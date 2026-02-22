@@ -123,6 +123,53 @@ button.ghost {
   grid-column: 1 / -1;
 }
 
+.demand-editor {
+  background: #fff;
+  border: 1px solid #e5d4b1;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.demand-editor h4 {
+  margin: 0 0 8px;
+}
+
+.demand-controls {
+  display: grid;
+  grid-template-columns: 120px 120px auto auto;
+  gap: 8px;
+  align-items: end;
+  margin-bottom: 8px;
+}
+
+#demand-schedule-chart {
+  width: 100% !important;
+  height: 170px !important;
+  margin-bottom: 8px;
+}
+
+.demand-points-list {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.demand-point-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #f7f0e3;
+  border: 1px solid #d9c6a6;
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 12px;
+}
+
+.demand-point-chip button {
+  padding: 1px 6px;
+  font-size: 11px;
+}
+
 .actions {
   display: flex;
   gap: 10px;
@@ -504,6 +551,10 @@ button.ghost {
   .stats,
   .team-board,
   .submit-box {
+    grid-template-columns: 1fr;
+  }
+
+  .demand-controls {
     grid-template-columns: 1fr;
   }
 
