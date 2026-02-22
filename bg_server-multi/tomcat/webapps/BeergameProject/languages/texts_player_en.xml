@@ -1,0 +1,179 @@
+<screens>
+	<screen name ="scLevels">
+		<label name="computerplayer_short">CPU</label>
+		
+		<label name="level_3_0">Brewery</label>
+		<label name="level_3_1">Wholesaler</label>
+		<label name="level_3_2">Retailer</label>
+		
+		<label name="level_4_0">Brewery</label>
+		<label name="level_4_1">Distributor</label>
+		<label name="level_4_2">Wholesaler</label>
+		<label name="level_4_3">Retailer</label>
+
+		<label name="level_5_0">Brewery</label>
+		<label name="level_5_1">Distributor</label>
+		<label name="level_5_2">Regional Distributor</label>
+		<label name="level_5_3">Wholesaler</label>
+		<label name="level_5_4">Retailer</label>
+	</screen>	
+	<screen name ="navigation">
+		<label name="label_language">English:</label>
+		<label name="label_youGotMail">You got mail!</label>
+		<label name="label_headline">The Beergame</label>
+	</screen>
+	<screen name ="popup_confirmOrder">
+		<label name="title">Thanks for your order!</label>
+		<label name="order">Your order:</label>
+		<label name="description">The next round will begin after all players placed their orders...
+		
+You are allowed to adjust your order as long as this round is still in play</label>
+		<label name="btn_undo">adjust</label>
+	</screen>
+	<screen name ="popup_nextRound">
+		<label name="description">The next round is about to start...</label>
+		<label name="btn_ok">ok then...</label>
+	</screen>
+	<screen name ="popup_sentSuccessfully">
+		<label name="label_desc">Your message was sent successfully.</label>
+		<label name="btn_ok">OK</label>
+	</screen>
+	<screen name ="miniSC">
+		<label name="role">Your role:</label>
+		<label name="stock">Stock:</label>
+		<label name="shippings">Shippings:</label>
+	</screen>
+	<screen name ="gui_game">
+		<label name="round">Week</label>
+		<label name="label_view">View:</label>		
+		<label name="combo_view_animation">Animation</label>
+		<label name="combo_view_table">Table</label>
+	</screen>
+	<screen name ="gui_chooseEvent">
+		<label name="title">Choose event</label>
+		<label name="label_name">Your name:</label>
+		<label name="label_mail">Your e-mail address:</label>
+		<label name="label_event">Event:</label>
+		<label name="btn_chooseEvent">Enter event</label>
+		<label name="pleaseSelect">--- please select ---</label>
+		<label name="label_nameError">Please enter your name and e-mail address!</label>
+		<label name="label_eventError">Please select an event!</label>
+	</screen>
+	<screen name ="gui_afterGame">
+		<label name="label_title">Thank you for playing the Beer Game!</label>
+		<label name="chart_customer">Customer</label>
+		<label name="label_desc">The chart below gives an overview of all players' orders. This will show you the intensity of the bullwhip effect during your game.
+
+You can hide single lines of the charts by clicking the little boxes beside the line captions.</label>
+	</screen>
+	<screen name ="gui_preGame">
+		<label name="message">The game will start in a moment.
+Please hang on...</label>
+	</screen>
+	<screen name ="game_animated">
+		<label name="label_inOrder">Receive
+order</label>
+		<label name="label_outOrder">My
+order</label>
+		<label name="label_stock">Stock</label>
+		<label name="label_openOrders">Open
+orders</label>
+		<label name="label_inDel">Receive
+delivery</label>
+		<label name="label_outDel">Deliver
+goods</label>
+		<label name="label_shippingDelay">Shipping
+Delay</label>
+		<label name="label_productionDelay">Production</label>
+		<label name="label_productionRequest">Production
+request</label>
+		<label name="label_costs">Overall costs</label>
+		<label name="label_mail">Mail</label>
+		<label name="btn_replay">again</label>
+		<label name="btn_fafo">skip</label>
+		<label name="btn_placeOrder">OK</label>	
+	</screen>
+	<screen name ="game_table">
+		<label name="label_placeOrder">Your order:</label>
+		<label name="btn_placeOrder">OK</label>
+		<label name="pleaseOrder">please place an order</label>
+		<label name="column_round" 						width="50">Round</label>
+		<label name="column_shippingIncomingDeliveries" width="65">Shipping</label>
+		<label name="column_incomingDelivery" 			width="115">Incoming Delivery</label>
+		<label name="column_available" 					width="65">Available</label>
+		<label name="column_incomingOrder" 				width="100">Incoming Order</label>
+		<label name="column_outgoingDelivery" 			width="115">Outgoing Delivery</label>
+		<label name="column_backorderAfterRound"	 	width="90">Open Orders</label>
+		<label name="column_stockAfterRound" 			width="60">Stock</label>
+		<label name="column_roundCosts" 				width="50">Costs</label>
+		<label name="column_outgoingOrder" 				width="100">My Order</label>
+		<label name="column_customerDemand" 			width="115">Customer Demand</label>
+	</screen>
+	<screen name ="popup_chat_senden">
+		<label name="title">Send Mesage</label>
+		<label name="label_receivers">Message recipients</label>
+		<label name="label_message">Message content</label>
+		<label name="label_desc">Here you can send a message to the administrator or (if allowed) to one or more of the other players.</label>
+		<label name="btn_markAll">select all</label>
+		<label name="btn_cancel">Close</label>
+		<label name="btn_send">Send</label>
+		<label name="label_numReceivers">Recipients selected</label>
+	</screen>
+	<screen name ="popup_chat_empfangen">
+		<label name="title">Messages</label>
+		<label name="label_message">Message content</label>
+		<label name="label_messages">Received messages</label>
+		<label name="btn_cancel">Close</label>
+		<label name="btn_reply">Reply</label>
+		<label name="btn_sendmail">New message</label>
+		<label name="column_name"	width="150">Name</label>
+		<label name="column_role"	width="150">Role</label>
+		<label name="column_date"	width="150">Date</label>
+		<label name="sender_admin">Administrator</label>
+		<label name="tree_pending">Pending Players</label>
+		<label name="tree_admin">Administrator</label>
+	</screen>
+	<screen name ="popup_credits">
+		<label name="label_title">Credits</label>
+		<label name="label_link">Credits</label>
+		<label name="btn_close">Close</label>
+		<label name="txt_credits">The Beergame, Version 1.2 (2009-06-15).
+		
+Idea, concept and visual design by Kai Riemer.
+Software design and development by Florian Christ.
+
+This software is educationware!
+
+The software may be used free of charge in the context of higher education, e.g. in university teaching.
+The software may however not be used for commercial purposes (e.g. in management seminars), nor is it allowed to make the software available online (for either purpose).
+
+The distribution of the software is not allowed. The software can be accessed by contacting the developers.
+
+Please respect these conditions.
+		</label>
+	</screen>
+	<screen name ="popup_help">
+		<label name="label_title">Help</label>
+		<label name="label_link">Help</label>
+		<label name="btn_close">Close</label>
+		<label name="txt_help">WELCOME TO THE BEERGAME!
+
+On your screen you should see the beergame main window (in the background) overlayed by the game window.
+
+THE GAME WINDOW:
+- In the middle of the main window you find your play sheet. In the upper part the data of the current round is displayed. In the lower part all summarized data (total cost, inventory, backorder) can be found.
+- The updating of the data is visualized using animations. You can skip animations by pressing 'skip'.
+- After the animation stops you can decide on and fill in your order. Once you press ok, the game moves on. As long as some players have not filled in their orders you can always return to this window and change your mind.
+- In the upper left corner the current round/week is displayed.
+- In the middle above your play sheet you see a visualization of the entire supply chain. Your position is highlighted and your role displayed. In a beergame setup with information sharing you can hover with your mouse pointer over the chain in order to access the various data for the different players.
+- In the upper right corner you can switch between the here described animation mode and a table view in which you see all data (also historic data) in a table.
+
+THE MAIN WINDOW (BACKGROUND):
+- In the upper left corner you find your message center through which you can send a message to the administrator (e.g. asking for help).
+- In the upper right corner you can change the language.
+- In the lower left corner you can read the credits.
+- The link in the lower right corner you already tried, otherwise you wouldn't be reading this text ;-)
+
+ENJOY THE GAME!</label>
+	</screen>
+</screens>

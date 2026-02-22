@@ -1,0 +1,175 @@
+<screens>
+	<screen name ="scLevels">
+		<label name="computerplayer_short">CPU</label>
+		
+		<label name="level_3_0">Sörgyár</label>
+		<label name="level_3_1">Nagykereskedõ</label>
+		<label name="level_3_2">Kiskereskedõ</label>
+		
+		<label name="level_4_0">Sörgyár</label>
+		<label name="level_4_1">Disztribútor</label>
+		<label name="level_4_2">Nagykereskedõ</label>
+		<label name="level_4_3">Kiskereskedõ</label>
+
+		<label name="level_5_0">Sörgyár</label>
+		<label name="level_5_1">Disztribútor</label>
+		<label name="level_5_2">Régiós disztribútor</label>
+		<label name="level_5_3">Nagykereskedõ</label>
+		<label name="level_5_4">Kiskereskedõ</label>
+	</screen>	
+	<screen name ="navigation">
+		<label name="label_language">Hungarian:</label>
+		<label name="label_youGotMail">Levele érkezett!</label>
+		<label name="label_headline">The Beergame</label>
+	</screen>
+	<screen name ="popup_confirmOrder">
+		<label name="title">Rendelését köszönjük!</label>
+		<label name="order">Az ön rendelése:</label>
+		<label name="description">A következõ kör akkor kezdõdik, ha mindenki feladta a megrendelést...
+		
+Addig módosíthatja a rendelését, amíg a kör le nem zárult.</label>
+		<label name="btn_undo">módosít</label>
+	</screen>
+	<screen name ="popup_nextRound">
+		<label name="description">A következõ kör várható kezdete...</label>
+		<label name="btn_ok">OK akkor...</label>
+	</screen>
+	<screen name ="popup_sentSuccessfully">
+		<label name="label_desc">Üzenetét sikeresen elküldtük.</label>
+		<label name="btn_ok">OK</label>
+	</screen>
+	<screen name ="miniSC">
+		<label name="role">Az ön szerepe:</label>
+		<label name="stock">Raktárkészlet:</label>
+		<label name="shippings">Szállítás alatt:</label>
+	</screen>
+	<screen name ="gui_game">
+		<label name="round">Hét</label>
+		<label name="label_view">Nézet:</label>		
+		<label name="combo_view_animation">Animáció</label>
+		<label name="combo_view_table">Táblázat</label>
+	</screen>
+	<screen name ="gui_chooseEvent">
+		<label name="title">Válasszon eseményt</label>
+		<label name="label_name">Az ön neve:</label>
+		<label name="label_mail">Az ön e-mail címe:</label>
+		<label name="label_event">Esemény:</label>
+		<label name="btn_chooseEvent">Adja meg az eseményt!</label>
+		<label name="pleaseSelect">--- válasszon ---</label>
+		<label name="label_nameError">Adja meg a nevét és e-mail címét!</label>
+		<label name="label_eventError">Válasszon eseményt!</label>
+	</screen>
+	<screen name ="gui_afterGame">
+		<label name="label_title">Köszönjük, hogy játszott a Beer Game-mel!</label>
+		<label name="chart_customer">Vevõ</label>
+		<label name="label_desc">Az alábbi grafikon áttekintést ad minden játékos rendelésérõl. Ez a grafikon megmutatja az ostorhatás (bullwhip) intenzitását a játék során. Az egyes vonalak elrejthetõek a vonalmagyarázat melletti kis négyzetre kattintva.</label>
+	</screen>
+	<screen name ="gui_preGame">
+		<label name="message">A játék pillanatokon belül kezdõdik, kérjük szíves türelmét!...</label>
+	</screen>
+	<screen name ="game_animated">
+		<label name="label_inOrder">Beérkezett rendelés</label>
+		<label name="label_outOrder">Saját rendelések</label>
+		<label name="label_stock">Raktárkészlet</label>
+		<label name="label_openOrders">Nyitott rendelések</label>
+		<label name="label_inDel">Beérkezés</label>
+		<label name="label_outDel">Kiszállítás</label>
+		<label name="label_shippingDelay">Szállítási késedelem</label>
+		<label name="label_productionDelay">Termelés</label>
+		<label name="label_productionRequest">Termelés igény</label>
+		<label name="label_costs">Teljes költség</label>
+		<label name="label_mail">Levél</label>
+		<label name="btn_replay">újra</label>
+		<label name="btn_fafo">kihagy</label>
+		<label name="btn_placeOrder">OK</label>	
+	</screen>
+	<screen name ="game_table">
+		<label name="label_placeOrder">Az ön rendelése:</label>
+		<label name="btn_placeOrder">OK</label>
+		<label name="pleaseOrder">Adja meg rendelését</label>
+		<label name="column_round" width="50">Kör</label>
+		<label name="column_shippingIncomingDeliveries" width="65">Szállítás</label>
+		<label name="column_incomingDelivery" width="115">Bejövõ szállítás</label>
+		<label name="column_available" width="65">Rendelkezésre áll</label>
+		<label name="column_incomingOrder" 		width="100">Bejövõ rendelés</label>
+		<label name="column_outgoingDelivery" 			width="115">Kimenõ szállítás</label>
+		<label name="column_backorderAfterRound" width="90">Nyitott Rendelések</label>
+		<label name="column_stockAfterRound" 	width="60">Raktárkészlet</label>
+		<label name="column_roundCosts" 				width="50">Költségek</label>
+		<label name="column_outgoingOrder" 				width="100">Az ön rendelése</label>
+		<label name="column_customerDemand" 			width="115">Vevõi igény</label>
+	</screen>
+	<screen name ="popup_chat_senden">
+		<label name="title">Üzenet küldése</label>
+		<label name="label_receivers">Message recipients</label>
+		<label name="label_message">Message content</label>
+		<label name="label_desc">Itt elküldheti üzenetét az adminisztrátornak, illetve ha engedélyezve van valamelyik, vagy az összes játékosnak.</label>
+		<label name="btn_markAll">mind kiválasztása</label>
+		<label name="btn_cancel">Bezárás</label>
+		<label name="btn_send">Elküldés</label>
+		<label name="label_numReceivers">Címzett kiválasztva</label>
+	</screen>
+	<screen name ="popup_chat_empfangen">
+		<label name="title">Üzenetek</label>
+		<label name="label_message">Üzenet tartalma</label>
+		<label name="label_messages">Received messages</label>
+		<label name="btn_cancel">Close</label>
+		<label name="btn_reply">Válasz</label>
+		<label name="btn_sendmail">Új üzenet</label>
+		<label name="column_name"	width="150">Név</label>
+		<label name="column_role" width="150">Szerep</label>
+		<label name="column_date"	width="150">Dátum</label>
+		<label name="sender_admin">Adminisztrátor</label>
+		<label name="tree_pending">Várakozó játékosok</label>
+		<label name="tree_admin">Adminisztrátor</label>
+	</screen>
+	<screen name ="popup_credits">
+		<label name="label_title">Készítõk</label>
+		<label name="label_link">Készítõk</label>
+		<label name="btn_close">Bezárás</label>
+		<label name="txt_credits">The Beergame, Version 1.2 (2009-06-15).
+		
+Ötlet, kidolgozás és megjelenés: Kai Riemer.
+Szoftvertervezés és fejlesztés: Florian Christ.
+
+A szoftver besorolása: educationware!
+
+A szoftver szabadon felhasználható a felsõoktatásban, pl. az egyetemi oktatásban. 
+A szoftver ugyanakkor nem szolgálhat kereskedelmi célokat (pl. menedzsment szerminárium), illetve nem lehet elérhetõ online semmilyen célból. 
+
+A szoftver további terjesztése nem engedélyezett. A szoftver elérhetõ a létrehozókon keresztül. 
+
+Kérjük méltányolja ezeket a megkötéseket! 
+		</label>
+	</screen>
+	<screen name ="popup_help">
+		<label name="label_title">Segítség</label>
+		<label name="label_link">Segítség</label>
+		<label name="btn_close">Bezárás</label>
+		<label name="txt_help">Üdvözöljük a 'THE BEERGAME' játékban!
+
+
+
+A képernyõjén látnia kell a program fõablakát (a háttérben), mely elõtt megjelenik a játékablak.
+
+
+
+JÁTÉKABLAK:
+
+- A játékablak közepén találja a játéklapot. A felsõ részen jelennek meg a játék aktuális körének adatai. A lenti részben jelennek meg az összesítések (teljes költség, raktárkészlet, elmaradt rendelések, stb.
+- Az adatok frissítését animáció kísére. Az animáció kihagyható a 'kihagy' gomb megnyomásával.
+- Az animáció után lehetõsége van feladni a rendelését. Az OK gomb megnyomása után a játék továbblép. Amíg a többi játékos fel nem adta a rendelést, lehetõség van a módosításra.
+- A bal felsõ sarokban látható az aktuális kör/hét száma.
+- A játéklap fölött középen látható az ellátási lánc vizualizálása. Az ön pozíciója és szerepe ki van emelve. A játék beállításaitól függõen lehetõség van arra, hogy információt nyerjen az ellátási lánc többi elemérõl.
+- A jobb felsõ sarokban lehet beállítani az animációs megjelenést, vagy pedig a táblázatos megjelenést (ahol visszemnõlegesen is láthatóak az adatok).
+
+FÕABLAK (HÁTTÉR):
+
+- A bal felsõ sarokban található az üzenetközpont, melyen keresztül üzenni lehet az adminisztrátornak (pl. segítséget kérni).
+- A jobb felsõ sarokban lehet változtatni a nyelvet.
+- Az bal elsõ sarokban érhetõek el a készítõk adatai.
+- A jobb alsó sarokban lévõ linket már bizonyára kipróbálta, máskülönben nem olvashatná ezt a szüveget ;-)
+
+ÉLVEZETES JÁTÉKOT KÍVÁNUNK!</label>
+	</screen>
+</screens>

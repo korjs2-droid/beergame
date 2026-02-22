@@ -1,0 +1,392 @@
+<event>
+	<eventKey>1496897768578</eventKey>
+	<date>1496897768578</date>
+	<title>aa</title>
+	<description></description>
+	<eventFolder>SavedEvents/aa-08.06.17</eventFolder>
+<preferences>
+<name>default</name>
+<description>default</description>
+<filename>null</filename>
+<supplyChainLevels>4</supplyChainLevels>
+<customerDemandChanges>
+<change round="4">10</change>
+<change round="0">5</change>
+</customerDemandChanges>
+<initialShippingIncomingDeliveries>
+<shipping id="0">5</shipping>
+<shipping id="1">5</shipping>
+</initialShippingIncomingDeliveries>
+<advanceToNextRoundStyle>1000</advanceToNextRoundStyle>
+<maxRoundsPerGame>40</maxRoundsPerGame>
+<costsPerUnitOnStack>0.5</costsPerUnitOnStack>
+<costsPerUnitNotDelivered>1.0</costsPerUnitNotDelivered>
+<initialStockBeforeRound>15</initialStockBeforeRound>
+<initialBackorderBeforeRound>0</initialBackorderBeforeRound>
+<initialIncomingOrder>5</initialIncomingOrder>
+<initialIncomingDelivery>5</initialIncomingDelivery>
+<shippingsVisible>false</shippingsVisible>
+<customerDemandVisible>false</customerDemandVisible>
+<stocksVisible>1000</stocksVisible>
+<messagingVisible>1000</messagingVisible>
+</preferences>
+<admin>
+	<name>a</name>
+	<email>a</email>
+</admin>
+	<pendingPlayers>		</pendingPlayers>
+	<games><game>
+	<gameKey>0</gameKey>
+	<gameState>2000</gameState>
+	<currentRound>5</currentRound>
+	<hasEnoughPlayers>true</hasEnoughPlayers>
+	<gameFolder>SavedEvents/aa-08.06.17/game0</gameFolder>
+	<sc_levels>
+<level id="0">
+<player>
+	<playerKey>1496897807016</playerKey>
+	<scLevel>0</scLevel>
+	<name>1</name>
+	<email>1</email>
+	<madeTurn>false</madeTurn>
+	<assignedToGame>true</assignedToGame>
+	<rounds><roundData round="1">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">5</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>5</outgoingOrder>
+	<stockAfterRound>15</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>7.5</roundCosts>
+</roundData>
+<roundData round="2">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">5</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>4</incomingOrder>
+	<outgoingDelivery>4</outgoingDelivery>
+	<outgoingOrder>5</outgoingOrder>
+	<stockAfterRound>16</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>15.5</roundCosts>
+</roundData>
+<roundData round="3">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">5</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>16</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>4</incomingOrder>
+	<outgoingDelivery>4</outgoingDelivery>
+	<outgoingOrder>5</outgoingOrder>
+	<stockAfterRound>17</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>24.0</roundCosts>
+</roundData>
+<roundData round="4">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">5</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>17</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>4</incomingOrder>
+	<outgoingDelivery>4</outgoingDelivery>
+	<outgoingOrder>5</outgoingOrder>
+	<stockAfterRound>18</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>33.0</roundCosts>
+</roundData>
+<roundData round="5">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">5</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>18</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>4</incomingOrder>
+	<outgoingDelivery>4</outgoingDelivery>
+	<outgoingOrder>0</outgoingOrder>
+	<stockAfterRound>19</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>42.5</roundCosts>
+</roundData>
+	</rounds>
+</player>
+</level>
+<level id="1">
+<player>
+	<playerKey>1496897815736</playerKey>
+	<scLevel>1</scLevel>
+	<name>2</name>
+	<email>2</email>
+	<madeTurn>false</madeTurn>
+	<assignedToGame>true</assignedToGame>
+	<rounds><roundData round="1">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">5</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>4</outgoingOrder>
+	<stockAfterRound>15</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>7.5</roundCosts>
+</roundData>
+<roundData round="2">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">4</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>4</outgoingOrder>
+	<stockAfterRound>15</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>15.0</roundCosts>
+</roundData>
+<roundData round="3">
+	<shippingIncomingDeliveries>
+<delivery id="0">4</delivery>
+<delivery id="1">4</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>4</outgoingOrder>
+	<stockAfterRound>15</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>22.5</roundCosts>
+</roundData>
+<roundData round="4">
+	<shippingIncomingDeliveries>
+<delivery id="0">4</delivery>
+<delivery id="1">4</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>4</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>4</outgoingOrder>
+	<stockAfterRound>14</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>29.5</roundCosts>
+</roundData>
+<roundData round="5">
+	<shippingIncomingDeliveries>
+<delivery id="0">4</delivery>
+<delivery id="1">4</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>14</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>4</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>0</outgoingOrder>
+	<stockAfterRound>13</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>36.0</roundCosts>
+</roundData>
+	</rounds>
+</player>
+</level>
+<level id="2">
+<player>
+	<playerKey>1496897824198</playerKey>
+	<scLevel>2</scLevel>
+	<name>3</name>
+	<email>3</email>
+	<madeTurn>false</madeTurn>
+	<assignedToGame>true</assignedToGame>
+	<rounds><roundData round="1">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">5</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>5</outgoingOrder>
+	<stockAfterRound>15</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>7.5</roundCosts>
+</roundData>
+<roundData round="2">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">5</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>5</outgoingOrder>
+	<stockAfterRound>15</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>15.0</roundCosts>
+</roundData>
+<roundData round="3">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">5</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>5</outgoingOrder>
+	<stockAfterRound>15</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>22.5</roundCosts>
+</roundData>
+<roundData round="4">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">5</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>5</outgoingOrder>
+	<stockAfterRound>15</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>30.0</roundCosts>
+</roundData>
+<roundData round="5">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">5</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>0</outgoingOrder>
+	<stockAfterRound>15</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>37.5</roundCosts>
+</roundData>
+	</rounds>
+</player>
+</level>
+<level id="3">
+<player>
+	<playerKey>1496897835963</playerKey>
+	<scLevel>3</scLevel>
+	<name>4</name>
+	<email>4</email>
+	<madeTurn>false</madeTurn>
+	<assignedToGame>true</assignedToGame>
+	<rounds><roundData round="1">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">5</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>5</outgoingOrder>
+	<stockAfterRound>15</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>7.5</roundCosts>
+</roundData>
+<roundData round="2">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">5</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>5</outgoingOrder>
+	<stockAfterRound>15</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>15.0</roundCosts>
+</roundData>
+<roundData round="3">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">5</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>5</outgoingOrder>
+	<stockAfterRound>15</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>22.5</roundCosts>
+</roundData>
+<roundData round="4">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">5</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>5</outgoingOrder>
+	<stockAfterRound>15</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>30.0</roundCosts>
+</roundData>
+<roundData round="5">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">5</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>10</incomingOrder>
+	<outgoingDelivery>10</outgoingDelivery>
+	<outgoingOrder>0</outgoingOrder>
+	<stockAfterRound>10</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>35.0</roundCosts>
+</roundData>
+	</rounds>
+</player>
+</level>
+	</sc_levels>
+</game>
+	</games>
+</event>

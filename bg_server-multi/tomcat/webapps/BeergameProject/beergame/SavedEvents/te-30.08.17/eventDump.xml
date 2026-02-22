@@ -1,0 +1,996 @@
+<event>
+	<eventKey>1504063267817</eventKey>
+	<date>1504063267817</date>
+	<title>te</title>
+	<description></description>
+	<eventFolder>SavedEvents/te-30.08.17</eventFolder>
+<preferences>
+<name>default</name>
+<description>default</description>
+<filename>null</filename>
+<supplyChainLevels>3</supplyChainLevels>
+<customerDemandChanges>
+<change round="4">10</change>
+<change round="0">5</change>
+</customerDemandChanges>
+<initialShippingIncomingDeliveries>
+<shipping id="0">5</shipping>
+<shipping id="1">5</shipping>
+</initialShippingIncomingDeliveries>
+<advanceToNextRoundStyle>1000</advanceToNextRoundStyle>
+<maxRoundsPerGame>20</maxRoundsPerGame>
+<costsPerUnitOnStack>0.5</costsPerUnitOnStack>
+<costsPerUnitNotDelivered>1.0</costsPerUnitNotDelivered>
+<initialStockBeforeRound>15</initialStockBeforeRound>
+<initialBackorderBeforeRound>0</initialBackorderBeforeRound>
+<initialIncomingOrder>5</initialIncomingOrder>
+<initialIncomingDelivery>5</initialIncomingDelivery>
+<shippingsVisible>true</shippingsVisible>
+<customerDemandVisible>true</customerDemandVisible>
+<stocksVisible>2000</stocksVisible>
+<messagingVisible>2000</messagingVisible>
+</preferences>
+<admin>
+	<name>te</name>
+	<email>te</email>
+</admin>
+	<pendingPlayers>		</pendingPlayers>
+	<games><game>
+	<gameKey>0</gameKey>
+	<gameState>4000</gameState>
+	<currentRound>20</currentRound>
+	<hasEnoughPlayers>true</hasEnoughPlayers>
+	<gameFolder>SavedEvents/te-30.08.17/game0</gameFolder>
+	<sc_levels>
+<level id="0">
+<player>
+	<playerKey>1504063281616</playerKey>
+	<scLevel>0</scLevel>
+	<name>a</name>
+	<email>a</email>
+	<madeTurn>true</madeTurn>
+	<assignedToGame>true</assignedToGame>
+	<rounds><roundData round="1">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">5</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>0</outgoingOrder>
+	<stockAfterRound>15</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>7.5</roundCosts>
+</roundData>
+<roundData round="2">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">0</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>0</incomingOrder>
+	<outgoingDelivery>0</outgoingDelivery>
+	<outgoingOrder>8</outgoingOrder>
+	<stockAfterRound>20</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>17.5</roundCosts>
+</roundData>
+<roundData round="3">
+	<shippingIncomingDeliveries>
+<delivery id="0">0</delivery>
+<delivery id="1">8</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>20</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>8</outgoingOrder>
+	<stockAfterRound>22</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>28.5</roundCosts>
+</roundData>
+<roundData round="4">
+	<shippingIncomingDeliveries>
+<delivery id="0">8</delivery>
+<delivery id="1">8</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>22</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>0</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>4</outgoingOrder>
+	<stockAfterRound>19</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>38.0</roundCosts>
+</roundData>
+<roundData round="5">
+	<shippingIncomingDeliveries>
+<delivery id="0">8</delivery>
+<delivery id="1">4</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>19</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>8</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>4</outgoingOrder>
+	<stockAfterRound>24</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>50.0</roundCosts>
+</roundData>
+<roundData round="6">
+	<shippingIncomingDeliveries>
+<delivery id="0">4</delivery>
+<delivery id="1">4</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>24</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>8</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>4</outgoingOrder>
+	<stockAfterRound>29</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>64.5</roundCosts>
+</roundData>
+<roundData round="7">
+	<shippingIncomingDeliveries>
+<delivery id="0">4</delivery>
+<delivery id="1">4</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>29</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>4</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>4</outgoingOrder>
+	<stockAfterRound>30</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>79.5</roundCosts>
+</roundData>
+<roundData round="8">
+	<shippingIncomingDeliveries>
+<delivery id="0">4</delivery>
+<delivery id="1">4</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>30</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>4</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>4</outgoingOrder>
+	<stockAfterRound>31</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>95.0</roundCosts>
+</roundData>
+<roundData round="9">
+	<shippingIncomingDeliveries>
+<delivery id="0">4</delivery>
+<delivery id="1">4</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>31</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>4</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>4</outgoingOrder>
+	<stockAfterRound>32</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>111.0</roundCosts>
+</roundData>
+<roundData round="10">
+	<shippingIncomingDeliveries>
+<delivery id="0">4</delivery>
+<delivery id="1">4</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>32</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>4</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>4</outgoingOrder>
+	<stockAfterRound>33</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>127.5</roundCosts>
+</roundData>
+<roundData round="11">
+	<shippingIncomingDeliveries>
+<delivery id="0">4</delivery>
+<delivery id="1">4</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>33</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>4</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>4</outgoingOrder>
+	<stockAfterRound>34</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>144.5</roundCosts>
+</roundData>
+<roundData round="12">
+	<shippingIncomingDeliveries>
+<delivery id="0">4</delivery>
+<delivery id="1">4</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>34</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>4</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>4</outgoingOrder>
+	<stockAfterRound>35</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>162.0</roundCosts>
+</roundData>
+<roundData round="13">
+	<shippingIncomingDeliveries>
+<delivery id="0">4</delivery>
+<delivery id="1">4</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>35</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>4</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>10</outgoingOrder>
+	<stockAfterRound>36</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>180.0</roundCosts>
+</roundData>
+<roundData round="14">
+	<shippingIncomingDeliveries>
+<delivery id="0">4</delivery>
+<delivery id="1">10</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>36</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>4</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>10</outgoingOrder>
+	<stockAfterRound>37</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>198.5</roundCosts>
+</roundData>
+<roundData round="15">
+	<shippingIncomingDeliveries>
+<delivery id="0">10</delivery>
+<delivery id="1">10</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>37</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>4</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>10</outgoingOrder>
+	<stockAfterRound>38</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>217.5</roundCosts>
+</roundData>
+<roundData round="16">
+	<shippingIncomingDeliveries>
+<delivery id="0">10</delivery>
+<delivery id="1">10</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>38</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>10</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>10</outgoingOrder>
+	<stockAfterRound>45</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>240.0</roundCosts>
+</roundData>
+<roundData round="17">
+	<shippingIncomingDeliveries>
+<delivery id="0">10</delivery>
+<delivery id="1">10</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>45</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>10</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>10</outgoingOrder>
+	<stockAfterRound>52</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>266.0</roundCosts>
+</roundData>
+<roundData round="18">
+	<shippingIncomingDeliveries>
+<delivery id="0">10</delivery>
+<delivery id="1">10</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>52</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>10</incomingDelivery>
+	<incomingOrder>8</incomingOrder>
+	<outgoingDelivery>8</outgoingDelivery>
+	<outgoingOrder>10</outgoingOrder>
+	<stockAfterRound>54</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>293.0</roundCosts>
+</roundData>
+<roundData round="19">
+	<shippingIncomingDeliveries>
+<delivery id="0">10</delivery>
+<delivery id="1">10</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>54</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>10</incomingDelivery>
+	<incomingOrder>8</incomingOrder>
+	<outgoingDelivery>8</outgoingDelivery>
+	<outgoingOrder>10</outgoingOrder>
+	<stockAfterRound>56</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>321.0</roundCosts>
+</roundData>
+<roundData round="20">
+	<shippingIncomingDeliveries>
+<delivery id="0">10</delivery>
+<delivery id="1">10</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>56</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>10</incomingDelivery>
+	<incomingOrder>44</incomingOrder>
+	<outgoingDelivery>44</outgoingDelivery>
+	<outgoingOrder>10</outgoingOrder>
+	<stockAfterRound>22</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>332.0</roundCosts>
+</roundData>
+	</rounds>
+</player>
+</level>
+<level id="1">
+<player>
+	<playerKey>1504063293757</playerKey>
+	<scLevel>1</scLevel>
+	<name>b</name>
+	<email>b</email>
+	<madeTurn>true</madeTurn>
+	<assignedToGame>true</assignedToGame>
+	<rounds><roundData round="1">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">5</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>0</outgoingOrder>
+	<stockAfterRound>15</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>7.5</roundCosts>
+</roundData>
+<roundData round="2">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">0</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>0</incomingOrder>
+	<outgoingDelivery>0</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>20</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>17.5</roundCosts>
+</roundData>
+<roundData round="3">
+	<shippingIncomingDeliveries>
+<delivery id="0">0</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>20</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>22</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>28.5</roundCosts>
+</roundData>
+<roundData round="4">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>22</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>0</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>19</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>38.0</roundCosts>
+</roundData>
+<roundData round="5">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>19</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>19</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>47.5</roundCosts>
+</roundData>
+<roundData round="6">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>19</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>19</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>57.0</roundCosts>
+</roundData>
+<roundData round="7">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>19</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>19</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>66.5</roundCosts>
+</roundData>
+<roundData round="8">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>19</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>19</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>76.0</roundCosts>
+</roundData>
+<roundData round="9">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>19</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>19</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>85.5</roundCosts>
+</roundData>
+<roundData round="10">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>19</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>19</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>95.0</roundCosts>
+</roundData>
+<roundData round="11">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>19</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>3</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>19</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>104.5</roundCosts>
+</roundData>
+<roundData round="12">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>19</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>8</incomingOrder>
+	<outgoingDelivery>8</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>14</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>111.5</roundCosts>
+</roundData>
+<roundData round="13">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>14</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>8</incomingOrder>
+	<outgoingDelivery>8</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>9</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>116.0</roundCosts>
+</roundData>
+<roundData round="14">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>9</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>8</incomingOrder>
+	<outgoingDelivery>8</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>4</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>118.0</roundCosts>
+</roundData>
+<roundData round="15">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>4</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>8</incomingOrder>
+	<outgoingDelivery>7</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>1</backorderAfterRound>
+	<roundCosts>119.0</roundCosts>
+</roundData>
+<roundData round="16">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>0</stockBeforeRound>
+	<backorderBeforeRound>1</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>8</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>6</backorderAfterRound>
+	<roundCosts>125.0</roundCosts>
+</roundData>
+<roundData round="17">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>0</stockBeforeRound>
+	<backorderBeforeRound>6</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>8</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>8</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>11</backorderAfterRound>
+	<roundCosts>136.0</roundCosts>
+</roundData>
+<roundData round="18">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">8</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>0</stockBeforeRound>
+	<backorderBeforeRound>11</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>8</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>8</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>16</backorderAfterRound>
+	<roundCosts>152.0</roundCosts>
+</roundData>
+<roundData round="19">
+	<shippingIncomingDeliveries>
+<delivery id="0">8</delivery>
+<delivery id="1">8</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>0</stockBeforeRound>
+	<backorderBeforeRound>16</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>27</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>44</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>40</backorderAfterRound>
+	<roundCosts>192.0</roundCosts>
+</roundData>
+<roundData round="20">
+	<shippingIncomingDeliveries>
+<delivery id="0">8</delivery>
+<delivery id="1">44</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>0</stockBeforeRound>
+	<backorderBeforeRound>40</backorderBeforeRound>
+	<incomingDelivery>8</incomingDelivery>
+	<incomingOrder>27</incomingOrder>
+	<outgoingDelivery>8</outgoingDelivery>
+	<outgoingOrder>44</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>59</backorderAfterRound>
+	<roundCosts>251.0</roundCosts>
+</roundData>
+	</rounds>
+</player>
+</level>
+<level id="2">
+<player>
+	<playerKey>1504063307011</playerKey>
+	<scLevel>2</scLevel>
+	<name>c</name>
+	<email>c</email>
+	<madeTurn>true</madeTurn>
+	<assignedToGame>true</assignedToGame>
+	<rounds><roundData round="1">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">5</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>0</outgoingOrder>
+	<stockAfterRound>15</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>7.5</roundCosts>
+</roundData>
+<roundData round="2">
+	<shippingIncomingDeliveries>
+<delivery id="0">5</delivery>
+<delivery id="1">0</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>15</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>15.0</roundCosts>
+</roundData>
+<roundData round="3">
+	<shippingIncomingDeliveries>
+<delivery id="0">0</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>5</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>15</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>22.5</roundCosts>
+</roundData>
+<roundData round="4">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>15</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>0</incomingDelivery>
+	<incomingOrder>5</incomingOrder>
+	<outgoingDelivery>5</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>10</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>27.5</roundCosts>
+</roundData>
+<roundData round="5">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>10</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>10</incomingOrder>
+	<outgoingDelivery>10</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>3</stockAfterRound>
+	<backorderAfterRound>0</backorderAfterRound>
+	<roundCosts>29.0</roundCosts>
+</roundData>
+<roundData round="6">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>3</stockBeforeRound>
+	<backorderBeforeRound>0</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>10</incomingOrder>
+	<outgoingDelivery>6</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>4</backorderAfterRound>
+	<roundCosts>33.0</roundCosts>
+</roundData>
+<roundData round="7">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>0</stockBeforeRound>
+	<backorderBeforeRound>4</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>10</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>11</backorderAfterRound>
+	<roundCosts>44.0</roundCosts>
+</roundData>
+<roundData round="8">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>0</stockBeforeRound>
+	<backorderBeforeRound>11</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>10</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>18</backorderAfterRound>
+	<roundCosts>62.0</roundCosts>
+</roundData>
+<roundData round="9">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>0</stockBeforeRound>
+	<backorderBeforeRound>18</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>10</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>25</backorderAfterRound>
+	<roundCosts>87.0</roundCosts>
+</roundData>
+<roundData round="10">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>0</stockBeforeRound>
+	<backorderBeforeRound>25</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>10</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>3</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>32</backorderAfterRound>
+	<roundCosts>119.0</roundCosts>
+</roundData>
+<roundData round="11">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>0</stockBeforeRound>
+	<backorderBeforeRound>32</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>10</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>8</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>39</backorderAfterRound>
+	<roundCosts>158.0</roundCosts>
+</roundData>
+<roundData round="12">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">8</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>0</stockBeforeRound>
+	<backorderBeforeRound>39</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>10</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>8</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>46</backorderAfterRound>
+	<roundCosts>204.0</roundCosts>
+</roundData>
+<roundData round="13">
+	<shippingIncomingDeliveries>
+<delivery id="0">8</delivery>
+<delivery id="1">8</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>0</stockBeforeRound>
+	<backorderBeforeRound>46</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>10</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>8</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>53</backorderAfterRound>
+	<roundCosts>257.0</roundCosts>
+</roundData>
+<roundData round="14">
+	<shippingIncomingDeliveries>
+<delivery id="0">8</delivery>
+<delivery id="1">8</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>0</stockBeforeRound>
+	<backorderBeforeRound>53</backorderBeforeRound>
+	<incomingDelivery>8</incomingDelivery>
+	<incomingOrder>10</incomingOrder>
+	<outgoingDelivery>8</outgoingDelivery>
+	<outgoingOrder>8</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>55</backorderAfterRound>
+	<roundCosts>312.0</roundCosts>
+</roundData>
+<roundData round="15">
+	<shippingIncomingDeliveries>
+<delivery id="0">8</delivery>
+<delivery id="1">7</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>0</stockBeforeRound>
+	<backorderBeforeRound>55</backorderBeforeRound>
+	<incomingDelivery>8</incomingDelivery>
+	<incomingOrder>10</incomingOrder>
+	<outgoingDelivery>8</outgoingDelivery>
+	<outgoingOrder>8</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>57</backorderAfterRound>
+	<roundCosts>369.0</roundCosts>
+</roundData>
+<roundData round="16">
+	<shippingIncomingDeliveries>
+<delivery id="0">7</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>0</stockBeforeRound>
+	<backorderBeforeRound>57</backorderBeforeRound>
+	<incomingDelivery>8</incomingDelivery>
+	<incomingOrder>10</incomingOrder>
+	<outgoingDelivery>8</outgoingDelivery>
+	<outgoingOrder>8</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>59</backorderAfterRound>
+	<roundCosts>428.0</roundCosts>
+</roundData>
+<roundData round="17">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>0</stockBeforeRound>
+	<backorderBeforeRound>59</backorderBeforeRound>
+	<incomingDelivery>7</incomingDelivery>
+	<incomingOrder>10</incomingOrder>
+	<outgoingDelivery>7</outgoingDelivery>
+	<outgoingOrder>8</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>62</backorderAfterRound>
+	<roundCosts>490.0</roundCosts>
+</roundData>
+<roundData round="18">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>0</stockBeforeRound>
+	<backorderBeforeRound>62</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>10</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>27</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>69</backorderAfterRound>
+	<roundCosts>559.0</roundCosts>
+</roundData>
+<roundData round="19">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">3</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>0</stockBeforeRound>
+	<backorderBeforeRound>69</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>10</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>27</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>76</backorderAfterRound>
+	<roundCosts>635.0</roundCosts>
+</roundData>
+<roundData round="20">
+	<shippingIncomingDeliveries>
+<delivery id="0">3</delivery>
+<delivery id="1">8</delivery>
+	</shippingIncomingDeliveries>
+	<stockBeforeRound>0</stockBeforeRound>
+	<backorderBeforeRound>76</backorderBeforeRound>
+	<incomingDelivery>3</incomingDelivery>
+	<incomingOrder>10</incomingOrder>
+	<outgoingDelivery>3</outgoingDelivery>
+	<outgoingOrder>27</outgoingOrder>
+	<stockAfterRound>0</stockAfterRound>
+	<backorderAfterRound>83</backorderAfterRound>
+	<roundCosts>718.0</roundCosts>
+</roundData>
+	</rounds>
+</player>
+</level>
+	</sc_levels>
+</game>
+<game>
+	<gameKey>1</gameKey>
+	<gameState>1000</gameState>
+	<currentRound>0</currentRound>
+	<hasEnoughPlayers>false</hasEnoughPlayers>
+	<gameFolder>SavedEvents/te-30.08.17/game1</gameFolder>
+	<sc_levels>
+<level id="0">
+</level>
+<level id="1">
+</level>
+<level id="2">
+</level>
+	</sc_levels>
+</game>
+	</games>
+</event>

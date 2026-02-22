@@ -1,0 +1,5 @@
+[autorun]
+icon=beergame.ico
+open=launch.bat
+action = PLEASE CLICK ON THE OK BUTTON
+useautoplay=1

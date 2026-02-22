@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?><preferences>
+<name>2nd round - with info sharing</name>
+<description>This configuration (with information sharing) should be played in a 2nd round to let players experience the value of information in supply chain management</description>
+<supplyChainLevels>4</supplyChainLevels>
+<customerDemandChanges>
+<change round="38">10</change>
+<change round="37">9</change>
+<change round="35">11</change>
+<change round="33">10</change>
+<change round="32">12</change>
+<change round="31">9</change>
+<change round="30">11</change>
+<change round="29">10</change>
+<change round="28">11</change>
+<change round="26">10</change>
+<change round="25">9</change>
+<change round="23">11</change>
+<change round="22">12</change>
+<change round="21">10</change>
+<change round="20">11</change>
+<change round="18">9</change>
+<change round="17">10</change>
+<change round="16">11</change>
+<change round="15">10</change>
+<change round="14">12</change>
+<change round="13">10</change>
+<change round="12">11</change>
+<change round="11">10</change>
+<change round="10">9</change>
+<change round="9">11</change>
+<change round="7">10</change>
+<change round="6">12</change>
+<change round="5">11</change>
+<change round="4">8</change>
+<change round="3">5</change>
+<change round="2">4</change>
+<change round="1">5</change>
+<change round="0">6</change>
+</customerDemandChanges>
+<initialShippingIncomingDeliveries>
+<shipping id="0">5</shipping>
+<shipping id="1">5</shipping>
+</initialShippingIncomingDeliveries>
+<advanceToNextRoundStyle>1000</advanceToNextRoundStyle>
+<maxRoundsPerGame>40</maxRoundsPerGame>
+<costsPerUnitOnStack>0.5</costsPerUnitOnStack>
+<costsPerUnitNotDelivered>1</costsPerUnitNotDelivered>
+<initialStockBeforeRound>15</initialStockBeforeRound>
+<initialBackorderBeforeRound>0</initialBackorderBeforeRound>
+<initialIncomingOrder>5</initialIncomingOrder>
+<initialIncomingDelivery>5</initialIncomingDelivery>
+<shippingsVisible>true</shippingsVisible>
+<customerDemandVisible>true</customerDemandVisible>
+<messagingVisible>1000</messagingVisible>
+<stocksVisible>3000</stocksVisible>
+</preferences>

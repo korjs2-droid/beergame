@@ -1,0 +1,464 @@
+<screens>
+	<screen name ="navigation">
+		<label name="label_chooseEvent">Choose Event</label>
+		<label name="label_createEvent">Create new event</label>
+		<label name="label_watchAllGames">Watch all games</label>
+		<label name="label_preferences_live">Change settings</label>
+		<label name="label_players2game">Assign players to games</label>
+		<label name="label_gameDetails">Game Details</label>
+		<label name="label_inbox">Inbox</label>
+		<label name="label_language">Language</label>
+		<label name="label_youGotMail">You got mail!</label>
+	</screen>
+	<screen name ="scLevels">
+		<label name="level_3_0">Brewery</label>
+		<label name="level_3_1">Wholesaler</label>
+		<label name="level_3_2">Retailer</label>
+		
+		<label name="level_4_0">Brewery</label>
+		<label name="level_4_1">Distributor</label>
+		<label name="level_4_2">Wholesaler</label>
+		<label name="level_4_3">Retailer</label>
+
+		<label name="level_5_0">Brewery</label>
+		<label name="level_5_1">Distributor</label>
+		<label name="level_5_2">Regional Distributor</label>
+		<label name="level_5_3">Wholesaler</label>
+		<label name="level_5_4">Retailer</label>
+	</screen>
+	<screen name ="popup_statistics">
+		<label name="label_title">Game Statistics</label>
+		<label name="label_desc">The following values can be used after the game for further discussion</label>
+		<label name="btn_close">Close</label>
+		<label name="label_avgOrder">Average order size</label>
+		<label name="label_maxOrder">Maximum order size</label>
+		<label name="label_smallOrders">Number of small orders*</label>
+		<label name="label_maxInventory">Maximum inventory</label>
+		<label name="label_maxBackorder">Maximum backorder</label>
+		<label name="label_InventorySpan">Inventory oscillation</label>
+		<label name="label_overallCosts">Overall costs</label>
+		<label name="label_footnote">* Amount: 0, 1 or 2</label>
+		<label name="label_overall">Overall</label>
+	</screen>
+	<screen name ="popup_overwrite">
+		<label name="label_desc">There is already a configuration with this name.
+		
+Do you want to overwrite it?</label>
+		<label name="btn_cancel">No</label>
+		<label name="btn_ok">Yes</label>
+	</screen>
+	<screen name ="popup_sentSuccessfully">
+		<label name="label_desc">Your message was sent successfully.</label>
+		<label name="btn_ok">OK</label>
+	</screen>
+	<screen name ="popup_load_settings">
+		<label name="label_title">Load configuration</label>
+		<label name="btn_cancel">Close</label>
+		<label name="btn_delete">Delete</label>
+		<label name="btn_load">Load</label>
+		
+		<label name="default_name">Default Settings</label>
+		<label name="default_desc">4-level supply chain, 40 rounds, full restrictions</label>
+	</screen>
+	<screen name ="popup_save_settings">
+		<label name="label_title">Save configuration</label>
+		<label name="label_nameError">Please enter a name for the configuration...</label>
+		<label name="label_name">Name:</label>
+		<label name="label_desc">Description:</label>
+		<label name="btn_cancel">Close</label>
+		<label name="btn_save">Save</label>
+	</screen>
+	<screen name ="popup_demChange">
+		<label name="einzeln_desc">Please enter the value of demand that will be valid from the specified round</label>
+		<label name="elnzeln_label_round">Round:</label>
+		<label name="einzeln_label_demand">Demand:</label>
+		<label name="folge_desc">Please enter the customer demand as a string delimited by comma.</label>
+		<label name="folge_round">Round:</label>
+		<label name="folge_status_suffix">Rounds found.</label>
+		<label name="btn_cancel">Cancel</label>
+		<label name="btn_add">Add</label>
+		<label name="btn_deployFolge">OK</label>
+	</screen>
+	<screen name ="popup_SCLevel">
+		<label name="desc">Please enter a label für the supply chain level</label>
+		<label name="btn_add">Add</label>
+		<label name="btn_cancel">Cancel</label>
+	</screen>
+	<screen name ="popup_addKIPlayer">
+		<label name="label_title">Add computer player</label>
+		<label name="label_nameError">Please enter a name for the player...</label>
+		<label name="label_strategyError">Please select an order strategy...</label>
+		<label name="label_name">Name:</label>
+		<label name="label_strategy">Order strategy:</label>
+		<label name="btn_cancel">Close</label>
+		<label name="btn_add">Add player</label>
+		<label name="strategy_pleaseSelect">----- Please select -----</label>
+		<label name="strategy_order_Q">constant orders</label>
+		<label name="strategy_order_to_S">order to S</label>
+		<label name="strategy_updated_s">updated s</label>
+		<label name="strategy_s_S">s_S</label>
+		<label name="strategy_s_Q">s_Q</label>
+		<label name="help_main">In order to add an artificial player you need to fill in a name and select an order policy.
+
+The different policies are described when you select them. You can manipulate each policy by selecting values for the key variables.
+
+The most complex (and unpredictable) policy is 'updated s'. This policy is governed by the following formula:
+
+ s = sum_1_n(incomingDelivery) * lead + M * sdtDeviation(incomingDelivery)
+ order = min(s*k-currentStock, S_max)
+ 
+ n = 10, or less, when less rounds have been played
+ lead = shippingDelay + 1;
+ 
+ input: k, M, s_max</label>
+	</screen>	
+	<screen name ="orderStrategies">
+		<label name="order_Q_label_desc">The computer player will order a constant amount each round.</label>
+		<label name="order_Q_label_Q">Order amount</label>
+		<label name="order_Q_value_Q">10</label>
+		
+		<label name="order_to_S_label_desc">Every round the computer player will fill up the stock to the given level.</label>
+		<label name="order_to_S_label_S">Stock level</label>
+		<label name="order_to_S_value_S">15</label>		
+
+		<label name="updated_s_label_x">Until Round</label>
+		<label name="updated_s_label_Y">order</label>		
+		<label name="updated_s_label_k">k</label>
+		<label name="updated_s_label_M">M</label>
+		<label name="updated_s_label_S_max">S_max</label>
+		<label name="updated_s_value_x">5</label>
+		<label name="updated_s_value_Y">5</label>
+		<label name="updated_s_value_k">1.5</label>
+		<label name="updated_s_value_M">1.55</label>
+		<label name="updated_s_value_S_max">100</label>
+		<label name="updated_s_label_desc">The critical stock level will be recalculated each round.</label>
+		
+		<label name="s_S_label_desc">When the stock falls below a certain level, the computer player will fill up to the given amount.</label>
+		<label name="s_S_label_s">Security level</label>
+		<label name="s_S_label_S">Fill up to</label>
+		<label name="s_S_value_s">5</label>
+		<label name="s_S_value_S">20</label>
+		
+		<label name="s_Q_label_desc">When the stock falls below a security level, the computer player will order the given amount.</label>
+		<label name="s_Q_label_s">Security level</label>
+		<label name="s_Q_label_Q">Order amount</label>
+		<label name="s_Q_value_s">5</label>
+		<label name="s_Q_value_Q">20</label>
+	</screen>	
+	<screen name ="popup_loadEvent">
+		<label name="title">Load Event</label>
+		<label name="label_eventList">Previous events:</label>
+		<label name="btn_cancel">Cancel</label>
+		<label name="btn_loadEvent">Load</label>
+		<label name="column_title" 	width="150">Title</label>
+		<label name="column_desc"	width="250">Description</label>
+		<label name="column_date" 	width="80">Date</label>
+	</screen>
+	<screen name ="gui_chooseEvent">
+		<label name="title">Choose Event</label>
+		<label name="label_eventList">Running events:</label>
+		<label name="btn_createEvent">Create</label>
+		<label name="btn_loadEvent">Load</label>
+		<label name="btn_showEvent">Choose</label>
+		<label name="column_title" 	width="150">Title</label>
+		<label name="column_desc"	width="250">Description</label>
+		<label name="column_date" 	width="80">Date</label>
+		<label name="help_main">For starting a new beergame session, as a first step you need to create a new event. Create a new event by clicking on 'Create'.
+
+If you already created an event before, which is currently running, you can enter the event by selecting it from the list and clicking on 'Choose'.
+
+You can also 'load' previous, already finished events in order to access the still existing data.</label>
+	</screen>
+	<screen name ="gui_createEvent">
+		<label name="title">Create new event</label>
+		<label name="label_title">Event title:</label>
+		<label name="label_desc">Description:</label>
+		<label name="btn_back">Back</label>
+		<label name="btn_next">Next</label>
+		<label name="label_titleError">Please give the event a name...</label>
+		<label name="label_adminname">Admin:</label>
+		<label name="label_adminemail">E-mail address:</label>
+		<label name="label_adminError">Please enter the Admin's name and e-mail...</label>
+		<label name="help_main">In order to create a new event you need to enter an event name. This name is displayed to the players when they enter the game.
+
+For your later reference you also need to enter a short description, your name, and email address. This data is not displayed to the players and for your own use only.</label>
+	</screen>
+	<screen name ="gui_gameDetails">
+		<label name="title">Game Details</label>
+		<label name="legende">S: Stock, O: Order, C: Costs</label>
+		<label name="legende_stock">S</label>
+		<label name="legende_order">O</label>
+		<label name="legende_costs">C</label>		
+		<label name="label_round">Round:</label>
+		<label name="label_status">State:</label>
+		<label name="label_customerOrders">Customer orders:</label>
+		<label name="label_customerGets">Customer gets:</label>
+		<label name="btn_sendMessage">send message</label>
+		<label name="btn_nextRound">go to next round</label>
+		<label name="btn_showStatistics">show statistics</label>
+		<label name="btn_downloadExcel">download excel file</label>
+		<label name="label_chartParam">Show in chart:</label>
+		<label name="state_1000">The game is not yet started.</label>
+		<label name="state_2000">Round in progress.
+Players are placing their orders.</label>
+		<label name="state_3000">Round finished.
+Players are waiting for next round!</label>
+		<label name="state_4000">Game finished!</label>
+		<label name="roundData_column_round" width="30">Rd.</label>		
+		<label name="madeTurn_true">yes</label>
+		<label name="madeTurn_false">no</label>
+		<label name="players_column_username" 	width="120">Name</label>
+		<label name="players_column_sclevel" 	width="100">Role</label>
+		<label name="players_column_madeTurn"	width="80">order placed</label>
+		<label name="combo_chartParam_roundCosts">Costs</label>
+		<label name="combo_chartParam_stockAfterRound">Stock</label>
+		<label name="combo_chartParam_backorderAfterRound">Backorder</label>
+		<label name="combo_chartParam_outgoingOrder">Orders</label>
+		<label name="chart_customer">Customer</label>
+		<label name="help_main">In this window you find a detailed control dashboard with all relevant live data of the game you have selected. You can always go back to the list of all games by clicking on 'Watch all games' in the top level navigation of the beergame, or you select another game directly using the drop down box in the upper right corner.
+
+In this window you see two tables. In the left table each row represents one week and shows the data for all players in this week. By scrolling down you can see every single week. The table on the right lists the players' names and role and whether they have already placed an order. For computer players the policy is listed.
+
+Again, you find buttons to move the game to the next round and to send a message to a player you select in the table. When running more then one supply chain, please don't forget to move the other games to the next round (when doing it manually). Only in the 'watch all' window can you access all games.
+
+At the bottom of the window you find the live chart with which you can view the progression of the game.
+
+The following can be done using the chart:
+- You can select what is displayed in the chart: the cost, order or inventory progressions. 
+- By clicking on the colored boxes in front of the role names you can also deselect/reselect the roles whose data is shown in the table.
+- Also, by selecting a row (round) in the left table you can limit the chart to this particular week.
+
+At any time during the game play and especially after the game finished, you can access a game statistic by pressing 'show statistics', which will provide you with a table with the most important key indicators of the game.
+
+When the game is finished you can download the data produced by the players and save it in excel format using the corresponding button.</label>
+	</screen>
+	<screen name ="gui_players2game">
+		<label name="label_freePlayers">Pending players</label>
+		<label name="label_allGames">All games of this event</label>
+		<label name="btn_players2game_random">Assign players randomly</label>
+		<label name="btn_startGames">Start full games</label>
+		<label name="btn_addGame">Add empty game</label>
+		<label name="btn_addKIPlayer">Add computer player</label>
+		<label name="tree_games_full">Full / Ready to go</label>
+		<label name="tree_games_running">Running games</label>
+		<label name="tree_games_finished">Finished games</label>
+		<label name="tree_games_notfull">Games with spare places</label>
+		<label name="tree_game_prefix">Game</label>
+		<label name="tree_game_empty">empty</label>
+		<label name="help_main">In the left part of the window you will see the names of the players entering the game. On the right side you see the status of all games in this session.
+At the beginning this list is empty.
+
+The first thing to do is to add empty games. You need to add as many games as you have supply chains to be played in the session. Those games will show up under "Games with spare places". You can expand the tree and see the games and which supply chain positions are still empty.
+
+The next step is to assign players to the games, i.e. to the supply chain positions/roles. You can either choose to do it manually (e.g. in order for the virtual supply chain to correspond with the seating order in the class room or computer lab), or you can let the software assign players randomly.
+
+In order to assign a particular player to a supply chain role you need to select the player's name on the left and the role on the right and then press the transfer button in the middle. You can remove a player by selecting the name on the right and then pressing the delete button.
+
+Should you have spare places in one of the supply chains you can fill an empty seat with a computer player. This artificial player will play according to an order policy that can be selected when adding this player. Please note that this should only be used as an exception since automatic order policies can lead to unexpected results.
+
+After filling all games you need to start the games by pressing 'Start full games'. You should then go and watch the progression of the games by clicking on 'Watch all games' in the top level navigation of the beergame.
+	</label>
+	</screen>
+	<screen name ="gui_preferences">
+		<label name="title">Game settings</label>
+		<label name="header_startvalues">Initial values</label>
+		<label name="label_stock">Stock:</label>
+		<label name="label_inDel">Incoming Delivery:</label>
+		<label name="label_backorder">Backorder:</label>
+		<label name="label_inOrder">Incoming Order:</label>
+		<label name="header_shippings">Shipping Delay</label>
+		<label name="label_shippingDelay">Length (Rounds):</label>
+		<label name="label_shippingAmount">Amount:</label>
+		<label name="header_costs">Costs</label>
+		<label name="label_perStock">per unit on stock:</label>
+		<label name="label_perBack">per unit backorder:</label>
+		<label name="header_scLevels">Supply chain levels</label>
+		<label name="label_scLength">Length of supply chain:</label>
+		<label name="header_demamdChange">Customer demand</label>
+		<label name="btn_addDemChange">add</label>
+		<label name="btn_editDemChange">edit</label>
+		<label name="btn_delDemChange">delete</label>
+		<label name="btn_demChangeFolge">Row of numbers</label>
+		<label name="demChange_prefix">from round</label>
+		<label name="demChange_suffix">units</label>
+		<label name="header_nextRound">Game Rounds</label>
+		<label name="label_advToNextRound">Transition:</label>
+		<label name="combo_advToNextRound_1000">automatically</label>
+		<label name="combo_advToNextRound_2000">by administrator</label>
+		<label name="label_maxRounds">Max. Rounds:</label>
+		<label name="header_tracking">Information Sharing</label>
+		<label name="label_shippingsVisible">Shippings:</label>
+		<label name="combo_shippingsVisible_true">visible</label>
+		<label name="combo_shippingsVisible_false">not visible</label>
+		<label name="label_customerDemandVisible">Customer demand:</label>
+		<label name="combo_customerDemandVisible_true">visible</label>
+		<label name="combo_customerDemandVisible_false">not visible</label>
+		<label name="label_stocksVisible">Inventories:</label>
+		<label name="combo_stocksVisible_2000">visible</label>
+		<label name="combo_stocksVisible_1000">not visible</label>
+		<label name="combo_stocksVisible_3000">with backorder</label>
+		<label name="label_messagingVisible">Send messages:</label>
+		<label name="combo_messagingVisible_1000">admin only</label>
+		<label name="combo_messagingVisible_2000">admin and players</label>
+		<label name="btn_createEvent">Create Event</label>
+		<label name="btn_changePrefs">Apply changes</label>
+		<label name="btn_loadSettings">Load settings</label>
+		<label name="btn_saveSettings">Save settings</label>
+		<label name="help_startValues">The best choice here is to play with the standard option. Should you decide to change these values please be aware of the following:
+- The sizes of initial inventory and incoming orders and deliveries should somewhat correspond with each other.
+- Either backorder or inventory need to be zero. Players can only move into backorder once inventory is empty.
+
+The default values, which come with the game (inventory=15, incoming delivery=5, incoming order=5, backorder=0), ensure that first of all nothing much is happening in the first few rounds of play thus giving the players time to adjust.
+Second, an inventory of 15 seems rather high to most players at the beginning of play, which serves the additional purpose of getting the players to place some very small (or zero amount) orders early on, which contributes nicely to the creation of the bullwhip effect later in the game.
+		</label>
+		<label name="help_shippingDelay">The amount variable defines the initial value that each truck in the delay fields contains at the beginning of play. This figure should correspond with the rest of the initial values.
+
+By changing the shipping delay length you can influence the nature of the game and of the bullwhip effect. By changing the delay from a length of 2 to a length of 1 you effectively speed up deliveries (thus implementing a form of supply chain optimization). This will reduce uncertainty in the game and contribute to a less pronounced bullwhip effect. You can use this option in class when playing a second round of the game in which you demonstrate the value of supply chain changes (once people have experienced the bullwhipe effect using the standard setup).
+		</label>
+		<label name="help_costs">You can change these parameters (e.g. to experiment with different settings). It is however a good idea to stick with the initial value, when using the beergame in class.
+		</label>
+		<label name="help_scLevels">The normal length of the beergame supply chain is four (brewery, distributor, wholesaler, retailer). You can change the value to 3.
+		
+By selecting a length of 3 you eliminate the distributor. Thus, you can simulate the effect of supply chain redesign (bypassing).
+		</label>
+		<label name="help_advToNextRound">The standard number of rounds to be played is 40. This corresponds with the pre-initialized values of the game. Should you for example decide to increase the length of the supply chain or the delay, you would have to play longer for the bullwhip effect to have time to evolve.
+
+Please note: Do not tell the players at the beginning of the game how many rounds will be played. Otherwise they will start acting tactically (by reducing inventory/ceasing to order) once the end is near.
+
+You can change the number of rounds during the game (by returning to this window), e.g. in order to end the game earlier. You can also change the mode of transition between rounds.
+		</label>
+		<label name="help_restrictions">With these variables you can demonstrate the value of information sharing. 
+		
+Please note: You should always play one session using the standard beergame setup before changing these parameters. That way the players experience the bullwhip effect first and can then, in a second step, appreciate the value of information sharing.
+
+SHIPPINGS: By selecting 'visible' you allow players to see what is in the incoming deliveries (the trucks). This option implements tracking & tracing.
+
+CUSTOMER DEMAND: By selecting 'visible' you make available for all supply chain stages the current customer demand in each week (which normally is only known to the retailer). This option implements POS data sharing.
+
+INVENTORIES: By selecting 'visible' every player can see the inventory levels of the other supply chain stages. Should players hold backorder the inventory shows '0'. By selecting 'with backorder' you can also make available this information. In this case backorder is displayed as negative inventory. This option implements a form of extranet solution that gives access to ERP data.
+
+SEND MESSAGES: The standard option is that you as administrator can send and exchange messages with the players. You can however allow the players to exchange messages between them (within a supply chain), thus allowing them to collaborate. But be aware that this might slow down the game significantly.
+		</label>
+		<label name="help_customerDemand">The standard option is that the external demand stays constant (value of 5) for four rounds and then jumps up to 10, where it stays for the remainder of the game.
+
+You can introduce variations by either adding more jumps or by simply defining a row of numbers.
+
+Please note: You might want to change the customer demand when playing a second session for demonstrating the value of information sharing and supply chain optimization. A good idea is to fill in a row of numbers that oscillates around a low value (e.g. 5) and then jumps up to oscillate around a higher value (e.g. 10).
+
+Your demand configuration will always be visualized in the chart you see on the right hand side.
+		</label>
+		<label name="help_main">In this window you can select and change all parameters that define and influence the nature of the beergame that will be played during the session.
+
+All variables are pre-initialized with the values that resemble the original/classic version of the beergame.
+
+You can also save a configuration for later use or load pre-defined configurations or your own saved configurations.
+
+The following parameters can be modified (more detailed information on each set of variables can be found in the corresponding help texts):
+
+INITIAL VALUES: Decide on how the supply chain is pre-initialized with values when the game starts.
+
+COSTS: Decide on how much cost is incurred by holding stock or moving into backorder.
+
+SHIPPING DELAY: By manipulating the shipping delay you can directly influence the bullwhip effect. A shorter delay leads to a more immediate movement of goods, thus reducing uncertainty and the bullwhip effect.
+
+SUPPLY CHAIN LENGTH: You can increase or reduce the length of the supply chain. Hence, you can adjust the game to varying group sizes or you can demonstrate the effects of supply chain re-design (e.g. bypassing).
+
+INFORMATION SHARING: This block of parameters gives you the opportunity and freedom to demonstrate the effect that certain supply chain management and e-commerce measures have on the bullwhip effect.
+
+GAME ROUNDS: Decide on the number of rounds you intend to play. With respect to transition between rounds the software allows you to choose between an 'automatic' option where all running games are moved to the next round/week whenever all players have entered their orders. You can also choose to do it manually.
+
+CUSTOMER DEMAND: The customer demand is the key variable to induce the bullwhip effect to the game. You can either define one or more demand jumps or you can fill in a row of numbers that corresponds with the intended length of the game (number of rounds).
+
+
+Please note that even when the games are already running you can still access this window and make on-the-fly changes to the following parameters:
+
+GAME ROUNDS: You can change the number of rounds (for an earlier or later end of the game) and switch the way transitions are made. For example, it is a good idea to do the transition manually yourself in the beginning when people are still learning (and you might want to answer questions and make sure everybody understands the game) and then switch to automatic later to speed up the game.
+
+CUSTOMER DEMAND: Sometimes you might want to change the demand in later rounds to spice up the game a little (e.g. induce a second effect in longer games).
+		</label>
+	</screen>
+	<screen name ="gui_watchAllGames">
+		<label name="title">Watch all games</label>
+		<label name="legende">S: Stock, O: Order, C: Costs, X: Order placed</label>
+		<label name="legende_stock">S</label>
+		<label name="legende_order">O</label>
+		<label name="legende_costs">C</label>	
+		<label name="btn_gameDetails">Show game details</label>
+		<label name="btn_sendMessage">send message</label>
+		<label name="btn_nextRound">go to next round</label>
+		<label name="state_1000">not yet started</label>
+		<label name="state_2000">running</label>
+		<label name="state_3000">waiting for next round</label>
+		<label name="state_4000">finished</label>
+		<label name="column_game"	width="50">Game</label>
+		<label name="column_round"	width="30">Rd.</label>
+		<label name="column_state"	width="100">State</label>
+		<label name="help_main">In this window you see a table in which every row represents one game (one supply chain).
+		
+For every game the current round and its state (running/finished) is shown. For every player all current data is displayed (Stock, Order, Cost). An 'X' marks when a player has already placed an order in the current round.
+
+By selecting a game (a row) and pressing 'Show game details' you can access a window with all data for this game and a live view of the bullwhip progression.
+
+Should you have opted for a manual transition between rounds in the game setup, you need to manually move games to the next round by selecting a game and pressing 'go to next round'. Please remember that you can always change this by clicking on 'Change settings' in the top level navigation of the beergame (at the top of the beergame window).
+
+You can also send a message to the players in a supply chain by selecting the row in the table and pressing 'send message'.</label>
+	</screen>
+	<screen name ="popup_chat_senden">
+		<label name="title">Send Message</label>
+		<label name="label_receivers">Message recipients</label>
+		<label name="label_message">Message content</label>
+		<label name="label_desc">Here you can send a message to one or more players. 
+Selecting a game instead of a player will send the message to all players of the game.</label>
+		<label name="btn_markAll">select all</label>
+		<label name="btn_cancel">Close</label>
+		<label name="btn_send">Send</label>
+		<label name="label_numReceivers">Recipients selected</label>
+		<label name="help_main">This is the send message window. You can send messages to one or all players of a particular supply chain/game.</label>
+	</screen>
+	<screen name ="popup_chat_empfangen">
+		<label name="title">Messages</label>
+		<label name="label_message">Message content</label>
+		<label name="label_messages">Received messages</label>
+		<label name="btn_cancel">Close</label>
+		<label name="btn_reply">Reply</label>
+		<label name="column_name"	width="150">Name</label>
+		<label name="column_role"	width="150">Role</label>
+		<label name="column_date"	width="150">Date</label>
+		<label name="sender_admin">Administrator</label>
+		<label name="tree_pending">Pending Players</label>
+		<label name="tree_admin">Administrator</label>
+		<label name="help_main">This is your Inbox. You can select and read messages and you can reply to messages.</label>
+	</screen>
+	<screen name ="popup_credits">
+		<label name="label_title">Credits</label>
+		<label name="label_link">Credits</label>
+		<label name="btn_close">Close</label>
+		<label name="txt_credits">The Beergame, Version 1.2 (2009-06-15).
+		
+Software idea, concept and visual design by Kai Riemer.
+Software design and development by Florian Christ.
+
+This software is educationware!
+
+The software may be used free of charge in the context of higher education, e.g. in university teaching.
+The software may however not be used for commercial purposes (e.g. in management seminars), nor is it allowed to make the software available online (for either purpose).
+
+The distribution of the software is not allowed. The software can be accessed by contacting the developers through the beergame portal (www.beergame.org).
+Please respect these conditions.
+
+***** Tomcat License *****
+
+The Beergame facilitation software uses the Tomcat Web Server to create its server-client environment. Please note that Tomcat is copyrighted by the Apache Foundation.
+
+Copyright © 1999-2006, The Apache Software Foundation.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+		</label>
+	</screen>
+	<screen name ="link_website">
+		<label name="label">www.beergame.org</label>
+		<label name="url">http://www.beergame.org</label>
+	</screen>
+</screens>

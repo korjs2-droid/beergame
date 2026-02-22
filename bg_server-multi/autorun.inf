@@ -1,0 +1,4 @@
+[autorun]
+open="Beergame_Server_START.bat"
+action=Beergame Server starten
+icon="tomcat/webapps/BeergameProject/beergame/beergame.ico"

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><preferences>
+<name>1st round - without info sharing</name>
+<description>This configuration (without information sharing) should be played in a 1st round to let players experience typical supply chain coordination problems.</description>
+<supplyChainLevels>4</supplyChainLevels>
+<customerDemandChanges>
+<change round="0">5</change>
+<change round="4">10</change>
+</customerDemandChanges>
+<initialShippingIncomingDeliveries>
+<shipping id="0">5</shipping>
+<shipping id="1">5</shipping>
+</initialShippingIncomingDeliveries>
+<advanceToNextRoundStyle>1000</advanceToNextRoundStyle>
+<maxRoundsPerGame>40</maxRoundsPerGame>
+<costsPerUnitOnStack>0.5</costsPerUnitOnStack>
+<costsPerUnitNotDelivered>1</costsPerUnitNotDelivered>
+<initialStockBeforeRound>15</initialStockBeforeRound>
+<initialBackorderBeforeRound>0</initialBackorderBeforeRound>
+<initialIncomingOrder>5</initialIncomingOrder>
+<initialIncomingDelivery>5</initialIncomingDelivery>
+<shippingsVisible>false</shippingsVisible>
+<customerDemandVisible>false</customerDemandVisible>
+<messagingVisible>1000</messagingVisible>
+<stocksVisible>1000</stocksVisible>
+</preferences>

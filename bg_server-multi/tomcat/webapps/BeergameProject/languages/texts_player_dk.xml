@@ -1,0 +1,179 @@
+<screens>
+	<screen name="scLevels">
+		<label name="computerplayer_short">CPU</label>
+		
+		<label name="level_3_0">Bryggeri</label>
+		<label name="level_3_1">Grossist</label>
+		<label name="level_3_2">Detailhandler</label>
+		
+		<label name="level_4_0">Bryggeri</label>
+		<label name="level_4_1">Distributør</label>
+		<label name="level_4_2">Grossist</label>
+		<label name="level_4_3">Detailhandler</label>
+		
+		<label name="level_5_0">Bryggeri</label>
+		<label name="level_5_1">Distributør</label>
+		<label name="level_5_2">Regionsdistributør</label>
+		<label name="level_5_3">Grossist</label>
+		<label name="level_5_4">Retailer</label>
+	</screen>
+	<screen name="navigation">
+		<label name="label_language">Danish:</label>
+		<label name="label_youGotMail">Du har fået post!</label>
+		<label name="label_headline">The Beergame</label>
+	</screen>
+	<screen name="popup_confirmOrder">
+		<label name="title">Tak for din bestilling!</label>
+		<label name="order">Din ordre:</label>
+		<label name="description">Den næste runde begynder når alle spillere har afgivet deres bestillinger...
+
+Du kan ændre på din bestilling så længe denne runde stadig er i gang</label>
+		<label name="btn_undo">tilpas</label>
+	</screen>
+	<screen name="popup_nextRound">
+		<label name="description">Den næste skal til at begynde...</label>
+		<label name="btn_ok">Godt så...</label>
+	</screen>
+	<screen name="popup_sentSuccessfully">
+		<label name="label_desc">Din besked er sendt.</label>
+		<label name="btn_ok">OK</label>
+	</screen>
+	<screen name="miniSC">
+		<label name="role">Din rolle:</label>
+		<label name="stock">Lager:</label>
+		<label name="shippings">Leverancer:</label>
+	</screen>
+	<screen name="gui_game">
+		<label name="round">Uge</label>
+		<label name="label_view">Vis:</label>
+		<label name="combo_view_animation">Animation</label>
+		<label name="combo_view_table">Tabel</label>
+	</screen>
+	<screen name="gui_chooseEvent">
+		<label name="title">Vælg begivenhed</label>
+		<label name="label_name">Dit navn:</label>
+		<label name="label_mail">Din e-mailadresse:</label>
+		<label name="label_event">Begivenhed:</label>
+		<label name="btn_chooseEvent">Gå til begivenhed</label>
+		<label name="pleaseSelect">--- Vælg ---</label>
+		<label name="label_nameError">Indtast dit navn og e-mailadresse!</label>
+		<label name="label_eventError">Vælg en begivenhed!</label>
+	</screen>
+	<screen name="gui_afterGame">
+		<label name="label_title">Tak fordi du spillede Beer Game!</label>
+		<label name="chart_customer">Kunde</label>
+		<label name="label_desc">Diagrammet nedenfor viser en oversigt over alle spilleres bestillinger. Dette viser intensiteten af bullwhip-effekten spillet. 
+		
+Du kan skjule linjer i diagrammet ved at klikke på de små bokse ved siden af linjeoverskrifterne.</label>
+	</screen>
+	<screen name="gui_preGame">
+		<label name="message">Spillet begynder om et øjeblik. 
+Vent venligst...</label>
+	</screen>
+	<screen name="game_animated">
+		<label name="label_inOrder">Modtag 
+bestillinger</label>
+		<label name="label_outOrder">Mine 
+bestillinger</label>
+		<label name="label_stock">Lager</label>
+		<label name="label_openOrders">Åbne 
+bestillinger</label>
+		<label name="label_inDel">Modtag 
+leverancer</label>
+		<label name="label_outDel">Levér 
+varer</label>
+		<label name="label_shippingDelay">Forsinkelse 
+i leverancer</label>
+		<label name="label_productionDelay">Produktion</label>
+		<label name="label_productionRequest">Produktions-
+anmodning</label>
+		<label name="label_costs">Totale 
+omkostninger</label>
+		<label name="label_mail">Post</label>
+		<label name="btn_replay">igen</label>
+		<label name="btn_fafo">spring over</label>
+		<label name="btn_placeOrder">OK</label>
+	</screen>
+	<screen name="game_table">
+		<label name="label_placeOrder">Din bestilling:</label>
+		<label name="btn_placeOrder">OK</label>
+		<label name="pleaseOrder">Afgiv en bestilling</label>
+		<label name="column_round" 							width="50">Runde</label>
+		<label name="column_shippingIncomingDeliveries" 	width="65">Levering</label>
+		<label name="column_incomingDelivery" 				width="115">Indgående levering</label>
+		<label name="column_available" 						width="65">Tilgængelig</label>
+		<label name="column_incomingOrder" 					width="100">Indgående bestilling</label>
+		<label name="column_outgoingDelivery" 				width="115">Udgående leverance</label>
+		<label name="column_backorderAfterRound" 			width="90">Åbne bestillinger</label>
+		<label name="column_stockAfterRound" 				width="60">Lager</label>
+		<label name="column_roundCosts" 					width="50">Omkostninger</label>
+		<label name="column_outgoingOrder" 					width="100">Mine bestillinger</label>
+		<label name="column_customerDemand" 				width="115">Kundeefterspørgsel</label>
+	</screen>
+	<screen name="popup_chat_senden">
+		<label name="title">Send besked</label>
+		<label name="label_receivers">Modtager</label>
+		<label name="label_message">Indhold</label>
+		<label name="label_desc">Her kan du sende en besked til administratoren eller (hvis tilladt) en eller flere af de andre spillere.</label>
+		<label name="btn_markAll">vælg alle</label>
+		<label name="btn_cancel">Luk</label>
+		<label name="btn_send">Send</label>
+		<label name="label_numReceivers">Valgte modtagere</label>
+	</screen>
+	<screen name="popup_chat_empfangen">
+		<label name="title">Beskeder</label>
+		<label name="label_message">Beskedindhold</label>
+		<label name="label_messages">Modtagede beskeder</label>
+		<label name="btn_cancel">Luk</label>
+		<label name="btn_reply">Gentag</label>
+		<label name="btn_sendmail">Ny besked</label>
+		<label name="column_name" width="150">Navn</label>
+		<label name="column_role" width="150">Rolle</label>
+		<label name="column_date" width="150">Dato</label>
+		<label name="sender_admin">Administrator</label>
+		<label name="tree_pending">Ventende spillere</label>
+		<label name="tree_admin">Administrator</label>
+	</screen>
+	<screen name="popup_credits">
+	<label name="label_title">Rulletekster</label>
+	<label name="label_link">Rulletekster</label>
+	<label name="btn_close">Luk</label>
+	<label name="txt_credits">The Beergame, Version 1.2 (2009-06-15). 
+	
+Programide, koncept og visuelt design af Kai Riemer. 
+Programdesign and udvikling af Florian Christ.  
+
+Dette program er educationware!  
+
+Programmet må benyttes uden betaling på højere uddannelser, f.eks universitetsundervisning. 
+Programmet må ikke bruges til kommercielle formål, f.eks. ledelseskurser. Det er heller ikke tilladt at gøre programmet tilgængeligt online. 
+
+Distribution af programmet er ikke tilladt. Programmet kan erhverves ved henvendelse til udviklerne. 
+
+Respektér venligst disse betingelser.</label>
+	</screen>
+	<screen name="popup_help">
+		<label name="label_title">Hjælp</label>
+		<label name="label_link">Hjælp</label>
+		<label name="btn_close">Luk</label>
+		<label name="txt_help">VELKOMMEN TIL THE BEERGAME!  
+		
+På skærmen kan du se hovedvinduet (i baggrunden) med spilvinduet i forgrunden. 
+
+SPILVINDUET: 
+- I midten af hovedvinduet finder du spillepladen. I øverste del finder du data om den spillerunde, der er i gang. I den nederste del finder du alle de opsummerede data (totale omkostninger, lager, restordre). 
+- Opdateringen af data er visualiseret med animationer. Du kan springe animationerne over ved at trykke 'spring over'. 
+- Når animationen er færdig, kan du afgive din bestilling. Når du trykker på ”ok” går spillet videre. Så længe der er spillere, der ikke har afgivet deres bestillinger, kan du vende tilbage til spillepladen og ændre din bestilling. 
+- I det øverste venstre hjørne vises den igangværende uge/runde. 
+- I midten over din spilleplade kan du se en visualisering af hele forsyningskæden. Din position er fremhævet, og din rolle er vist. I en opsætning af Beergame med informationsdeling slået til kan du holde markøren over forsyningskæden for at få forskellige informationer om de andre spillere. 
+- I det øverste højre hjørne kan du skifte mellem den beskrevne animationstilstand og tabeltilstand, hvor du ser alle data (også historiske) i en tabel.  
+
+HOVEDVINDUET (BAGGRUND): 
+- I det øverste venstre hjørne kan du finde dit beskedcenter, hvor du kan sende beskeder til administratoren (f.eks. for at spørge om hjælp). 
+- I det øverste højre hjørne kan du skifte sprog. 
+- I det nederste venstre hjørne kan du læse rulletekster. 
+- Linket i det nederste højre hjørne har du allerede bruget, ellers ville du ikke se denne tekst ;-) 
+
+GOD FORNØJELSE MED SPILLET!</label>
+	</screen>
+</screens>

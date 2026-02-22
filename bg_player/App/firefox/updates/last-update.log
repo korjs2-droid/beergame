@@ -1,0 +1,2489 @@
+PREPARE ADD .autoreg
+PREPARE ADD AccessibleMarshal.dll
+PREPARE ADD browserconfig.properties
+PREPARE ADD chrome/browser.jar
+PREPARE ADD chrome/browser.manifest
+PREPARE ADD chrome/classic.jar
+PREPARE ADD chrome/classic.manifest
+PREPARE ADD chrome/comm.jar
+PREPARE ADD chrome/comm.manifest
+PREPARE ADD chrome/en-US.jar
+PREPARE ADD chrome/en-US.manifest
+PREPARE ADD chrome/pippki.jar
+PREPARE ADD chrome/pippki.manifest
+PREPARE ADD chrome/reporter.jar
+PREPARE ADD chrome/reporter.manifest
+PREPARE ADD chrome/toolkit.jar
+PREPARE ADD chrome/toolkit.manifest
+PREPARE ADD components/browser.xpt
+PREPARE ADD components/FeedConverter.js
+PREPARE ADD components/FeedProcessor.js
+PREPARE ADD components/FeedWriter.js
+PREPARE ADD components/jar50.dll
+PREPARE ADD components/jsconsole-clhandler.js
+PREPARE ADD components/jsd3250.dll
+PREPARE ADD components/myspell.dll
+PREPARE ADD components/nsBookmarkTransactionManager.js
+PREPARE ADD components/nsBrowserContentHandler.js
+PREPARE ADD components/nsBrowserGlue.js
+PREPARE ADD components/nsCloseAllWindows.js
+PREPARE ADD components/nsDefaultCLH.js
+PREPARE ADD components/nsDictionary.js
+PREPARE ADD components/nsExtensionManager.js
+PREPARE ADD components/nsHelperAppDlg.js
+PREPARE ADD components/nsMicrosummaryService.js
+PREPARE ADD components/nsPostUpdateWin.js
+PREPARE ADD components/nsProxyAutoConfig.js
+PREPARE ADD components/nsSafebrowsingApplication.js
+PREPARE ADD components/nsSearchService.js
+PREPARE ADD components/nsSearchSuggestions.js
+PREPARE ADD components/nsSessionStartup.js
+PREPARE ADD components/nsSessionStore.js
+PREPARE ADD components/nsSetDefaultBrowser.js
+PREPARE ADD components/nsSidebar.js
+PREPARE ADD components/nsUpdateService.js
+PREPARE ADD components/nsUrlClassifierLib.js
+PREPARE ADD components/nsUrlClassifierListManager.js
+PREPARE ADD components/nsUrlClassifierTable.js
+PREPARE ADD components/nsURLFormatter.js
+PREPARE ADD components/nsXmlRpcClient.js
+PREPARE ADD components/spellchk.dll
+PREPARE ADD components/WebContentConverter.js
+PREPARE ADD components/xpinstal.dll
+PREPARE ADD defaults/autoconfig/platform.js
+PREPARE ADD defaults/autoconfig/prefcalls.js
+PREPARE ADD defaults/pref/firefox-branding.js
+PREPARE ADD defaults/pref/firefox-l10n.js
+PREPARE ADD defaults/pref/firefox.js
+PREPARE ADD defaults/pref/reporter.js
+PREPARE ADD defaults/profile/bookmarks.html
+PREPARE ADD defaults/profile/chrome/userChrome-example.css
+PREPARE ADD defaults/profile/chrome/userContent-example.css
+PREPARE ADD defaults/profile/localstore.rdf
+PREPARE ADD defaults/profile/mimeTypes.rdf
+PREPARE ADD defaults/profile/prefs.js
+PREPARE ADD defaults/profile/search.rdf
+PREPARE ADD dictionaries/en-US.aff
+PREPARE ADD dictionaries/en-US.dic
+PREPARE ADD extensions/inspector@mozilla.org/chrome/icons/default/winInspectorMain.ico
+PREPARE ADD extensions/inspector@mozilla.org/chrome/inspector.jar
+PREPARE ADD extensions/inspector@mozilla.org/chrome.manifest
+PREPARE ADD extensions/inspector@mozilla.org/components/inspector-cmdline.js
+PREPARE ADD extensions/inspector@mozilla.org/defaults/preferences/inspector.js
+PREPARE ADD extensions/inspector@mozilla.org/install.rdf
+PREPARE ADD extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/install.rdf
+PREPARE ADD firefox.exe
+PREPARE ADD freebl3.chk
+PREPARE ADD freebl3.dll
+PREPARE ADD greprefs/all.js
+PREPARE ADD greprefs/security-prefs.js
+PREPARE ADD greprefs/xpinstall.js
+PREPARE ADD js3250.dll
+PREPARE ADD LICENSE
+PREPARE ADD nspr4.dll
+PREPARE ADD nss3.dll
+PREPARE ADD nssckbi.dll
+PREPARE ADD old-homepage-default.properties
+PREPARE ADD plc4.dll
+PREPARE ADD plds4.dll
+PREPARE ADD plugins/npnul32.dll
+PREPARE ADD README.txt
+PREPARE ADD removed-files
+PREPARE ADD res/arrow.gif
+PREPARE ADD res/arrowd.gif
+PREPARE ADD res/broken-image.gif
+PREPARE ADD res/charsetalias.properties
+PREPARE ADD res/charsetData.properties
+PREPARE ADD res/cmessage.txt
+PREPARE ADD res/dtd/mathml.dtd
+PREPARE ADD res/dtd/xhtml11.dtd
+PREPARE ADD res/EditorOverride.css
+PREPARE ADD res/entityTables/html40Latin1.properties
+PREPARE ADD res/entityTables/html40Special.properties
+PREPARE ADD res/entityTables/html40Symbols.properties
+PREPARE ADD res/entityTables/htmlEntityVersions.properties
+PREPARE ADD res/entityTables/mathml20.properties
+PREPARE ADD res/entityTables/transliterate.properties
+PREPARE ADD res/fonts/fontEncoding.properties
+PREPARE ADD res/fonts/fontNameMap.properties
+PREPARE ADD res/fonts/mathfont.properties
+PREPARE ADD res/fonts/mathfontCMEX10.properties
+PREPARE ADD res/fonts/mathfontCMSY10.properties
+PREPARE ADD res/fonts/mathfontMath1.properties
+PREPARE ADD res/fonts/mathfontMath2.properties
+PREPARE ADD res/fonts/mathfontMath4.properties
+PREPARE ADD res/fonts/mathfontMTExtra.properties
+PREPARE ADD res/fonts/mathfontPUA.properties
+PREPARE ADD res/fonts/mathfontSymbol.properties
+PREPARE ADD res/forms.css
+PREPARE ADD res/grabber.gif
+PREPARE ADD res/hiddenWindow.html
+PREPARE ADD res/html/gopher-audio.gif
+PREPARE ADD res/html/gopher-binary.gif
+PREPARE ADD res/html/gopher-find.gif
+PREPARE ADD res/html/gopher-image.gif
+PREPARE ADD res/html/gopher-menu.gif
+PREPARE ADD res/html/gopher-movie.gif
+PREPARE ADD res/html/gopher-sound.gif
+PREPARE ADD res/html/gopher-telnet.gif
+PREPARE ADD res/html/gopher-text.gif
+PREPARE ADD res/html/gopher-unknown.gif
+PREPARE ADD res/html.css
+PREPARE ADD res/langGroups.properties
+PREPARE ADD res/language.properties
+PREPARE ADD res/loading-image.gif
+PREPARE ADD res/mathml.css
+PREPARE ADD res/quirk.css
+PREPARE ADD res/svg.css
+PREPARE ADD res/table-add-column-after-active.gif
+PREPARE ADD res/table-add-column-after-hover.gif
+PREPARE ADD res/table-add-column-after.gif
+PREPARE ADD res/table-add-column-before-active.gif
+PREPARE ADD res/table-add-column-before-hover.gif
+PREPARE ADD res/table-add-column-before.gif
+PREPARE ADD res/table-add-row-after-active.gif
+PREPARE ADD res/table-add-row-after-hover.gif
+PREPARE ADD res/table-add-row-after.gif
+PREPARE ADD res/table-add-row-before-active.gif
+PREPARE ADD res/table-add-row-before-hover.gif
+PREPARE ADD res/table-add-row-before.gif
+PREPARE ADD res/table-remove-column-active.gif
+PREPARE ADD res/table-remove-column-hover.gif
+PREPARE ADD res/table-remove-column.gif
+PREPARE ADD res/table-remove-row-active.gif
+PREPARE ADD res/table-remove-row-hover.gif
+PREPARE ADD res/table-remove-row.gif
+PREPARE ADD res/ua.css
+PREPARE ADD res/viewsource.css
+PREPARE ADD res/wincharset.properties
+PREPARE ADD searchplugins/amazondotcom.xml
+PREPARE ADD searchplugins/answers.xml
+PREPARE ADD searchplugins/creativecommons.xml
+PREPARE ADD searchplugins/eBay.xml
+PREPARE ADD searchplugins/google.xml
+PREPARE ADD searchplugins/yahoo.xml
+PREPARE ADD smime3.dll
+PREPARE ADD softokn3.chk
+PREPARE ADD softokn3.dll
+PREPARE ADD ssl3.dll
+PREPARE ADD uninstall/helper.exe
+PREPARE ADD updater.exe
+PREPARE ADD updater.ini
+PREPARE ADD xpcom.dll
+PREPARE ADD xpcom_compat.dll
+PREPARE ADD xpcom_core.dll
+PREPARE ADD xpicleanup.exe
+PREPARE ADD xpistub.dll
+PREPARE REMOVE chrome/US.jar
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE chrome/en-win.jar
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE chrome/help.jar
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE chrome/chrome.rdf
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE chrome/installed-chrome.txt
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE chrome/app-chrome.manifest
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE chrome/m3ffxtbr.manifest
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE chrome/m3ffxtbr.jar
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE defaults/existing-profile-defaults.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE defaults/pref/all.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE defaults/pref/security-prefs.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE defaults/pref/winpref.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE defaults/pref/xpinstall.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE defaults/pref/bug307259.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE defaults/pref/bug259708.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE defaults/profile/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/install.rdf
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE defaults/profile/extensions/Extensions.rdf
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE defaults/profile/extensions/installed-extensions.txt
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE extensions/{641d8d09-7dda-4850-8228-ac0ab65e2ac9}/install.rdf
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/dictionary.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/dictionary.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/amazondotcom.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/amazondotcom.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/creativecommons.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/creativecommons.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/answers.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/answers.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/component.reg
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/compreg.dat
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/xpti.dat
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/xptitemp.dat
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/nsBackgroundUpdateService.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/autocomplete.xpt
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE zlib.dll
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/BrandRes.dll
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/fullsoft.dll
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/master.ini
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/qfaservices.dll
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/qfaservices.xpt
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/talkback-l10n.ini
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/talkback.cnt
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/talkback.exe
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/talkback.hlp
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/libqfaservices.so
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/talkback/master.ini
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/talkback/talkback
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/talkback/talkback.so
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/talkback/XTalkback.ad
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE extensions/reporter@mozilla.org/install.rdf
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE extensions/reporter@mozilla.org/chrome.manifest
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE extensions/reporter@mozilla.org/chrome/reporter.jar
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE extensions/reporter@mozilla.org/defaults/preferences/reporter.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE extensions/inspector@mozilla.org/components/inspector.xpt
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE extensions/inspector@mozilla.org/components/inspector.dll
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE uninstall/UninstallFirefox.exe
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE uninstall/UninstallDeerPark.exe
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE uninstall/uninst.exe
+PREPARE REMOVE uninstall/uninstall.exe
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/myspell/en-US.dic
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/myspell/en-US.aff
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE Microsoft.VC80.CRT.manifest
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE msvcm80.dll
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE msvcp80.dll
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE msvcr80.dll
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/DRAE.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/DRAE.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/DRAE.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/MediaDICO-fr.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/MediaDICO-fr.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/MediaDICO-fr.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/allegro-pl.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/allegro-pl.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/allegro-pl.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/amazon-de.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/amazon-de.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/amazon-de.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/amazon-en-GB.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/amazon-en-GB.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/amazon-en-GB.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/amazon-france.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/amazon-france.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/amazon-france.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/amazon-jp.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/amazon-jp.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/amazon-jp.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/amazondotcom.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/amazondotcom.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/amazondotcom.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/amazondotcom-zh-TW.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/amazondotcom-zh-TW.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/amazondotcom-zh-TW.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/answers.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/answers.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/answers.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-es-ES.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-es-ES.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-es-ES.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/atlas-sk.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/atlas-sk.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/atlas-sk.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/baidu.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/baidu.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/baidu.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/bok-NO.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/bok-NO.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/bok-NO.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/bolcom-nl.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/bolcom-nl.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/bolcom-nl.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/bookplus-fi.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/bookplus-fi.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/bookplus-fi.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/caplex-NO.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/caplex-NO.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/caplex-NO.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/centrum-cz.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/centrum-cz.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/centrum-cz.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/creativecommons.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/creativecommons.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/creativecommons.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/creativecommons-fi.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/creativecommons-fi.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/creativecommons-fi.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/creativecommons-it.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/creativecommons-it.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/creativecommons-it.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/creativecommons-zh-TW.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/creativecommons-zh-TW.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/creativecommons-zh-TW.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/daum-ko.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/daum-ko.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/daum-ko.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/demauro-it.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/demauro-it.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/demauro-it.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/dictionary-en-GB.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/dictionary-en-GB.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/dictionary-en-GB.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/dunaj-sk.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/dunaj-sk.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/dunaj-sk.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-de.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-de.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-de.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-en-GB.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-en-GB.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-en-GB.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-france.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-france.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-france.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-gu.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-gu.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-gu.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-nl.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-nl.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-nl.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-zh-CN.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-zh-CN.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-zh-CN.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-zh-TW.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-zh-TW.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/eBay-zh-TW.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/ebay-it.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/ebay-it.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/ebay-it.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/filesearchru.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/filesearchru.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/filesearchru.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/goo.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/goo.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/goo.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-NO.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-NO.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-NO.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-ar.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-ar.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-ar.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-bg.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-bg.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-bg.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-ca.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-ca.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-ca.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-de.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-de.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-de.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-dk.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-dk.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-dk.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-en-GB.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-en-GB.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-en-GB.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-eu.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-eu.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-eu.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-fi.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-fi.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-fi.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-gu.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-gu.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-gu.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-it.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-it.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-it.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-jp.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-jp.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-jp.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-ko.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-ko.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-ko.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-lt.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-lt.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-lt.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-nl.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-nl.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-nl.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-pl.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-pl.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-pl.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-ro.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-ro.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-ro.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-ru.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-ru.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-ru.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-sl.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-sl.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-sl.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-zh-TW.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-zh-TW.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-zh-TW.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/grandiccionari.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/grandiccionari.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/grandiccionari.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/huuto-fi.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/huuto-fi.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/huuto-fi.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/jyxo-cz.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/jyxo-cz.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/jyxo-cz.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/lingvo.yandex.ru.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/lingvo.yandex.ru.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/lingvo.yandex.ru.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/llibres.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/llibres.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/llibres.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/mall-cz.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/mall-cz.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/mall-cz.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/mercadolivre-com-br.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/mercadolivre-com-br.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/mercadolivre-com-br.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/merlin-pl.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/merlin-pl.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/merlin-pl.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/najdi-si.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/najdi-si.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/najdi-si.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/naver-ko.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/naver-ko.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/naver-ko.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/nosaltres.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/nosaltres.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/nosaltres.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/pbi-pl.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/pbi-pl.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/pbi-pl.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/pbi-pl.xml
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-pt-BR.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-pt-BR.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-pt-BR.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/priceru.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/priceru.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/priceru.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/pwn-pl.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/pwn-pl.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/pwn-pl.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/qxl-NO.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/qxl-NO.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/qxl-NO.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/rakuten.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/rakuten.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/rakuten.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/seznam-cz.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/seznam-cz.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/seznam-cz.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/sigov-gov-si.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/sigov-gov-si.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/sigov-gov-si.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/slunecnice-cz.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/slunecnice-cz.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/slunecnice-cz.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/submarino-com-br.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/submarino-com-br.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/submarino-com-br.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/taobao.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/taobao.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/taobao.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/telefonkatalogen-NO.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/telefonkatalogen-NO.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/telefonkatalogen-NO.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/universal-pt.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/universal-pt.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/universal-pt.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/vandale-nl.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/vandale-nl.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/vandale-nl.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/walla_sites.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/walla_sites.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/walla_sites.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-bg.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-bg.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-bg.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-ca.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-ca.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-ca.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-de.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-de.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-de.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-es-ES.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-es-ES.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-es-ES.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-eu.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-eu.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-eu.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-fi.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-fi.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-fi.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-fr.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-fr.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-fr.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-fy.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-fy.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-fy.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-he.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-he.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-he.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-it.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-it.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-it.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-lt.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-lt.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-lt.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-nl.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-nl.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-nl.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-pl.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-pl.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-pl.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-ru.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-ru.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-ru.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-sk.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-sk.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wikipedia-sk.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wp-pl.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wp-pl.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/wp-pl.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-NO.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-NO.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-NO.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-ar.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-ar.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-ar.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-ca.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-ca.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-ca.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-cn.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-cn.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-cn.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-de.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-de.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-de.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-dk.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-dk.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-dk.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-en-GB.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-en-GB.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-en-GB.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-es-ES.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-es-ES.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-es-ES.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-fi.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-fi.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-fi.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-france.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-france.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-france.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-gu.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-gu.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-gu.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-it.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-it.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-it.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-jp.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-jp.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-jp.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-jp-auctions.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-jp-auctions.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-jp-auctions.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-jp-shopping.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-jp-shopping.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-jp-shopping.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-kr.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-kr.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-kr.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-nl.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-nl.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-nl.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-ga-IE.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-ga-IE.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/google-ga-IE.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-pt-BR.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-pt-BR.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-pt-BR.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-tw.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-tw.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yahoo-tw.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yandex.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yandex.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/yandex.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/zoznam-sk.src
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/zoznam-sk.png
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE searchplugins/zoznam-sk.gif
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/sidebar.xpt
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/xmlextras.xpt
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE application.ini
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE blocklist.xml
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE crashreporter-override.ini
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE crashreporter.exe
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE crashreporter.ini
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE mozcrt19.dll
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE nssdbm3.dll
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE nssutil3.dll
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE platform.ini
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE sqlite3.dll
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE xul.dll
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/aboutrobots.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/browserdirprovider.dll
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/brwsrcmp.dll
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/fuelapplication.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/nsaddonrepository.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/nsblocklistservice.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/nscontentdispatchchooser.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/nscontentprefservice.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/nsdownloadmanagerui.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/nshandlerservice.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/nslivemarkservice.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/nslogininfo.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/nsloginmanager.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/nsloginmanagerprompter.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/nsplacestransactionsservice.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/nstaggingservice.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/nstrytoclose.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/nswebhandlerapp.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/pluginglue.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/storage-legacy.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE components/txexsltregexfunctions.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE modules/debug.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE modules/distribution.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE modules/downloadutils.jsm
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE modules/iso8601dateutils.jsm
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE modules/json.jsm
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE modules/microformats.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE modules/pluralform.jsm
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE modules/utils.js
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE modules/xpcomutils.jsm
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE res/contenteditable.css
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE res/designmode.css
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE res/fonts/mathfontstandardsymbolsl.properties
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE res/fonts/mathfontstixnonunicode.properties
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE res/fonts/mathfontstixsize1.properties
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE res/fonts/mathfontunicode.properties
+file cannot be removed because it does not exist; skipping
+PREPARE REMOVE res/html/folder.png
+file cannot be removed because it does not exist; skipping
+EXECUTE ADD .autoreg
+EXECUTE ADD AccessibleMarshal.dll
+EXECUTE ADD browserconfig.properties
+EXECUTE ADD chrome/browser.jar
+EXECUTE ADD chrome/browser.manifest
+EXECUTE ADD chrome/classic.jar
+EXECUTE ADD chrome/classic.manifest
+EXECUTE ADD chrome/comm.jar
+EXECUTE ADD chrome/comm.manifest
+EXECUTE ADD chrome/en-US.jar
+EXECUTE ADD chrome/en-US.manifest
+EXECUTE ADD chrome/pippki.jar
+EXECUTE ADD chrome/pippki.manifest
+EXECUTE ADD chrome/reporter.jar
+EXECUTE ADD chrome/reporter.manifest
+EXECUTE ADD chrome/toolkit.jar
+EXECUTE ADD chrome/toolkit.manifest
+EXECUTE ADD components/browser.xpt
+EXECUTE ADD components/FeedConverter.js
+EXECUTE ADD components/FeedProcessor.js
+EXECUTE ADD components/FeedWriter.js
+EXECUTE ADD components/jar50.dll
+EXECUTE ADD components/jsconsole-clhandler.js
+EXECUTE ADD components/jsd3250.dll
+EXECUTE ADD components/myspell.dll
+EXECUTE ADD components/nsBookmarkTransactionManager.js
+EXECUTE ADD components/nsBrowserContentHandler.js
+EXECUTE ADD components/nsBrowserGlue.js
+EXECUTE ADD components/nsCloseAllWindows.js
+EXECUTE ADD components/nsDefaultCLH.js
+EXECUTE ADD components/nsDictionary.js
+EXECUTE ADD components/nsExtensionManager.js
+EXECUTE ADD components/nsHelperAppDlg.js
+EXECUTE ADD components/nsMicrosummaryService.js
+EXECUTE ADD components/nsPostUpdateWin.js
+EXECUTE ADD components/nsProxyAutoConfig.js
+EXECUTE ADD components/nsSafebrowsingApplication.js
+EXECUTE ADD components/nsSearchService.js
+EXECUTE ADD components/nsSearchSuggestions.js
+EXECUTE ADD components/nsSessionStartup.js
+EXECUTE ADD components/nsSessionStore.js
+EXECUTE ADD components/nsSetDefaultBrowser.js
+EXECUTE ADD components/nsSidebar.js
+EXECUTE ADD components/nsUpdateService.js
+EXECUTE ADD components/nsUrlClassifierLib.js
+EXECUTE ADD components/nsUrlClassifierListManager.js
+EXECUTE ADD components/nsUrlClassifierTable.js
+EXECUTE ADD components/nsURLFormatter.js
+EXECUTE ADD components/nsXmlRpcClient.js
+EXECUTE ADD components/spellchk.dll
+EXECUTE ADD components/WebContentConverter.js
+EXECUTE ADD components/xpinstal.dll
+EXECUTE ADD defaults/autoconfig/platform.js
+EXECUTE ADD defaults/autoconfig/prefcalls.js
+EXECUTE ADD defaults/pref/firefox-branding.js
+EXECUTE ADD defaults/pref/firefox-l10n.js
+EXECUTE ADD defaults/pref/firefox.js
+EXECUTE ADD defaults/pref/reporter.js
+EXECUTE ADD defaults/profile/bookmarks.html
+EXECUTE ADD defaults/profile/chrome/userChrome-example.css
+EXECUTE ADD defaults/profile/chrome/userContent-example.css
+EXECUTE ADD defaults/profile/localstore.rdf
+EXECUTE ADD defaults/profile/mimeTypes.rdf
+EXECUTE ADD defaults/profile/prefs.js
+EXECUTE ADD defaults/profile/search.rdf
+EXECUTE ADD dictionaries/en-US.aff
+EXECUTE ADD dictionaries/en-US.dic
+EXECUTE ADD extensions/inspector@mozilla.org/chrome/icons/default/winInspectorMain.ico
+EXECUTE ADD extensions/inspector@mozilla.org/chrome/inspector.jar
+EXECUTE ADD extensions/inspector@mozilla.org/chrome.manifest
+EXECUTE ADD extensions/inspector@mozilla.org/components/inspector-cmdline.js
+EXECUTE ADD extensions/inspector@mozilla.org/defaults/preferences/inspector.js
+EXECUTE ADD extensions/inspector@mozilla.org/install.rdf
+EXECUTE ADD extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/install.rdf
+EXECUTE ADD firefox.exe
+EXECUTE ADD freebl3.chk
+EXECUTE ADD freebl3.dll
+EXECUTE ADD greprefs/all.js
+EXECUTE ADD greprefs/security-prefs.js
+EXECUTE ADD greprefs/xpinstall.js
+EXECUTE ADD js3250.dll
+EXECUTE ADD LICENSE
+EXECUTE ADD nspr4.dll
+EXECUTE ADD nss3.dll
+EXECUTE ADD nssckbi.dll
+EXECUTE ADD old-homepage-default.properties
+EXECUTE ADD plc4.dll
+EXECUTE ADD plds4.dll
+EXECUTE ADD plugins/npnul32.dll
+EXECUTE ADD README.txt
+EXECUTE ADD removed-files
+EXECUTE ADD res/arrow.gif
+EXECUTE ADD res/arrowd.gif
+EXECUTE ADD res/broken-image.gif
+EXECUTE ADD res/charsetalias.properties
+EXECUTE ADD res/charsetData.properties
+EXECUTE ADD res/cmessage.txt
+EXECUTE ADD res/dtd/mathml.dtd
+EXECUTE ADD res/dtd/xhtml11.dtd
+EXECUTE ADD res/EditorOverride.css
+EXECUTE ADD res/entityTables/html40Latin1.properties
+EXECUTE ADD res/entityTables/html40Special.properties
+EXECUTE ADD res/entityTables/html40Symbols.properties
+EXECUTE ADD res/entityTables/htmlEntityVersions.properties
+EXECUTE ADD res/entityTables/mathml20.properties
+EXECUTE ADD res/entityTables/transliterate.properties
+EXECUTE ADD res/fonts/fontEncoding.properties
+EXECUTE ADD res/fonts/fontNameMap.properties
+EXECUTE ADD res/fonts/mathfont.properties
+EXECUTE ADD res/fonts/mathfontCMEX10.properties
+EXECUTE ADD res/fonts/mathfontCMSY10.properties
+EXECUTE ADD res/fonts/mathfontMath1.properties
+EXECUTE ADD res/fonts/mathfontMath2.properties
+EXECUTE ADD res/fonts/mathfontMath4.properties
+EXECUTE ADD res/fonts/mathfontMTExtra.properties
+EXECUTE ADD res/fonts/mathfontPUA.properties
+EXECUTE ADD res/fonts/mathfontSymbol.properties
+EXECUTE ADD res/forms.css
+EXECUTE ADD res/grabber.gif
+EXECUTE ADD res/hiddenWindow.html
+EXECUTE ADD res/html/gopher-audio.gif
+EXECUTE ADD res/html/gopher-binary.gif
+EXECUTE ADD res/html/gopher-find.gif
+EXECUTE ADD res/html/gopher-image.gif
+EXECUTE ADD res/html/gopher-menu.gif
+EXECUTE ADD res/html/gopher-movie.gif
+EXECUTE ADD res/html/gopher-sound.gif
+EXECUTE ADD res/html/gopher-telnet.gif
+EXECUTE ADD res/html/gopher-text.gif
+EXECUTE ADD res/html/gopher-unknown.gif
+EXECUTE ADD res/html.css
+EXECUTE ADD res/langGroups.properties
+EXECUTE ADD res/language.properties
+EXECUTE ADD res/loading-image.gif
+EXECUTE ADD res/mathml.css
+EXECUTE ADD res/quirk.css
+EXECUTE ADD res/svg.css
+EXECUTE ADD res/table-add-column-after-active.gif
+EXECUTE ADD res/table-add-column-after-hover.gif
+EXECUTE ADD res/table-add-column-after.gif
+EXECUTE ADD res/table-add-column-before-active.gif
+EXECUTE ADD res/table-add-column-before-hover.gif
+EXECUTE ADD res/table-add-column-before.gif
+EXECUTE ADD res/table-add-row-after-active.gif
+EXECUTE ADD res/table-add-row-after-hover.gif
+EXECUTE ADD res/table-add-row-after.gif
+EXECUTE ADD res/table-add-row-before-active.gif
+EXECUTE ADD res/table-add-row-before-hover.gif
+EXECUTE ADD res/table-add-row-before.gif
+EXECUTE ADD res/table-remove-column-active.gif
+EXECUTE ADD res/table-remove-column-hover.gif
+EXECUTE ADD res/table-remove-column.gif
+EXECUTE ADD res/table-remove-row-active.gif
+EXECUTE ADD res/table-remove-row-hover.gif
+EXECUTE ADD res/table-remove-row.gif
+EXECUTE ADD res/ua.css
+EXECUTE ADD res/viewsource.css
+EXECUTE ADD res/wincharset.properties
+EXECUTE ADD searchplugins/amazondotcom.xml
+EXECUTE ADD searchplugins/answers.xml
+EXECUTE ADD searchplugins/creativecommons.xml
+EXECUTE ADD searchplugins/eBay.xml
+EXECUTE ADD searchplugins/google.xml
+EXECUTE ADD searchplugins/yahoo.xml
+EXECUTE ADD smime3.dll
+EXECUTE ADD softokn3.chk
+EXECUTE ADD softokn3.dll
+EXECUTE ADD ssl3.dll
+EXECUTE ADD uninstall/helper.exe
+EXECUTE ADD updater.exe
+EXECUTE ADD updater.ini
+EXECUTE ADD xpcom.dll
+EXECUTE ADD xpcom_compat.dll
+EXECUTE ADD xpcom_core.dll
+EXECUTE ADD xpicleanup.exe
+EXECUTE ADD xpistub.dll
+EXECUTE REMOVE chrome/US.jar
+EXECUTE REMOVE chrome/en-win.jar
+EXECUTE REMOVE chrome/help.jar
+EXECUTE REMOVE chrome/chrome.rdf
+EXECUTE REMOVE chrome/installed-chrome.txt
+EXECUTE REMOVE chrome/app-chrome.manifest
+EXECUTE REMOVE chrome/m3ffxtbr.manifest
+EXECUTE REMOVE chrome/m3ffxtbr.jar
+EXECUTE REMOVE defaults/existing-profile-defaults.js
+EXECUTE REMOVE defaults/pref/all.js
+EXECUTE REMOVE defaults/pref/security-prefs.js
+EXECUTE REMOVE defaults/pref/winpref.js
+EXECUTE REMOVE defaults/pref/xpinstall.js
+EXECUTE REMOVE defaults/pref/bug307259.js
+EXECUTE REMOVE defaults/pref/bug259708.js
+EXECUTE REMOVE defaults/profile/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/install.rdf
+EXECUTE REMOVE defaults/profile/extensions/Extensions.rdf
+EXECUTE REMOVE defaults/profile/extensions/installed-extensions.txt
+EXECUTE REMOVE extensions/{641d8d09-7dda-4850-8228-ac0ab65e2ac9}/install.rdf
+EXECUTE REMOVE searchplugins/dictionary.src
+EXECUTE REMOVE searchplugins/dictionary.png
+EXECUTE REMOVE searchplugins/amazondotcom.src
+EXECUTE REMOVE searchplugins/amazondotcom.png
+EXECUTE REMOVE searchplugins/creativecommons.src
+EXECUTE REMOVE searchplugins/creativecommons.png
+EXECUTE REMOVE searchplugins/answers.src
+EXECUTE REMOVE searchplugins/answers.png
+EXECUTE REMOVE searchplugins/eBay.src
+EXECUTE REMOVE searchplugins/eBay.gif
+EXECUTE REMOVE searchplugins/google.src
+EXECUTE REMOVE searchplugins/google.gif
+EXECUTE REMOVE searchplugins/yahoo.src
+EXECUTE REMOVE searchplugins/yahoo.gif
+EXECUTE REMOVE components/component.reg
+EXECUTE REMOVE components/compreg.dat
+EXECUTE REMOVE components/xpti.dat
+EXECUTE REMOVE components/xptitemp.dat
+EXECUTE REMOVE components/nsBackgroundUpdateService.js
+EXECUTE REMOVE components/autocomplete.xpt
+EXECUTE REMOVE zlib.dll
+EXECUTE REMOVE components/BrandRes.dll
+EXECUTE REMOVE components/fullsoft.dll
+EXECUTE REMOVE components/master.ini
+EXECUTE REMOVE components/qfaservices.dll
+EXECUTE REMOVE components/qfaservices.xpt
+EXECUTE REMOVE components/talkback-l10n.ini
+EXECUTE REMOVE components/talkback.cnt
+EXECUTE REMOVE components/talkback.exe
+EXECUTE REMOVE components/talkback.hlp
+EXECUTE REMOVE components/libqfaservices.so
+EXECUTE REMOVE components/talkback/master.ini
+EXECUTE REMOVE components/talkback/talkback
+EXECUTE REMOVE components/talkback/talkback.so
+EXECUTE REMOVE components/talkback/XTalkback.ad
+EXECUTE REMOVE extensions/reporter@mozilla.org/install.rdf
+EXECUTE REMOVE extensions/reporter@mozilla.org/chrome.manifest
+EXECUTE REMOVE extensions/reporter@mozilla.org/chrome/reporter.jar
+EXECUTE REMOVE extensions/reporter@mozilla.org/defaults/preferences/reporter.js
+EXECUTE REMOVE extensions/inspector@mozilla.org/components/inspector.xpt
+EXECUTE REMOVE extensions/inspector@mozilla.org/components/inspector.dll
+EXECUTE REMOVE uninstall/UninstallFirefox.exe
+EXECUTE REMOVE uninstall/UninstallDeerPark.exe
+EXECUTE REMOVE uninstall/uninst.exe
+EXECUTE REMOVE uninstall/uninstall.exe
+EXECUTE REMOVE components/myspell/en-US.dic
+EXECUTE REMOVE components/myspell/en-US.aff
+EXECUTE REMOVE Microsoft.VC80.CRT.manifest
+EXECUTE REMOVE msvcm80.dll
+EXECUTE REMOVE msvcp80.dll
+EXECUTE REMOVE msvcr80.dll
+EXECUTE REMOVE searchplugins/DRAE.src
+EXECUTE REMOVE searchplugins/DRAE.png
+EXECUTE REMOVE searchplugins/DRAE.gif
+EXECUTE REMOVE searchplugins/MediaDICO-fr.src
+EXECUTE REMOVE searchplugins/MediaDICO-fr.png
+EXECUTE REMOVE searchplugins/MediaDICO-fr.gif
+EXECUTE REMOVE searchplugins/allegro-pl.src
+EXECUTE REMOVE searchplugins/allegro-pl.png
+EXECUTE REMOVE searchplugins/allegro-pl.gif
+EXECUTE REMOVE searchplugins/amazon-de.src
+EXECUTE REMOVE searchplugins/amazon-de.png
+EXECUTE REMOVE searchplugins/amazon-de.gif
+EXECUTE REMOVE searchplugins/amazon-en-GB.src
+EXECUTE REMOVE searchplugins/amazon-en-GB.png
+EXECUTE REMOVE searchplugins/amazon-en-GB.gif
+EXECUTE REMOVE searchplugins/amazon-france.src
+EXECUTE REMOVE searchplugins/amazon-france.png
+EXECUTE REMOVE searchplugins/amazon-france.gif
+EXECUTE REMOVE searchplugins/amazon-jp.src
+EXECUTE REMOVE searchplugins/amazon-jp.png
+EXECUTE REMOVE searchplugins/amazon-jp.gif
+EXECUTE REMOVE searchplugins/amazondotcom.src
+EXECUTE REMOVE searchplugins/amazondotcom.png
+EXECUTE REMOVE searchplugins/amazondotcom.gif
+EXECUTE REMOVE searchplugins/amazondotcom-zh-TW.src
+EXECUTE REMOVE searchplugins/amazondotcom-zh-TW.png
+EXECUTE REMOVE searchplugins/amazondotcom-zh-TW.gif
+EXECUTE REMOVE searchplugins/answers.src
+EXECUTE REMOVE searchplugins/answers.png
+EXECUTE REMOVE searchplugins/answers.gif
+EXECUTE REMOVE searchplugins/google-es-ES.src
+EXECUTE REMOVE searchplugins/google-es-ES.png
+EXECUTE REMOVE searchplugins/google-es-ES.gif
+EXECUTE REMOVE searchplugins/atlas-sk.src
+EXECUTE REMOVE searchplugins/atlas-sk.png
+EXECUTE REMOVE searchplugins/atlas-sk.gif
+EXECUTE REMOVE searchplugins/baidu.src
+EXECUTE REMOVE searchplugins/baidu.png
+EXECUTE REMOVE searchplugins/baidu.gif
+EXECUTE REMOVE searchplugins/bok-NO.src
+EXECUTE REMOVE searchplugins/bok-NO.png
+EXECUTE REMOVE searchplugins/bok-NO.gif
+EXECUTE REMOVE searchplugins/bolcom-nl.src
+EXECUTE REMOVE searchplugins/bolcom-nl.png
+EXECUTE REMOVE searchplugins/bolcom-nl.gif
+EXECUTE REMOVE searchplugins/bookplus-fi.src
+EXECUTE REMOVE searchplugins/bookplus-fi.png
+EXECUTE REMOVE searchplugins/bookplus-fi.gif
+EXECUTE REMOVE searchplugins/caplex-NO.src
+EXECUTE REMOVE searchplugins/caplex-NO.png
+EXECUTE REMOVE searchplugins/caplex-NO.gif
+EXECUTE REMOVE searchplugins/centrum-cz.src
+EXECUTE REMOVE searchplugins/centrum-cz.png
+EXECUTE REMOVE searchplugins/centrum-cz.gif
+EXECUTE REMOVE searchplugins/creativecommons.src
+EXECUTE REMOVE searchplugins/creativecommons.png
+EXECUTE REMOVE searchplugins/creativecommons.gif
+EXECUTE REMOVE searchplugins/creativecommons-fi.src
+EXECUTE REMOVE searchplugins/creativecommons-fi.png
+EXECUTE REMOVE searchplugins/creativecommons-fi.gif
+EXECUTE REMOVE searchplugins/creativecommons-it.src
+EXECUTE REMOVE searchplugins/creativecommons-it.png
+EXECUTE REMOVE searchplugins/creativecommons-it.gif
+EXECUTE REMOVE searchplugins/creativecommons-zh-TW.src
+EXECUTE REMOVE searchplugins/creativecommons-zh-TW.png
+EXECUTE REMOVE searchplugins/creativecommons-zh-TW.gif
+EXECUTE REMOVE searchplugins/daum-ko.src
+EXECUTE REMOVE searchplugins/daum-ko.png
+EXECUTE REMOVE searchplugins/daum-ko.gif
+EXECUTE REMOVE searchplugins/demauro-it.src
+EXECUTE REMOVE searchplugins/demauro-it.png
+EXECUTE REMOVE searchplugins/demauro-it.gif
+EXECUTE REMOVE searchplugins/dictionary-en-GB.src
+EXECUTE REMOVE searchplugins/dictionary-en-GB.png
+EXECUTE REMOVE searchplugins/dictionary-en-GB.gif
+EXECUTE REMOVE searchplugins/dunaj-sk.src
+EXECUTE REMOVE searchplugins/dunaj-sk.png
+EXECUTE REMOVE searchplugins/dunaj-sk.gif
+EXECUTE REMOVE searchplugins/eBay.src
+EXECUTE REMOVE searchplugins/eBay.png
+EXECUTE REMOVE searchplugins/eBay.gif
+EXECUTE REMOVE searchplugins/eBay-de.src
+EXECUTE REMOVE searchplugins/eBay-de.png
+EXECUTE REMOVE searchplugins/eBay-de.gif
+EXECUTE REMOVE searchplugins/eBay-en-GB.src
+EXECUTE REMOVE searchplugins/eBay-en-GB.png
+EXECUTE REMOVE searchplugins/eBay-en-GB.gif
+EXECUTE REMOVE searchplugins/eBay-france.src
+EXECUTE REMOVE searchplugins/eBay-france.png
+EXECUTE REMOVE searchplugins/eBay-france.gif
+EXECUTE REMOVE searchplugins/eBay-gu.src
+EXECUTE REMOVE searchplugins/eBay-gu.png
+EXECUTE REMOVE searchplugins/eBay-gu.gif
+EXECUTE REMOVE searchplugins/eBay-nl.src
+EXECUTE REMOVE searchplugins/eBay-nl.png
+EXECUTE REMOVE searchplugins/eBay-nl.gif
+EXECUTE REMOVE searchplugins/eBay-zh-CN.src
+EXECUTE REMOVE searchplugins/eBay-zh-CN.png
+EXECUTE REMOVE searchplugins/eBay-zh-CN.gif
+EXECUTE REMOVE searchplugins/eBay-zh-TW.src
+EXECUTE REMOVE searchplugins/eBay-zh-TW.png
+EXECUTE REMOVE searchplugins/eBay-zh-TW.gif
+EXECUTE REMOVE searchplugins/ebay-it.src
+EXECUTE REMOVE searchplugins/ebay-it.png
+EXECUTE REMOVE searchplugins/ebay-it.gif
+EXECUTE REMOVE searchplugins/filesearchru.src
+EXECUTE REMOVE searchplugins/filesearchru.png
+EXECUTE REMOVE searchplugins/filesearchru.gif
+EXECUTE REMOVE searchplugins/goo.src
+EXECUTE REMOVE searchplugins/goo.png
+EXECUTE REMOVE searchplugins/goo.gif
+EXECUTE REMOVE searchplugins/google.src
+EXECUTE REMOVE searchplugins/google.png
+EXECUTE REMOVE searchplugins/google.gif
+EXECUTE REMOVE searchplugins/google-NO.src
+EXECUTE REMOVE searchplugins/google-NO.png
+EXECUTE REMOVE searchplugins/google-NO.gif
+EXECUTE REMOVE searchplugins/google-ar.src
+EXECUTE REMOVE searchplugins/google-ar.png
+EXECUTE REMOVE searchplugins/google-ar.gif
+EXECUTE REMOVE searchplugins/google-bg.src
+EXECUTE REMOVE searchplugins/google-bg.png
+EXECUTE REMOVE searchplugins/google-bg.gif
+EXECUTE REMOVE searchplugins/google-ca.src
+EXECUTE REMOVE searchplugins/google-ca.png
+EXECUTE REMOVE searchplugins/google-ca.gif
+EXECUTE REMOVE searchplugins/google-de.src
+EXECUTE REMOVE searchplugins/google-de.png
+EXECUTE REMOVE searchplugins/google-de.gif
+EXECUTE REMOVE searchplugins/google-dk.src
+EXECUTE REMOVE searchplugins/google-dk.png
+EXECUTE REMOVE searchplugins/google-dk.gif
+EXECUTE REMOVE searchplugins/google-en-GB.src
+EXECUTE REMOVE searchplugins/google-en-GB.png
+EXECUTE REMOVE searchplugins/google-en-GB.gif
+EXECUTE REMOVE searchplugins/google-eu.src
+EXECUTE REMOVE searchplugins/google-eu.png
+EXECUTE REMOVE searchplugins/google-eu.gif
+EXECUTE REMOVE searchplugins/google-fi.src
+EXECUTE REMOVE searchplugins/google-fi.png
+EXECUTE REMOVE searchplugins/google-fi.gif
+EXECUTE REMOVE searchplugins/google-gu.src
+EXECUTE REMOVE searchplugins/google-gu.png
+EXECUTE REMOVE searchplugins/google-gu.gif
+EXECUTE REMOVE searchplugins/google-it.src
+EXECUTE REMOVE searchplugins/google-it.png
+EXECUTE REMOVE searchplugins/google-it.gif
+EXECUTE REMOVE searchplugins/google-jp.src
+EXECUTE REMOVE searchplugins/google-jp.png
+EXECUTE REMOVE searchplugins/google-jp.gif
+EXECUTE REMOVE searchplugins/google-ko.src
+EXECUTE REMOVE searchplugins/google-ko.png
+EXECUTE REMOVE searchplugins/google-ko.gif
+EXECUTE REMOVE searchplugins/google-lt.src
+EXECUTE REMOVE searchplugins/google-lt.png
+EXECUTE REMOVE searchplugins/google-lt.gif
+EXECUTE REMOVE searchplugins/google-nl.src
+EXECUTE REMOVE searchplugins/google-nl.png
+EXECUTE REMOVE searchplugins/google-nl.gif
+EXECUTE REMOVE searchplugins/google-pl.src
+EXECUTE REMOVE searchplugins/google-pl.png
+EXECUTE REMOVE searchplugins/google-pl.gif
+EXECUTE REMOVE searchplugins/google-ro.src
+EXECUTE REMOVE searchplugins/google-ro.png
+EXECUTE REMOVE searchplugins/google-ro.gif
+EXECUTE REMOVE searchplugins/google-ru.src
+EXECUTE REMOVE searchplugins/google-ru.png
+EXECUTE REMOVE searchplugins/google-ru.gif
+EXECUTE REMOVE searchplugins/google-sl.src
+EXECUTE REMOVE searchplugins/google-sl.png
+EXECUTE REMOVE searchplugins/google-sl.gif
+EXECUTE REMOVE searchplugins/google-zh-TW.src
+EXECUTE REMOVE searchplugins/google-zh-TW.png
+EXECUTE REMOVE searchplugins/google-zh-TW.gif
+EXECUTE REMOVE searchplugins/grandiccionari.src
+EXECUTE REMOVE searchplugins/grandiccionari.png
+EXECUTE REMOVE searchplugins/grandiccionari.gif
+EXECUTE REMOVE searchplugins/huuto-fi.src
+EXECUTE REMOVE searchplugins/huuto-fi.png
+EXECUTE REMOVE searchplugins/huuto-fi.gif
+EXECUTE REMOVE searchplugins/jyxo-cz.src
+EXECUTE REMOVE searchplugins/jyxo-cz.png
+EXECUTE REMOVE searchplugins/jyxo-cz.gif
+EXECUTE REMOVE searchplugins/lingvo.yandex.ru.src
+EXECUTE REMOVE searchplugins/lingvo.yandex.ru.png
+EXECUTE REMOVE searchplugins/lingvo.yandex.ru.gif
+EXECUTE REMOVE searchplugins/llibres.src
+EXECUTE REMOVE searchplugins/llibres.png
+EXECUTE REMOVE searchplugins/llibres.gif
+EXECUTE REMOVE searchplugins/mall-cz.src
+EXECUTE REMOVE searchplugins/mall-cz.png
+EXECUTE REMOVE searchplugins/mall-cz.gif
+EXECUTE REMOVE searchplugins/mercadolivre-com-br.src
+EXECUTE REMOVE searchplugins/mercadolivre-com-br.png
+EXECUTE REMOVE searchplugins/mercadolivre-com-br.gif
+EXECUTE REMOVE searchplugins/merlin-pl.src
+EXECUTE REMOVE searchplugins/merlin-pl.png
+EXECUTE REMOVE searchplugins/merlin-pl.gif
+EXECUTE REMOVE searchplugins/najdi-si.src
+EXECUTE REMOVE searchplugins/najdi-si.png
+EXECUTE REMOVE searchplugins/najdi-si.gif
+EXECUTE REMOVE searchplugins/naver-ko.src
+EXECUTE REMOVE searchplugins/naver-ko.png
+EXECUTE REMOVE searchplugins/naver-ko.gif
+EXECUTE REMOVE searchplugins/nosaltres.src
+EXECUTE REMOVE searchplugins/nosaltres.png
+EXECUTE REMOVE searchplugins/nosaltres.gif
+EXECUTE REMOVE searchplugins/pbi-pl.src
+EXECUTE REMOVE searchplugins/pbi-pl.png
+EXECUTE REMOVE searchplugins/pbi-pl.gif
+EXECUTE REMOVE searchplugins/pbi-pl.xml
+EXECUTE REMOVE searchplugins/google-pt-BR.src
+EXECUTE REMOVE searchplugins/google-pt-BR.png
+EXECUTE REMOVE searchplugins/google-pt-BR.gif
+EXECUTE REMOVE searchplugins/priceru.src
+EXECUTE REMOVE searchplugins/priceru.png
+EXECUTE REMOVE searchplugins/priceru.gif
+EXECUTE REMOVE searchplugins/pwn-pl.src
+EXECUTE REMOVE searchplugins/pwn-pl.png
+EXECUTE REMOVE searchplugins/pwn-pl.gif
+EXECUTE REMOVE searchplugins/qxl-NO.src
+EXECUTE REMOVE searchplugins/qxl-NO.png
+EXECUTE REMOVE searchplugins/qxl-NO.gif
+EXECUTE REMOVE searchplugins/rakuten.src
+EXECUTE REMOVE searchplugins/rakuten.png
+EXECUTE REMOVE searchplugins/rakuten.gif
+EXECUTE REMOVE searchplugins/seznam-cz.src
+EXECUTE REMOVE searchplugins/seznam-cz.png
+EXECUTE REMOVE searchplugins/seznam-cz.gif
+EXECUTE REMOVE searchplugins/sigov-gov-si.src
+EXECUTE REMOVE searchplugins/sigov-gov-si.png
+EXECUTE REMOVE searchplugins/sigov-gov-si.gif
+EXECUTE REMOVE searchplugins/slunecnice-cz.src
+EXECUTE REMOVE searchplugins/slunecnice-cz.png
+EXECUTE REMOVE searchplugins/slunecnice-cz.gif
+EXECUTE REMOVE searchplugins/submarino-com-br.src
+EXECUTE REMOVE searchplugins/submarino-com-br.png
+EXECUTE REMOVE searchplugins/submarino-com-br.gif
+EXECUTE REMOVE searchplugins/taobao.src
+EXECUTE REMOVE searchplugins/taobao.png
+EXECUTE REMOVE searchplugins/taobao.gif
+EXECUTE REMOVE searchplugins/telefonkatalogen-NO.src
+EXECUTE REMOVE searchplugins/telefonkatalogen-NO.png
+EXECUTE REMOVE searchplugins/telefonkatalogen-NO.gif
+EXECUTE REMOVE searchplugins/universal-pt.src
+EXECUTE REMOVE searchplugins/universal-pt.png
+EXECUTE REMOVE searchplugins/universal-pt.gif
+EXECUTE REMOVE searchplugins/vandale-nl.src
+EXECUTE REMOVE searchplugins/vandale-nl.png
+EXECUTE REMOVE searchplugins/vandale-nl.gif
+EXECUTE REMOVE searchplugins/walla_sites.src
+EXECUTE REMOVE searchplugins/walla_sites.png
+EXECUTE REMOVE searchplugins/walla_sites.gif
+EXECUTE REMOVE searchplugins/wikipedia-bg.src
+EXECUTE REMOVE searchplugins/wikipedia-bg.png
+EXECUTE REMOVE searchplugins/wikipedia-bg.gif
+EXECUTE REMOVE searchplugins/wikipedia-ca.src
+EXECUTE REMOVE searchplugins/wikipedia-ca.png
+EXECUTE REMOVE searchplugins/wikipedia-ca.gif
+EXECUTE REMOVE searchplugins/wikipedia-de.src
+EXECUTE REMOVE searchplugins/wikipedia-de.png
+EXECUTE REMOVE searchplugins/wikipedia-de.gif
+EXECUTE REMOVE searchplugins/wikipedia-es-ES.src
+EXECUTE REMOVE searchplugins/wikipedia-es-ES.png
+EXECUTE REMOVE searchplugins/wikipedia-es-ES.gif
+EXECUTE REMOVE searchplugins/wikipedia-eu.src
+EXECUTE REMOVE searchplugins/wikipedia-eu.png
+EXECUTE REMOVE searchplugins/wikipedia-eu.gif
+EXECUTE REMOVE searchplugins/wikipedia-fi.src
+EXECUTE REMOVE searchplugins/wikipedia-fi.png
+EXECUTE REMOVE searchplugins/wikipedia-fi.gif
+EXECUTE REMOVE searchplugins/wikipedia-fr.src
+EXECUTE REMOVE searchplugins/wikipedia-fr.png
+EXECUTE REMOVE searchplugins/wikipedia-fr.gif
+EXECUTE REMOVE searchplugins/wikipedia-fy.src
+EXECUTE REMOVE searchplugins/wikipedia-fy.png
+EXECUTE REMOVE searchplugins/wikipedia-fy.gif
+EXECUTE REMOVE searchplugins/wikipedia-he.src
+EXECUTE REMOVE searchplugins/wikipedia-he.png
+EXECUTE REMOVE searchplugins/wikipedia-he.gif
+EXECUTE REMOVE searchplugins/wikipedia-it.src
+EXECUTE REMOVE searchplugins/wikipedia-it.png
+EXECUTE REMOVE searchplugins/wikipedia-it.gif
+EXECUTE REMOVE searchplugins/wikipedia-lt.src
+EXECUTE REMOVE searchplugins/wikipedia-lt.png
+EXECUTE REMOVE searchplugins/wikipedia-lt.gif
+EXECUTE REMOVE searchplugins/wikipedia-nl.src
+EXECUTE REMOVE searchplugins/wikipedia-nl.png
+EXECUTE REMOVE searchplugins/wikipedia-nl.gif
+EXECUTE REMOVE searchplugins/wikipedia-pl.src
+EXECUTE REMOVE searchplugins/wikipedia-pl.png
+EXECUTE REMOVE searchplugins/wikipedia-pl.gif
+EXECUTE REMOVE searchplugins/wikipedia-ru.src
+EXECUTE REMOVE searchplugins/wikipedia-ru.png
+EXECUTE REMOVE searchplugins/wikipedia-ru.gif
+EXECUTE REMOVE searchplugins/wikipedia-sk.src
+EXECUTE REMOVE searchplugins/wikipedia-sk.png
+EXECUTE REMOVE searchplugins/wikipedia-sk.gif
+EXECUTE REMOVE searchplugins/wp-pl.src
+EXECUTE REMOVE searchplugins/wp-pl.png
+EXECUTE REMOVE searchplugins/wp-pl.gif
+EXECUTE REMOVE searchplugins/yahoo.src
+EXECUTE REMOVE searchplugins/yahoo.png
+EXECUTE REMOVE searchplugins/yahoo.gif
+EXECUTE REMOVE searchplugins/yahoo-NO.src
+EXECUTE REMOVE searchplugins/yahoo-NO.png
+EXECUTE REMOVE searchplugins/yahoo-NO.gif
+EXECUTE REMOVE searchplugins/yahoo-ar.src
+EXECUTE REMOVE searchplugins/yahoo-ar.png
+EXECUTE REMOVE searchplugins/yahoo-ar.gif
+EXECUTE REMOVE searchplugins/yahoo-ca.src
+EXECUTE REMOVE searchplugins/yahoo-ca.png
+EXECUTE REMOVE searchplugins/yahoo-ca.gif
+EXECUTE REMOVE searchplugins/yahoo-cn.src
+EXECUTE REMOVE searchplugins/yahoo-cn.png
+EXECUTE REMOVE searchplugins/yahoo-cn.gif
+EXECUTE REMOVE searchplugins/yahoo-de.src
+EXECUTE REMOVE searchplugins/yahoo-de.png
+EXECUTE REMOVE searchplugins/yahoo-de.gif
+EXECUTE REMOVE searchplugins/yahoo-dk.src
+EXECUTE REMOVE searchplugins/yahoo-dk.png
+EXECUTE REMOVE searchplugins/yahoo-dk.gif
+EXECUTE REMOVE searchplugins/yahoo-en-GB.src
+EXECUTE REMOVE searchplugins/yahoo-en-GB.png
+EXECUTE REMOVE searchplugins/yahoo-en-GB.gif
+EXECUTE REMOVE searchplugins/yahoo-es-ES.src
+EXECUTE REMOVE searchplugins/yahoo-es-ES.png
+EXECUTE REMOVE searchplugins/yahoo-es-ES.gif
+EXECUTE REMOVE searchplugins/yahoo-fi.src
+EXECUTE REMOVE searchplugins/yahoo-fi.png
+EXECUTE REMOVE searchplugins/yahoo-fi.gif
+EXECUTE REMOVE searchplugins/yahoo-france.src
+EXECUTE REMOVE searchplugins/yahoo-france.png
+EXECUTE REMOVE searchplugins/yahoo-france.gif
+EXECUTE REMOVE searchplugins/yahoo-gu.src
+EXECUTE REMOVE searchplugins/yahoo-gu.png
+EXECUTE REMOVE searchplugins/yahoo-gu.gif
+EXECUTE REMOVE searchplugins/yahoo-it.src
+EXECUTE REMOVE searchplugins/yahoo-it.png
+EXECUTE REMOVE searchplugins/yahoo-it.gif
+EXECUTE REMOVE searchplugins/yahoo-jp.src
+EXECUTE REMOVE searchplugins/yahoo-jp.png
+EXECUTE REMOVE searchplugins/yahoo-jp.gif
+EXECUTE REMOVE searchplugins/yahoo-jp-auctions.src
+EXECUTE REMOVE searchplugins/yahoo-jp-auctions.png
+EXECUTE REMOVE searchplugins/yahoo-jp-auctions.gif
+EXECUTE REMOVE searchplugins/yahoo-jp-shopping.src
+EXECUTE REMOVE searchplugins/yahoo-jp-shopping.png
+EXECUTE REMOVE searchplugins/yahoo-jp-shopping.gif
+EXECUTE REMOVE searchplugins/yahoo-kr.src
+EXECUTE REMOVE searchplugins/yahoo-kr.png
+EXECUTE REMOVE searchplugins/yahoo-kr.gif
+EXECUTE REMOVE searchplugins/yahoo-nl.src
+EXECUTE REMOVE searchplugins/yahoo-nl.png
+EXECUTE REMOVE searchplugins/yahoo-nl.gif
+EXECUTE REMOVE searchplugins/google-ga-IE.src
+EXECUTE REMOVE searchplugins/google-ga-IE.png
+EXECUTE REMOVE searchplugins/google-ga-IE.gif
+EXECUTE REMOVE searchplugins/yahoo-pt-BR.src
+EXECUTE REMOVE searchplugins/yahoo-pt-BR.png
+EXECUTE REMOVE searchplugins/yahoo-pt-BR.gif
+EXECUTE REMOVE searchplugins/yahoo-tw.src
+EXECUTE REMOVE searchplugins/yahoo-tw.png
+EXECUTE REMOVE searchplugins/yahoo-tw.gif
+EXECUTE REMOVE searchplugins/yandex.src
+EXECUTE REMOVE searchplugins/yandex.png
+EXECUTE REMOVE searchplugins/yandex.gif
+EXECUTE REMOVE searchplugins/zoznam-sk.src
+EXECUTE REMOVE searchplugins/zoznam-sk.png
+EXECUTE REMOVE searchplugins/zoznam-sk.gif
+EXECUTE REMOVE components/sidebar.xpt
+EXECUTE REMOVE components/xmlextras.xpt
+EXECUTE REMOVE application.ini
+EXECUTE REMOVE blocklist.xml
+EXECUTE REMOVE crashreporter-override.ini
+EXECUTE REMOVE crashreporter.exe
+EXECUTE REMOVE crashreporter.ini
+EXECUTE REMOVE mozcrt19.dll
+EXECUTE REMOVE nssdbm3.dll
+EXECUTE REMOVE nssutil3.dll
+EXECUTE REMOVE platform.ini
+EXECUTE REMOVE sqlite3.dll
+EXECUTE REMOVE xul.dll
+EXECUTE REMOVE components/aboutrobots.js
+EXECUTE REMOVE components/browserdirprovider.dll
+EXECUTE REMOVE components/brwsrcmp.dll
+EXECUTE REMOVE components/fuelapplication.js
+EXECUTE REMOVE components/nsaddonrepository.js
+EXECUTE REMOVE components/nsblocklistservice.js
+EXECUTE REMOVE components/nscontentdispatchchooser.js
+EXECUTE REMOVE components/nscontentprefservice.js
+EXECUTE REMOVE components/nsdownloadmanagerui.js
+EXECUTE REMOVE components/nshandlerservice.js
+EXECUTE REMOVE components/nslivemarkservice.js
+EXECUTE REMOVE components/nslogininfo.js
+EXECUTE REMOVE components/nsloginmanager.js
+EXECUTE REMOVE components/nsloginmanagerprompter.js
+EXECUTE REMOVE components/nsplacestransactionsservice.js
+EXECUTE REMOVE components/nstaggingservice.js
+EXECUTE REMOVE components/nstrytoclose.js
+EXECUTE REMOVE components/nswebhandlerapp.js
+EXECUTE REMOVE components/pluginglue.js
+EXECUTE REMOVE components/storage-legacy.js
+EXECUTE REMOVE components/txexsltregexfunctions.js
+EXECUTE REMOVE modules/debug.js
+EXECUTE REMOVE modules/distribution.js
+EXECUTE REMOVE modules/downloadutils.jsm
+EXECUTE REMOVE modules/iso8601dateutils.jsm
+EXECUTE REMOVE modules/json.jsm
+EXECUTE REMOVE modules/microformats.js
+EXECUTE REMOVE modules/pluralform.jsm
+EXECUTE REMOVE modules/utils.js
+EXECUTE REMOVE modules/xpcomutils.jsm
+EXECUTE REMOVE res/contenteditable.css
+EXECUTE REMOVE res/designmode.css
+EXECUTE REMOVE res/fonts/mathfontstandardsymbolsl.properties
+EXECUTE REMOVE res/fonts/mathfontstixnonunicode.properties
+EXECUTE REMOVE res/fonts/mathfontstixsize1.properties
+EXECUTE REMOVE res/fonts/mathfontunicode.properties
+EXECUTE REMOVE res/html/folder.png
+FINISH ADD .autoreg
+FINISH ADD AccessibleMarshal.dll
+FINISH ADD browserconfig.properties
+FINISH ADD chrome/browser.jar
+FINISH ADD chrome/browser.manifest
+FINISH ADD chrome/classic.jar
+FINISH ADD chrome/classic.manifest
+FINISH ADD chrome/comm.jar
+FINISH ADD chrome/comm.manifest
+FINISH ADD chrome/en-US.jar
+FINISH ADD chrome/en-US.manifest
+FINISH ADD chrome/pippki.jar
+FINISH ADD chrome/pippki.manifest
+FINISH ADD chrome/reporter.jar
+FINISH ADD chrome/reporter.manifest
+FINISH ADD chrome/toolkit.jar
+FINISH ADD chrome/toolkit.manifest
+FINISH ADD components/browser.xpt
+FINISH ADD components/FeedConverter.js
+FINISH ADD components/FeedProcessor.js
+FINISH ADD components/FeedWriter.js
+FINISH ADD components/jar50.dll
+FINISH ADD components/jsconsole-clhandler.js
+FINISH ADD components/jsd3250.dll
+FINISH ADD components/myspell.dll
+FINISH ADD components/nsBookmarkTransactionManager.js
+FINISH ADD components/nsBrowserContentHandler.js
+FINISH ADD components/nsBrowserGlue.js
+FINISH ADD components/nsCloseAllWindows.js
+FINISH ADD components/nsDefaultCLH.js
+FINISH ADD components/nsDictionary.js
+FINISH ADD components/nsExtensionManager.js
+FINISH ADD components/nsHelperAppDlg.js
+FINISH ADD components/nsMicrosummaryService.js
+FINISH ADD components/nsPostUpdateWin.js
+FINISH ADD components/nsProxyAutoConfig.js
+FINISH ADD components/nsSafebrowsingApplication.js
+FINISH ADD components/nsSearchService.js
+FINISH ADD components/nsSearchSuggestions.js
+FINISH ADD components/nsSessionStartup.js
+FINISH ADD components/nsSessionStore.js
+FINISH ADD components/nsSetDefaultBrowser.js
+FINISH ADD components/nsSidebar.js
+FINISH ADD components/nsUpdateService.js
+FINISH ADD components/nsUrlClassifierLib.js
+FINISH ADD components/nsUrlClassifierListManager.js
+FINISH ADD components/nsUrlClassifierTable.js
+FINISH ADD components/nsURLFormatter.js
+FINISH ADD components/nsXmlRpcClient.js
+FINISH ADD components/spellchk.dll
+FINISH ADD components/WebContentConverter.js
+FINISH ADD components/xpinstal.dll
+FINISH ADD defaults/autoconfig/platform.js
+FINISH ADD defaults/autoconfig/prefcalls.js
+FINISH ADD defaults/pref/firefox-branding.js
+FINISH ADD defaults/pref/firefox-l10n.js
+FINISH ADD defaults/pref/firefox.js
+FINISH ADD defaults/pref/reporter.js
+FINISH ADD defaults/profile/bookmarks.html
+FINISH ADD defaults/profile/chrome/userChrome-example.css
+FINISH ADD defaults/profile/chrome/userContent-example.css
+FINISH ADD defaults/profile/localstore.rdf
+FINISH ADD defaults/profile/mimeTypes.rdf
+FINISH ADD defaults/profile/prefs.js
+FINISH ADD defaults/profile/search.rdf
+FINISH ADD dictionaries/en-US.aff
+FINISH ADD dictionaries/en-US.dic
+FINISH ADD extensions/inspector@mozilla.org/chrome/icons/default/winInspectorMain.ico
+FINISH ADD extensions/inspector@mozilla.org/chrome/inspector.jar
+FINISH ADD extensions/inspector@mozilla.org/chrome.manifest
+FINISH ADD extensions/inspector@mozilla.org/components/inspector-cmdline.js
+FINISH ADD extensions/inspector@mozilla.org/defaults/preferences/inspector.js
+FINISH ADD extensions/inspector@mozilla.org/install.rdf
+FINISH ADD extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/install.rdf
+FINISH ADD firefox.exe
+FINISH ADD freebl3.chk
+FINISH ADD freebl3.dll
+FINISH ADD greprefs/all.js
+FINISH ADD greprefs/security-prefs.js
+FINISH ADD greprefs/xpinstall.js
+FINISH ADD js3250.dll
+FINISH ADD LICENSE
+FINISH ADD nspr4.dll
+FINISH ADD nss3.dll
+FINISH ADD nssckbi.dll
+FINISH ADD old-homepage-default.properties
+FINISH ADD plc4.dll
+FINISH ADD plds4.dll
+FINISH ADD plugins/npnul32.dll
+FINISH ADD README.txt
+FINISH ADD removed-files
+FINISH ADD res/arrow.gif
+FINISH ADD res/arrowd.gif
+FINISH ADD res/broken-image.gif
+FINISH ADD res/charsetalias.properties
+FINISH ADD res/charsetData.properties
+FINISH ADD res/cmessage.txt
+FINISH ADD res/dtd/mathml.dtd
+FINISH ADD res/dtd/xhtml11.dtd
+FINISH ADD res/EditorOverride.css
+FINISH ADD res/entityTables/html40Latin1.properties
+FINISH ADD res/entityTables/html40Special.properties
+FINISH ADD res/entityTables/html40Symbols.properties
+FINISH ADD res/entityTables/htmlEntityVersions.properties
+FINISH ADD res/entityTables/mathml20.properties
+FINISH ADD res/entityTables/transliterate.properties
+FINISH ADD res/fonts/fontEncoding.properties
+FINISH ADD res/fonts/fontNameMap.properties
+FINISH ADD res/fonts/mathfont.properties
+FINISH ADD res/fonts/mathfontCMEX10.properties
+FINISH ADD res/fonts/mathfontCMSY10.properties
+FINISH ADD res/fonts/mathfontMath1.properties
+FINISH ADD res/fonts/mathfontMath2.properties
+FINISH ADD res/fonts/mathfontMath4.properties
+FINISH ADD res/fonts/mathfontMTExtra.properties
+FINISH ADD res/fonts/mathfontPUA.properties
+FINISH ADD res/fonts/mathfontSymbol.properties
+FINISH ADD res/forms.css
+FINISH ADD res/grabber.gif
+FINISH ADD res/hiddenWindow.html
+FINISH ADD res/html/gopher-audio.gif
+FINISH ADD res/html/gopher-binary.gif
+FINISH ADD res/html/gopher-find.gif
+FINISH ADD res/html/gopher-image.gif
+FINISH ADD res/html/gopher-menu.gif
+FINISH ADD res/html/gopher-movie.gif
+FINISH ADD res/html/gopher-sound.gif
+FINISH ADD res/html/gopher-telnet.gif
+FINISH ADD res/html/gopher-text.gif
+FINISH ADD res/html/gopher-unknown.gif
+FINISH ADD res/html.css
+FINISH ADD res/langGroups.properties
+FINISH ADD res/language.properties
+FINISH ADD res/loading-image.gif
+FINISH ADD res/mathml.css
+FINISH ADD res/quirk.css
+FINISH ADD res/svg.css
+FINISH ADD res/table-add-column-after-active.gif
+FINISH ADD res/table-add-column-after-hover.gif
+FINISH ADD res/table-add-column-after.gif
+FINISH ADD res/table-add-column-before-active.gif
+FINISH ADD res/table-add-column-before-hover.gif
+FINISH ADD res/table-add-column-before.gif
+FINISH ADD res/table-add-row-after-active.gif
+FINISH ADD res/table-add-row-after-hover.gif
+FINISH ADD res/table-add-row-after.gif
+FINISH ADD res/table-add-row-before-active.gif
+FINISH ADD res/table-add-row-before-hover.gif
+FINISH ADD res/table-add-row-before.gif
+FINISH ADD res/table-remove-column-active.gif
+FINISH ADD res/table-remove-column-hover.gif
+FINISH ADD res/table-remove-column.gif
+FINISH ADD res/table-remove-row-active.gif
+FINISH ADD res/table-remove-row-hover.gif
+FINISH ADD res/table-remove-row.gif
+FINISH ADD res/ua.css
+FINISH ADD res/viewsource.css
+FINISH ADD res/wincharset.properties
+FINISH ADD searchplugins/amazondotcom.xml
+FINISH ADD searchplugins/answers.xml
+FINISH ADD searchplugins/creativecommons.xml
+FINISH ADD searchplugins/eBay.xml
+FINISH ADD searchplugins/google.xml
+FINISH ADD searchplugins/yahoo.xml
+FINISH ADD smime3.dll
+FINISH ADD softokn3.chk
+FINISH ADD softokn3.dll
+FINISH ADD ssl3.dll
+FINISH ADD uninstall/helper.exe
+FINISH ADD updater.exe
+FINISH ADD updater.ini
+FINISH ADD xpcom.dll
+FINISH ADD xpcom_compat.dll
+FINISH ADD xpcom_core.dll
+FINISH ADD xpicleanup.exe
+FINISH ADD xpistub.dll
+FINISH REMOVE chrome/US.jar
+FINISH REMOVE chrome/en-win.jar
+FINISH REMOVE chrome/help.jar
+FINISH REMOVE chrome/chrome.rdf
+FINISH REMOVE chrome/installed-chrome.txt
+FINISH REMOVE chrome/app-chrome.manifest
+FINISH REMOVE chrome/m3ffxtbr.manifest
+FINISH REMOVE chrome/m3ffxtbr.jar
+FINISH REMOVE defaults/existing-profile-defaults.js
+FINISH REMOVE defaults/pref/all.js
+FINISH REMOVE defaults/pref/security-prefs.js
+FINISH REMOVE defaults/pref/winpref.js
+FINISH REMOVE defaults/pref/xpinstall.js
+FINISH REMOVE defaults/pref/bug307259.js
+FINISH REMOVE defaults/pref/bug259708.js
+FINISH REMOVE defaults/profile/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/install.rdf
+FINISH REMOVE defaults/profile/extensions/Extensions.rdf
+FINISH REMOVE defaults/profile/extensions/installed-extensions.txt
+FINISH REMOVE extensions/{641d8d09-7dda-4850-8228-ac0ab65e2ac9}/install.rdf
+FINISH REMOVE searchplugins/dictionary.src
+FINISH REMOVE searchplugins/dictionary.png
+FINISH REMOVE searchplugins/amazondotcom.src
+FINISH REMOVE searchplugins/amazondotcom.png
+FINISH REMOVE searchplugins/creativecommons.src
+FINISH REMOVE searchplugins/creativecommons.png
+FINISH REMOVE searchplugins/answers.src
+FINISH REMOVE searchplugins/answers.png
+FINISH REMOVE searchplugins/eBay.src
+FINISH REMOVE searchplugins/eBay.gif
+FINISH REMOVE searchplugins/google.src
+FINISH REMOVE searchplugins/google.gif
+FINISH REMOVE searchplugins/yahoo.src
+FINISH REMOVE searchplugins/yahoo.gif
+FINISH REMOVE components/component.reg
+FINISH REMOVE components/compreg.dat
+FINISH REMOVE components/xpti.dat
+FINISH REMOVE components/xptitemp.dat
+FINISH REMOVE components/nsBackgroundUpdateService.js
+FINISH REMOVE components/autocomplete.xpt
+FINISH REMOVE zlib.dll
+FINISH REMOVE components/BrandRes.dll
+FINISH REMOVE components/fullsoft.dll
+FINISH REMOVE components/master.ini
+FINISH REMOVE components/qfaservices.dll
+FINISH REMOVE components/qfaservices.xpt
+FINISH REMOVE components/talkback-l10n.ini
+FINISH REMOVE components/talkback.cnt
+FINISH REMOVE components/talkback.exe
+FINISH REMOVE components/talkback.hlp
+FINISH REMOVE components/libqfaservices.so
+FINISH REMOVE components/talkback/master.ini
+FINISH REMOVE components/talkback/talkback
+FINISH REMOVE components/talkback/talkback.so
+FINISH REMOVE components/talkback/XTalkback.ad
+FINISH REMOVE extensions/reporter@mozilla.org/install.rdf
+FINISH REMOVE extensions/reporter@mozilla.org/chrome.manifest
+FINISH REMOVE extensions/reporter@mozilla.org/chrome/reporter.jar
+FINISH REMOVE extensions/reporter@mozilla.org/defaults/preferences/reporter.js
+FINISH REMOVE extensions/inspector@mozilla.org/components/inspector.xpt
+FINISH REMOVE extensions/inspector@mozilla.org/components/inspector.dll
+FINISH REMOVE uninstall/UninstallFirefox.exe
+FINISH REMOVE uninstall/UninstallDeerPark.exe
+FINISH REMOVE uninstall/uninst.exe
+FINISH REMOVE uninstall/uninstall.exe
+FINISH REMOVE components/myspell/en-US.dic
+FINISH REMOVE components/myspell/en-US.aff
+FINISH REMOVE Microsoft.VC80.CRT.manifest
+FINISH REMOVE msvcm80.dll
+FINISH REMOVE msvcp80.dll
+FINISH REMOVE msvcr80.dll
+FINISH REMOVE searchplugins/DRAE.src
+FINISH REMOVE searchplugins/DRAE.png
+FINISH REMOVE searchplugins/DRAE.gif
+FINISH REMOVE searchplugins/MediaDICO-fr.src
+FINISH REMOVE searchplugins/MediaDICO-fr.png
+FINISH REMOVE searchplugins/MediaDICO-fr.gif
+FINISH REMOVE searchplugins/allegro-pl.src
+FINISH REMOVE searchplugins/allegro-pl.png
+FINISH REMOVE searchplugins/allegro-pl.gif
+FINISH REMOVE searchplugins/amazon-de.src
+FINISH REMOVE searchplugins/amazon-de.png
+FINISH REMOVE searchplugins/amazon-de.gif
+FINISH REMOVE searchplugins/amazon-en-GB.src
+FINISH REMOVE searchplugins/amazon-en-GB.png
+FINISH REMOVE searchplugins/amazon-en-GB.gif
+FINISH REMOVE searchplugins/amazon-france.src
+FINISH REMOVE searchplugins/amazon-france.png
+FINISH REMOVE searchplugins/amazon-france.gif
+FINISH REMOVE searchplugins/amazon-jp.src
+FINISH REMOVE searchplugins/amazon-jp.png
+FINISH REMOVE searchplugins/amazon-jp.gif
+FINISH REMOVE searchplugins/amazondotcom.src
+FINISH REMOVE searchplugins/amazondotcom.png
+FINISH REMOVE searchplugins/amazondotcom.gif
+FINISH REMOVE searchplugins/amazondotcom-zh-TW.src
+FINISH REMOVE searchplugins/amazondotcom-zh-TW.png
+FINISH REMOVE searchplugins/amazondotcom-zh-TW.gif
+FINISH REMOVE searchplugins/answers.src
+FINISH REMOVE searchplugins/answers.png
+FINISH REMOVE searchplugins/answers.gif
+FINISH REMOVE searchplugins/google-es-ES.src
+FINISH REMOVE searchplugins/google-es-ES.png
+FINISH REMOVE searchplugins/google-es-ES.gif
+FINISH REMOVE searchplugins/atlas-sk.src
+FINISH REMOVE searchplugins/atlas-sk.png
+FINISH REMOVE searchplugins/atlas-sk.gif
+FINISH REMOVE searchplugins/baidu.src
+FINISH REMOVE searchplugins/baidu.png
+FINISH REMOVE searchplugins/baidu.gif
+FINISH REMOVE searchplugins/bok-NO.src
+FINISH REMOVE searchplugins/bok-NO.png
+FINISH REMOVE searchplugins/bok-NO.gif
+FINISH REMOVE searchplugins/bolcom-nl.src
+FINISH REMOVE searchplugins/bolcom-nl.png
+FINISH REMOVE searchplugins/bolcom-nl.gif
+FINISH REMOVE searchplugins/bookplus-fi.src
+FINISH REMOVE searchplugins/bookplus-fi.png
+FINISH REMOVE searchplugins/bookplus-fi.gif
+FINISH REMOVE searchplugins/caplex-NO.src
+FINISH REMOVE searchplugins/caplex-NO.png
+FINISH REMOVE searchplugins/caplex-NO.gif
+FINISH REMOVE searchplugins/centrum-cz.src
+FINISH REMOVE searchplugins/centrum-cz.png
+FINISH REMOVE searchplugins/centrum-cz.gif
+FINISH REMOVE searchplugins/creativecommons.src
+FINISH REMOVE searchplugins/creativecommons.png
+FINISH REMOVE searchplugins/creativecommons.gif
+FINISH REMOVE searchplugins/creativecommons-fi.src
+FINISH REMOVE searchplugins/creativecommons-fi.png
+FINISH REMOVE searchplugins/creativecommons-fi.gif
+FINISH REMOVE searchplugins/creativecommons-it.src
+FINISH REMOVE searchplugins/creativecommons-it.png
+FINISH REMOVE searchplugins/creativecommons-it.gif
+FINISH REMOVE searchplugins/creativecommons-zh-TW.src
+FINISH REMOVE searchplugins/creativecommons-zh-TW.png
+FINISH REMOVE searchplugins/creativecommons-zh-TW.gif
+FINISH REMOVE searchplugins/daum-ko.src
+FINISH REMOVE searchplugins/daum-ko.png
+FINISH REMOVE searchplugins/daum-ko.gif
+FINISH REMOVE searchplugins/demauro-it.src
+FINISH REMOVE searchplugins/demauro-it.png
+FINISH REMOVE searchplugins/demauro-it.gif
+FINISH REMOVE searchplugins/dictionary-en-GB.src
+FINISH REMOVE searchplugins/dictionary-en-GB.png
+FINISH REMOVE searchplugins/dictionary-en-GB.gif
+FINISH REMOVE searchplugins/dunaj-sk.src
+FINISH REMOVE searchplugins/dunaj-sk.png
+FINISH REMOVE searchplugins/dunaj-sk.gif
+FINISH REMOVE searchplugins/eBay.src
+FINISH REMOVE searchplugins/eBay.png
+FINISH REMOVE searchplugins/eBay.gif
+FINISH REMOVE searchplugins/eBay-de.src
+FINISH REMOVE searchplugins/eBay-de.png
+FINISH REMOVE searchplugins/eBay-de.gif
+FINISH REMOVE searchplugins/eBay-en-GB.src
+FINISH REMOVE searchplugins/eBay-en-GB.png
+FINISH REMOVE searchplugins/eBay-en-GB.gif
+FINISH REMOVE searchplugins/eBay-france.src
+FINISH REMOVE searchplugins/eBay-france.png
+FINISH REMOVE searchplugins/eBay-france.gif
+FINISH REMOVE searchplugins/eBay-gu.src
+FINISH REMOVE searchplugins/eBay-gu.png
+FINISH REMOVE searchplugins/eBay-gu.gif
+FINISH REMOVE searchplugins/eBay-nl.src
+FINISH REMOVE searchplugins/eBay-nl.png
+FINISH REMOVE searchplugins/eBay-nl.gif
+FINISH REMOVE searchplugins/eBay-zh-CN.src
+FINISH REMOVE searchplugins/eBay-zh-CN.png
+FINISH REMOVE searchplugins/eBay-zh-CN.gif
+FINISH REMOVE searchplugins/eBay-zh-TW.src
+FINISH REMOVE searchplugins/eBay-zh-TW.png
+FINISH REMOVE searchplugins/eBay-zh-TW.gif
+FINISH REMOVE searchplugins/ebay-it.src
+FINISH REMOVE searchplugins/ebay-it.png
+FINISH REMOVE searchplugins/ebay-it.gif
+FINISH REMOVE searchplugins/filesearchru.src
+FINISH REMOVE searchplugins/filesearchru.png
+FINISH REMOVE searchplugins/filesearchru.gif
+FINISH REMOVE searchplugins/goo.src
+FINISH REMOVE searchplugins/goo.png
+FINISH REMOVE searchplugins/goo.gif
+FINISH REMOVE searchplugins/google.src
+FINISH REMOVE searchplugins/google.png
+FINISH REMOVE searchplugins/google.gif
+FINISH REMOVE searchplugins/google-NO.src
+FINISH REMOVE searchplugins/google-NO.png
+FINISH REMOVE searchplugins/google-NO.gif
+FINISH REMOVE searchplugins/google-ar.src
+FINISH REMOVE searchplugins/google-ar.png
+FINISH REMOVE searchplugins/google-ar.gif
+FINISH REMOVE searchplugins/google-bg.src
+FINISH REMOVE searchplugins/google-bg.png
+FINISH REMOVE searchplugins/google-bg.gif
+FINISH REMOVE searchplugins/google-ca.src
+FINISH REMOVE searchplugins/google-ca.png
+FINISH REMOVE searchplugins/google-ca.gif
+FINISH REMOVE searchplugins/google-de.src
+FINISH REMOVE searchplugins/google-de.png
+FINISH REMOVE searchplugins/google-de.gif
+FINISH REMOVE searchplugins/google-dk.src
+FINISH REMOVE searchplugins/google-dk.png
+FINISH REMOVE searchplugins/google-dk.gif
+FINISH REMOVE searchplugins/google-en-GB.src
+FINISH REMOVE searchplugins/google-en-GB.png
+FINISH REMOVE searchplugins/google-en-GB.gif
+FINISH REMOVE searchplugins/google-eu.src
+FINISH REMOVE searchplugins/google-eu.png
+FINISH REMOVE searchplugins/google-eu.gif
+FINISH REMOVE searchplugins/google-fi.src
+FINISH REMOVE searchplugins/google-fi.png
+FINISH REMOVE searchplugins/google-fi.gif
+FINISH REMOVE searchplugins/google-gu.src
+FINISH REMOVE searchplugins/google-gu.png
+FINISH REMOVE searchplugins/google-gu.gif
+FINISH REMOVE searchplugins/google-it.src
+FINISH REMOVE searchplugins/google-it.png
+FINISH REMOVE searchplugins/google-it.gif
+FINISH REMOVE searchplugins/google-jp.src
+FINISH REMOVE searchplugins/google-jp.png
+FINISH REMOVE searchplugins/google-jp.gif
+FINISH REMOVE searchplugins/google-ko.src
+FINISH REMOVE searchplugins/google-ko.png
+FINISH REMOVE searchplugins/google-ko.gif
+FINISH REMOVE searchplugins/google-lt.src
+FINISH REMOVE searchplugins/google-lt.png
+FINISH REMOVE searchplugins/google-lt.gif
+FINISH REMOVE searchplugins/google-nl.src
+FINISH REMOVE searchplugins/google-nl.png
+FINISH REMOVE searchplugins/google-nl.gif
+FINISH REMOVE searchplugins/google-pl.src
+FINISH REMOVE searchplugins/google-pl.png
+FINISH REMOVE searchplugins/google-pl.gif
+FINISH REMOVE searchplugins/google-ro.src
+FINISH REMOVE searchplugins/google-ro.png
+FINISH REMOVE searchplugins/google-ro.gif
+FINISH REMOVE searchplugins/google-ru.src
+FINISH REMOVE searchplugins/google-ru.png
+FINISH REMOVE searchplugins/google-ru.gif
+FINISH REMOVE searchplugins/google-sl.src
+FINISH REMOVE searchplugins/google-sl.png
+FINISH REMOVE searchplugins/google-sl.gif
+FINISH REMOVE searchplugins/google-zh-TW.src
+FINISH REMOVE searchplugins/google-zh-TW.png
+FINISH REMOVE searchplugins/google-zh-TW.gif
+FINISH REMOVE searchplugins/grandiccionari.src
+FINISH REMOVE searchplugins/grandiccionari.png
+FINISH REMOVE searchplugins/grandiccionari.gif
+FINISH REMOVE searchplugins/huuto-fi.src
+FINISH REMOVE searchplugins/huuto-fi.png
+FINISH REMOVE searchplugins/huuto-fi.gif
+FINISH REMOVE searchplugins/jyxo-cz.src
+FINISH REMOVE searchplugins/jyxo-cz.png
+FINISH REMOVE searchplugins/jyxo-cz.gif
+FINISH REMOVE searchplugins/lingvo.yandex.ru.src
+FINISH REMOVE searchplugins/lingvo.yandex.ru.png
+FINISH REMOVE searchplugins/lingvo.yandex.ru.gif
+FINISH REMOVE searchplugins/llibres.src
+FINISH REMOVE searchplugins/llibres.png
+FINISH REMOVE searchplugins/llibres.gif
+FINISH REMOVE searchplugins/mall-cz.src
+FINISH REMOVE searchplugins/mall-cz.png
+FINISH REMOVE searchplugins/mall-cz.gif
+FINISH REMOVE searchplugins/mercadolivre-com-br.src
+FINISH REMOVE searchplugins/mercadolivre-com-br.png
+FINISH REMOVE searchplugins/mercadolivre-com-br.gif
+FINISH REMOVE searchplugins/merlin-pl.src
+FINISH REMOVE searchplugins/merlin-pl.png
+FINISH REMOVE searchplugins/merlin-pl.gif
+FINISH REMOVE searchplugins/najdi-si.src
+FINISH REMOVE searchplugins/najdi-si.png
+FINISH REMOVE searchplugins/najdi-si.gif
+FINISH REMOVE searchplugins/naver-ko.src
+FINISH REMOVE searchplugins/naver-ko.png
+FINISH REMOVE searchplugins/naver-ko.gif
+FINISH REMOVE searchplugins/nosaltres.src
+FINISH REMOVE searchplugins/nosaltres.png
+FINISH REMOVE searchplugins/nosaltres.gif
+FINISH REMOVE searchplugins/pbi-pl.src
+FINISH REMOVE searchplugins/pbi-pl.png
+FINISH REMOVE searchplugins/pbi-pl.gif
+FINISH REMOVE searchplugins/pbi-pl.xml
+FINISH REMOVE searchplugins/google-pt-BR.src
+FINISH REMOVE searchplugins/google-pt-BR.png
+FINISH REMOVE searchplugins/google-pt-BR.gif
+FINISH REMOVE searchplugins/priceru.src
+FINISH REMOVE searchplugins/priceru.png
+FINISH REMOVE searchplugins/priceru.gif
+FINISH REMOVE searchplugins/pwn-pl.src
+FINISH REMOVE searchplugins/pwn-pl.png
+FINISH REMOVE searchplugins/pwn-pl.gif
+FINISH REMOVE searchplugins/qxl-NO.src
+FINISH REMOVE searchplugins/qxl-NO.png
+FINISH REMOVE searchplugins/qxl-NO.gif
+FINISH REMOVE searchplugins/rakuten.src
+FINISH REMOVE searchplugins/rakuten.png
+FINISH REMOVE searchplugins/rakuten.gif
+FINISH REMOVE searchplugins/seznam-cz.src
+FINISH REMOVE searchplugins/seznam-cz.png
+FINISH REMOVE searchplugins/seznam-cz.gif
+FINISH REMOVE searchplugins/sigov-gov-si.src
+FINISH REMOVE searchplugins/sigov-gov-si.png
+FINISH REMOVE searchplugins/sigov-gov-si.gif
+FINISH REMOVE searchplugins/slunecnice-cz.src
+FINISH REMOVE searchplugins/slunecnice-cz.png
+FINISH REMOVE searchplugins/slunecnice-cz.gif
+FINISH REMOVE searchplugins/submarino-com-br.src
+FINISH REMOVE searchplugins/submarino-com-br.png
+FINISH REMOVE searchplugins/submarino-com-br.gif
+FINISH REMOVE searchplugins/taobao.src
+FINISH REMOVE searchplugins/taobao.png
+FINISH REMOVE searchplugins/taobao.gif
+FINISH REMOVE searchplugins/telefonkatalogen-NO.src
+FINISH REMOVE searchplugins/telefonkatalogen-NO.png
+FINISH REMOVE searchplugins/telefonkatalogen-NO.gif
+FINISH REMOVE searchplugins/universal-pt.src
+FINISH REMOVE searchplugins/universal-pt.png
+FINISH REMOVE searchplugins/universal-pt.gif
+FINISH REMOVE searchplugins/vandale-nl.src
+FINISH REMOVE searchplugins/vandale-nl.png
+FINISH REMOVE searchplugins/vandale-nl.gif
+FINISH REMOVE searchplugins/walla_sites.src
+FINISH REMOVE searchplugins/walla_sites.png
+FINISH REMOVE searchplugins/walla_sites.gif
+FINISH REMOVE searchplugins/wikipedia-bg.src
+FINISH REMOVE searchplugins/wikipedia-bg.png
+FINISH REMOVE searchplugins/wikipedia-bg.gif
+FINISH REMOVE searchplugins/wikipedia-ca.src
+FINISH REMOVE searchplugins/wikipedia-ca.png
+FINISH REMOVE searchplugins/wikipedia-ca.gif
+FINISH REMOVE searchplugins/wikipedia-de.src
+FINISH REMOVE searchplugins/wikipedia-de.png
+FINISH REMOVE searchplugins/wikipedia-de.gif
+FINISH REMOVE searchplugins/wikipedia-es-ES.src
+FINISH REMOVE searchplugins/wikipedia-es-ES.png
+FINISH REMOVE searchplugins/wikipedia-es-ES.gif
+FINISH REMOVE searchplugins/wikipedia-eu.src
+FINISH REMOVE searchplugins/wikipedia-eu.png
+FINISH REMOVE searchplugins/wikipedia-eu.gif
+FINISH REMOVE searchplugins/wikipedia-fi.src
+FINISH REMOVE searchplugins/wikipedia-fi.png
+FINISH REMOVE searchplugins/wikipedia-fi.gif
+FINISH REMOVE searchplugins/wikipedia-fr.src
+FINISH REMOVE searchplugins/wikipedia-fr.png
+FINISH REMOVE searchplugins/wikipedia-fr.gif
+FINISH REMOVE searchplugins/wikipedia-fy.src
+FINISH REMOVE searchplugins/wikipedia-fy.png
+FINISH REMOVE searchplugins/wikipedia-fy.gif
+FINISH REMOVE searchplugins/wikipedia-he.src
+FINISH REMOVE searchplugins/wikipedia-he.png
+FINISH REMOVE searchplugins/wikipedia-he.gif
+FINISH REMOVE searchplugins/wikipedia-it.src
+FINISH REMOVE searchplugins/wikipedia-it.png
+FINISH REMOVE searchplugins/wikipedia-it.gif
+FINISH REMOVE searchplugins/wikipedia-lt.src
+FINISH REMOVE searchplugins/wikipedia-lt.png
+FINISH REMOVE searchplugins/wikipedia-lt.gif
+FINISH REMOVE searchplugins/wikipedia-nl.src
+FINISH REMOVE searchplugins/wikipedia-nl.png
+FINISH REMOVE searchplugins/wikipedia-nl.gif
+FINISH REMOVE searchplugins/wikipedia-pl.src
+FINISH REMOVE searchplugins/wikipedia-pl.png
+FINISH REMOVE searchplugins/wikipedia-pl.gif
+FINISH REMOVE searchplugins/wikipedia-ru.src
+FINISH REMOVE searchplugins/wikipedia-ru.png
+FINISH REMOVE searchplugins/wikipedia-ru.gif
+FINISH REMOVE searchplugins/wikipedia-sk.src
+FINISH REMOVE searchplugins/wikipedia-sk.png
+FINISH REMOVE searchplugins/wikipedia-sk.gif
+FINISH REMOVE searchplugins/wp-pl.src
+FINISH REMOVE searchplugins/wp-pl.png
+FINISH REMOVE searchplugins/wp-pl.gif
+FINISH REMOVE searchplugins/yahoo.src
+FINISH REMOVE searchplugins/yahoo.png
+FINISH REMOVE searchplugins/yahoo.gif
+FINISH REMOVE searchplugins/yahoo-NO.src
+FINISH REMOVE searchplugins/yahoo-NO.png
+FINISH REMOVE searchplugins/yahoo-NO.gif
+FINISH REMOVE searchplugins/yahoo-ar.src
+FINISH REMOVE searchplugins/yahoo-ar.png
+FINISH REMOVE searchplugins/yahoo-ar.gif
+FINISH REMOVE searchplugins/yahoo-ca.src
+FINISH REMOVE searchplugins/yahoo-ca.png
+FINISH REMOVE searchplugins/yahoo-ca.gif
+FINISH REMOVE searchplugins/yahoo-cn.src
+FINISH REMOVE searchplugins/yahoo-cn.png
+FINISH REMOVE searchplugins/yahoo-cn.gif
+FINISH REMOVE searchplugins/yahoo-de.src
+FINISH REMOVE searchplugins/yahoo-de.png
+FINISH REMOVE searchplugins/yahoo-de.gif
+FINISH REMOVE searchplugins/yahoo-dk.src
+FINISH REMOVE searchplugins/yahoo-dk.png
+FINISH REMOVE searchplugins/yahoo-dk.gif
+FINISH REMOVE searchplugins/yahoo-en-GB.src
+FINISH REMOVE searchplugins/yahoo-en-GB.png
+FINISH REMOVE searchplugins/yahoo-en-GB.gif
+FINISH REMOVE searchplugins/yahoo-es-ES.src
+FINISH REMOVE searchplugins/yahoo-es-ES.png
+FINISH REMOVE searchplugins/yahoo-es-ES.gif
+FINISH REMOVE searchplugins/yahoo-fi.src
+FINISH REMOVE searchplugins/yahoo-fi.png
+FINISH REMOVE searchplugins/yahoo-fi.gif
+FINISH REMOVE searchplugins/yahoo-france.src
+FINISH REMOVE searchplugins/yahoo-france.png
+FINISH REMOVE searchplugins/yahoo-france.gif
+FINISH REMOVE searchplugins/yahoo-gu.src
+FINISH REMOVE searchplugins/yahoo-gu.png
+FINISH REMOVE searchplugins/yahoo-gu.gif
+FINISH REMOVE searchplugins/yahoo-it.src
+FINISH REMOVE searchplugins/yahoo-it.png
+FINISH REMOVE searchplugins/yahoo-it.gif
+FINISH REMOVE searchplugins/yahoo-jp.src
+FINISH REMOVE searchplugins/yahoo-jp.png
+FINISH REMOVE searchplugins/yahoo-jp.gif
+FINISH REMOVE searchplugins/yahoo-jp-auctions.src
+FINISH REMOVE searchplugins/yahoo-jp-auctions.png
+FINISH REMOVE searchplugins/yahoo-jp-auctions.gif
+FINISH REMOVE searchplugins/yahoo-jp-shopping.src
+FINISH REMOVE searchplugins/yahoo-jp-shopping.png
+FINISH REMOVE searchplugins/yahoo-jp-shopping.gif
+FINISH REMOVE searchplugins/yahoo-kr.src
+FINISH REMOVE searchplugins/yahoo-kr.png
+FINISH REMOVE searchplugins/yahoo-kr.gif
+FINISH REMOVE searchplugins/yahoo-nl.src
+FINISH REMOVE searchplugins/yahoo-nl.png
+FINISH REMOVE searchplugins/yahoo-nl.gif
+FINISH REMOVE searchplugins/google-ga-IE.src
+FINISH REMOVE searchplugins/google-ga-IE.png
+FINISH REMOVE searchplugins/google-ga-IE.gif
+FINISH REMOVE searchplugins/yahoo-pt-BR.src
+FINISH REMOVE searchplugins/yahoo-pt-BR.png
+FINISH REMOVE searchplugins/yahoo-pt-BR.gif
+FINISH REMOVE searchplugins/yahoo-tw.src
+FINISH REMOVE searchplugins/yahoo-tw.png
+FINISH REMOVE searchplugins/yahoo-tw.gif
+FINISH REMOVE searchplugins/yandex.src
+FINISH REMOVE searchplugins/yandex.png
+FINISH REMOVE searchplugins/yandex.gif
+FINISH REMOVE searchplugins/zoznam-sk.src
+FINISH REMOVE searchplugins/zoznam-sk.png
+FINISH REMOVE searchplugins/zoznam-sk.gif
+FINISH REMOVE components/sidebar.xpt
+FINISH REMOVE components/xmlextras.xpt
+FINISH REMOVE application.ini
+FINISH REMOVE blocklist.xml
+FINISH REMOVE crashreporter-override.ini
+FINISH REMOVE crashreporter.exe
+FINISH REMOVE crashreporter.ini
+FINISH REMOVE mozcrt19.dll
+FINISH REMOVE nssdbm3.dll
+FINISH REMOVE nssutil3.dll
+FINISH REMOVE platform.ini
+FINISH REMOVE sqlite3.dll
+FINISH REMOVE xul.dll
+FINISH REMOVE components/aboutrobots.js
+FINISH REMOVE components/browserdirprovider.dll
+FINISH REMOVE components/brwsrcmp.dll
+FINISH REMOVE components/fuelapplication.js
+FINISH REMOVE components/nsaddonrepository.js
+FINISH REMOVE components/nsblocklistservice.js
+FINISH REMOVE components/nscontentdispatchchooser.js
+FINISH REMOVE components/nscontentprefservice.js
+FINISH REMOVE components/nsdownloadmanagerui.js
+FINISH REMOVE components/nshandlerservice.js
+FINISH REMOVE components/nslivemarkservice.js
+FINISH REMOVE components/nslogininfo.js
+FINISH REMOVE components/nsloginmanager.js
+FINISH REMOVE components/nsloginmanagerprompter.js
+FINISH REMOVE components/nsplacestransactionsservice.js
+FINISH REMOVE components/nstaggingservice.js
+FINISH REMOVE components/nstrytoclose.js
+FINISH REMOVE components/nswebhandlerapp.js
+FINISH REMOVE components/pluginglue.js
+FINISH REMOVE components/storage-legacy.js
+FINISH REMOVE components/txexsltregexfunctions.js
+FINISH REMOVE modules/debug.js
+FINISH REMOVE modules/distribution.js
+FINISH REMOVE modules/downloadutils.jsm
+FINISH REMOVE modules/iso8601dateutils.jsm
+FINISH REMOVE modules/json.jsm
+FINISH REMOVE modules/microformats.js
+FINISH REMOVE modules/pluralform.jsm
+FINISH REMOVE modules/utils.js
+FINISH REMOVE modules/xpcomutils.jsm
+FINISH REMOVE res/contenteditable.css
+FINISH REMOVE res/designmode.css
+FINISH REMOVE res/fonts/mathfontstandardsymbolsl.properties
+FINISH REMOVE res/fonts/mathfontstixnonunicode.properties
+FINISH REMOVE res/fonts/mathfontstixsize1.properties
+FINISH REMOVE res/fonts/mathfontunicode.properties
+FINISH REMOVE res/html/folder.png
+succeeded
+calling QuitProgressUI

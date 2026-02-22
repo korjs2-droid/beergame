@@ -1,0 +1,182 @@
+<screens>
+	<screen name ="scLevels">
+		<label name="computerplayer_short">CPU</label>
+
+		<label name="level_3_0">Brauerei</label>
+		<label name="level_3_1">Großhändler</label>
+		<label name="level_3_2">Einzelhändler</label>
+		
+		<label name="level_4_0">Brauerei</label>
+		<label name="level_4_1">Distributor</label>
+		<label name="level_4_2">Großhändler</label>
+		<label name="level_4_3">Einzelhändler</label>
+
+		<label name="level_5_0">Brauerei</label>
+		<label name="level_5_1">Distributor</label>
+		<label name="level_5_2">Regionaler Distributor</label>
+		<label name="level_5_3">Großhändler</label>
+		<label name="level_5_4">Einzelhändler</label>
+	</screen>
+	<screen name ="navigation">
+		<label name="label_language">German:</label>
+		<label name="label_youGotMail">Sie haben neue Nachrichten erhalten!</label>
+		<label name="label_headline">The Beergame</label>
+	</screen>
+	<screen name ="popup_confirmOrder">
+		<label name="title">Danke für Ihre Bestellung!</label>
+		<label name="order">Ihre Bestellung:</label>
+		<label name="description">Sobald alle Spieler ihre Bestellungen abgegeben haben, beginnt die nächste Runde...
+
+Solange die nächste Runde noch nicht freigegeben wurde, können sie Ihre Bestellung noch korrigieren</label>
+		<label name="btn_undo">korrigieren</label>
+	</screen>
+	<screen name ="popup_sentSuccessfully">
+		<label name="label_desc">Ihre Nachricht wurde erfolgreich versandt.</label>
+		<label name="btn_ok">OK</label>
+	</screen>
+	<screen name ="popup_nextRound">
+		<label name="description">Die nächste Runde kann beginnen...</label>
+		<label name="btn_ok">Dann mal los...</label>
+	</screen>
+	<screen name ="miniSC">
+		<label name="role">Sie sind:</label>
+		<label name="stock">Lager:</label>
+		<label name="shippings">Unterwegs:</label>
+	</screen>
+	<screen name ="gui_game">
+		<label name="round">Runde:</label>
+		<label name="label_view">Ansicht:</label>		
+		<label name="combo_view_animation">Animation</label>
+		<label name="combo_view_table">Tabelle</label>
+	</screen>
+	<screen name ="gui_chooseEvent">
+		<label name="title">Veranstaltung auswählen</label>
+		<label name="label_name">Ihr Name:</label>
+		<label name="label_mail">Ihre E-Mail Adresse:</label>
+		<label name="label_event">Veranstaltung:</label>
+		<label name="btn_chooseEvent">betreten</label>
+		<label name="pleaseSelect">--- Bitte auswählen ---</label>
+		<label name="label_nameError">Bitte geben Sie Name und Email-Adresse ein!</label>
+		<label name="label_eventError">Bitte wählen Sie eine Veranstaltung aus!</label>
+	</screen>
+	<screen name ="gui_afterGame">
+		<label name="label_title">Vielen Dank fürs Mitspielen!</label>
+		<label name="chart_customer">Kunde</label>
+		<label name="label_desc">Das unten stehenden Diagramm zeigt die Bestellmengen aller Spieler im Überblick. Daran können Sie sehen, wie groß der Bullwhip-Effekt in diesem Spiel ausgefallen ist.
+
+Durch Klick auf die Legenden-Kästchen können einzelne Spieler aus dem Diagramm ausgeblendet werden.</label>
+	</screen>
+	<screen name ="gui_preGame">
+		<label name="message">Das Spiel wird in Kürze gestartet.
+Bitte haben Sie etwas Geduld...</label>
+	</screen>
+	<screen name ="game_animated">
+		<label name="label_inOrder">Bestellung
+annehmen</label>
+		<label name="label_outOrder">Meine
+Bestellung</label>
+		<label name="label_stock">Lagerbestand</label>
+		<label name="label_openOrders">Offene
+Bestellungen</label>
+		<label name="label_inDel">Lieferung
+annehmen</label>
+		<label name="label_outDel">Waren
+ausliefern</label>
+		<label name="label_shippingDelay">Liefer-
+strecke</label>
+		<label name="label_productionDelay">Produktion</label>
+		<label name="label_productionRequest">Produktions-
+auftrag</label>
+		<label name="label_costs">Gesamtkosten</label>
+		<label name="label_mail">Postweg</label>
+		<label name="btn_replay">nochmal</label>
+		<label name="btn_fafo">überspringen</label>
+		<label name="btn_placeOrder">OK</label>		
+	</screen>
+	<screen name ="game_table">
+		<label name="label_placeOrder">Ihre Bestellung:</label>
+		<label name="btn_placeOrder">OK</label>
+		<label name="pleaseOrder">Bestellung eingeben...</label>
+		<label name="column_round" 						width="50">Runde</label>
+		<label name="column_shippingIncomingDeliveries" width="60">Unterwegs</label>
+		<label name="column_incomingDelivery" 			width="95">Wareneingang</label>
+		<label name="column_available" 					width="70">Verfügbar</label>
+		<label name="column_incomingOrder" 				width="95">Kundenauftrag</label>
+		<label name="column_outgoingDelivery" 			width="95">Warenausgang</label>
+		<label name="column_backorderAfterRound"	 	width="50">Offen</label>
+		<label name="column_stockAfterRound" 			width="90">Lagerbestand</label>
+		<label name="column_roundCosts" 				width="55">Kosten</label>
+		<label name="column_outgoingOrder" 				width="100">Meine Bestellung</label>
+		<label name="column_customerDemand" 			width="100">Endkundennachfr.</label>
+	</screen>
+	<screen name ="popup_chat_senden">
+		<label name="title">Nachricht senden</label>
+		<label name="label_receivers">Empfänger der Nachricht</label>
+		<label name="label_message">Inhalt der Nachricht</label>
+		<label name="label_desc">Hier können Sie eine Textnachricht an einen oder mehrere Spieler senden. 
+Wenn Sie statt eines Spielers ein Spiel markieren, wird die Nachricht an alle Spieler des Spiels gesendet.</label>
+		<label name="btn_markAll">alle auswählen</label>
+		<label name="btn_cancel">Schliessen</label>
+		<label name="btn_send">Senden</label>
+		<label name="label_numReceivers">Empfänger gewählt</label>
+	</screen>
+	<screen name ="popup_chat_empfangen">
+		<label name="title">Nachrichten</label>
+		<label name="label_message">Inhalt der Nachricht</label>
+		<label name="label_messages">Empfangene Nachrichten</label>
+		<label name="btn_cancel">Schliessen</label>
+		<label name="btn_reply">Antworten</label>
+		<label name="btn_sendmail">Neue Nachricht</label>
+		<label name="column_name"	width="150">Name</label>
+		<label name="column_role"	width="150">Rolle</label>
+		<label name="column_date"	width="150">Datum</label>
+		<label name="sender_admin">Spielleiter</label>
+		<label name="tree_pending">Nicht zugeordnet</label>
+		<label name="tree_admin">Spielleiter</label>
+	</screen>
+	<screen name ="popup_credits">
+		<label name="label_title">Credits</label>
+		<label name="label_link">Credits</label>
+		<label name="btn_close">Schliessen</label>
+		<label name="txt_credits">The Beergame, Version 1.2 (2009-06-15).
+		
+Software-Idee, Konzept und visuelles Design: Kai Riemer.
+Software Design und Entwicklung: Florian Christ.
+
+Diese Software steht unter einer speziellen Lizenz für den Ausbildungsbetrieb (educationware)!
+
+Die Software darf kostenlos im Rahmen der universitären Ausbildung eingesetzt werden.
+Die Software darf jedoch nicht für kommerzielle Zwecke eingesetzt werden; dies gilt insbesondere für Managementseminare mit Teilnehmern aus der Praxis. Es ist zudem nicht gestattet die Software online über das Internet verfügbar zu machen (egal zu welchem Zweck).
+Sollten Sie sich nicht sicher sein, so kontaktieren Sie bitte die Entwickler.
+
+Eine Weitergabe der Software ohne Zustimmung der Entwickler ist ebenfalls nicht gestattet. Die Software kann von den Entwicklern kostenlos angefordert werden.
+
+Bitte respektieren Sie diese Bestimmungen.
+		</label>
+	</screen>
+	<screen name ="popup_help">
+		<label name="label_title">Hilfe</label>
+		<label name="label_link">Hilfe</label>
+		<label name="btn_close">Schliessen</label>
+		<label name="txt_help">HERZLICH WILLKOMMEN IM BEERGAME!
+
+Sie sollten nun auf Ihrem Bildschirm das Beergame-Hauptfenster sehen (im Hintergrund), das vom eigentlichen Spielfenster überlagert wird, in dem die Animationen stattfinden.
+
+SPIELFENSTER:
+- In der Mitte des Spielfensters finden Sie Ihre Spielkarte auf der Ihre Daten angezeigt werden. Im oberen Teil finden Sie die Werte für die aktuelle Runde (Woche). Im unteren Teil werden die Bestandswerte angezeigt (Kosten, Lager, Backorder).
+- Die Aktualisierung der Daten wird durch Animationen visualisiert. Sie können diese Animationen überspringen, indem Sie auf 'überspringen' klicken.
+- Wenn die Animation stoppt, können Sie Ihre Bestellung eingeben. Wenn Sie 'OK' klicken, geht das Spiel weiter. Solange nicht alle Spieler ihre Bestellung abgegeben haben, können Sie zurückkehren und ihre Bestellmenge ändern. Haben alle Spieler 'OK' signalisiert, startet die nächste Woche.
+- In der linken oberen Ecke finden Sie die aktuelle Woche/Runde.
+- In der Mitte über Ihrer Spielkarte finden Sie ein Visualisierung der gesamten Supply-Chain. Ihre Rolle (Position) in der Kette ist hervorgehoben. Wenn der Administrator Informationsweitergabe freigeschaltet hat, so können Sie sich die verschiedenen Informationen anzeigen lassen, indem Sie mit Ihrem Mauszeiger über die Supply-Chain-Piktogramme fahren.
+- In der rechten oben Ecke können Sie zwischen dem Standard-Animationsmodus und einer Tabellenansicht umschalten. In der Tabellenansicht können Sie alle aktuellen und die Daten der vorangegangenen Runden einsehen.
+
+HAUPTFENSTER (HINTERGRUND):
+- In der linken oberen Ecke finden Sie den Link zu Ihrem Posteingang, von wo aus Sie dem Administrator Nachrichten senden können (z.B. um Fragen zu stellen).
+- In der rechten oberen Ecke können Sie die Sprache umstellen.
+- In der linken unteren Ecke können Sie sich Informationen zu den Entwicklern anzeigen lassen.
+- Den Link in der rechten unteren Ecke haben Sie ja bereits ausprobiert, sonst könnten Sie diesen Text nicht lesen ;-)
+
+VIEL SPASS MIT DEM BEERGAME!
+		</label>
+	</screen>
+</screens>
