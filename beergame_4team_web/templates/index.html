@@ -10,25 +10,66 @@
     <main class="container">
       <section class="panel" id="auth-panel">
         <h1>Beer Game (4 Teams)</h1>
-        <p class="muted">Local multiplayer prototype based on legacy Beer Game flow.</p>
+        <p class="muted">Admin 1 + Player 4 local/online multiplayer mode.</p>
 
         <div class="grid2">
+          <label>
+            Role
+            <select id="role">
+              <option value="player">Player</option>
+              <option value="admin">Admin</option>
+            </select>
+          </label>
           <label>
             Your name
             <input id="name" type="text" maxlength="40" value="Player" />
           </label>
-          <label>
+          <label id="team-label">
             Team
             <select id="team"></select>
           </label>
         </div>
 
-        <div class="actions">
-          <button id="create-btn">Create Room</button>
-          <button id="join-btn">Join Room</button>
+        <div id="admin-settings" class="grid3 hidden">
+          <label>
+            Max rounds
+            <input id="max-rounds" type="number" min="1" value="40" />
+          </label>
+          <label>
+            Holding cost
+            <input id="holding-cost" type="number" min="0" step="0.1" value="0.5" />
+          </label>
+          <label>
+            Backlog cost
+            <input id="backlog-cost" type="number" min="0" step="0.1" value="1.0" />
+          </label>
+          <label>
+            Initial stock
+            <input id="initial-stock" type="number" min="0" value="15" />
+          </label>
+          <label>
+            Initial incoming order
+            <input id="initial-order" type="number" min="0" value="5" />
+          </label>
+          <label>
+            Initial incoming delivery
+            <input id="initial-delivery" type="number" min="0" value="5" />
+          </label>
+          <label class="span3">
+            Demand schedule
+            <input id="demand-schedule" type="text" value="0:5,4:10" />
+          </label>
         </div>
 
-        <label>
+        <div class="actions" id="admin-actions">
+          <button id="create-btn">Create Room (Admin)</button>
+        </div>
+
+        <div class="actions" id="player-actions">
+          <button id="join-btn">Join Room (Player)</button>
+        </div>
+
+        <label id="room-code-label">
           Room code (for join)
           <input id="room-code" type="text" placeholder="e.g. A1B2C3" />
         </label>
@@ -39,8 +80,14 @@
       <section class="panel hidden" id="game-panel">
         <div class="top-row">
           <h2 id="room-title">Room</h2>
-          <button id="reset-btn" class="ghost">Reset Game</button>
+          <div class="actions">
+            <button id="start-btn" class="ghost hidden">Start Game</button>
+            <button id="save-settings-btn" class="ghost hidden">Save Settings</button>
+            <button id="reset-btn" class="ghost hidden">Reset Game</button>
+          </div>
         </div>
+
+        <div id="assignments" class="assignments"></div>
 
         <div class="stats">
           <div>

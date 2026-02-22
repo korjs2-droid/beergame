@@ -4,7 +4,9 @@ This is a local web version of the beer game inspired by your legacy `bg_player`
 
 ## What is implemented
 
-- 4 fixed supply-chain teams: `Retailer`, `Wholesaler`, `Distributor`, `Factory`
+- 1 admin + 4 fixed player teams: `Retailer`, `Wholesaler`, `Distributor`, `Factory`
+- Admin can configure game settings before start and monitor all teams
+- Admin starts the game after all 4 players join
 - Simultaneous turn submission: the round resolves only when all 4 teams submit orders
 - Core inventory logic with backlog and holding/backorder costs
 - Default settings aligned to legacy defaults:
@@ -33,9 +35,9 @@ For team play on local network, open:
 
 ## How to play
 
-1. One person creates a room and chooses one team.
-2. Other 3 players join with the same room code and choose remaining teams.
-3. When 4 teams are present, game starts automatically.
+1. One person selects `Admin`, sets game options, and creates a room.
+2. Four players join with the room code and pick different teams.
+3. Admin checks assignments and clicks `Start Game`.
 4. Each round every team submits an order once.
 5. Round resolves automatically when all 4 orders are submitted.
 
