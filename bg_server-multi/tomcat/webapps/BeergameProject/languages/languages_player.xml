@@ -1,9 +1,0 @@
-<languages>
-	<language suffix="de" icon="languages/icons/flagge_de1.gif" isDefault="false"/>
-	<language suffix="hu" icon="languages/icons/flagge_hu1.gif" isDefault="false"/>
-	<language suffix="se" icon="languages/icons/flagge_se1.gif" isDefault="false"/>
-	<language suffix="es" icon="languages/icons/flagge_es1.gif" isDefault="false"/>
-	<language suffix="dk" icon="languages/icons/flagge_dk1.gif" isDefault="false"/>
-	<language suffix="it" icon="languages/icons/flagge_it1.gif" isDefault="false"/>
-	<language suffix="en" icon="languages/icons/flagge_gb1.gif" isDefault="true"/>
-</languages>
