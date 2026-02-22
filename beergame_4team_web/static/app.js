@@ -35,6 +35,12 @@ const initialStockInput = document.getElementById("initial-stock");
 const initialOrderInput = document.getElementById("initial-order");
 const initialDeliveryInput = document.getElementById("initial-delivery");
 const demandScheduleInput = document.getElementById("demand-schedule");
+const demandRoundPointInput = document.getElementById("demand-round-point");
+const demandValuePointInput = document.getElementById("demand-value-point");
+const demandAddBtn = document.getElementById("demand-add-btn");
+const demandClearBtn = document.getElementById("demand-clear-btn");
+const demandScheduleChartCanvas = document.getElementById("demand-schedule-chart");
+const demandPointsList = document.getElementById("demand-points-list");
 
 const authPanel = document.getElementById("auth-panel");
 const gamePanel = document.getElementById("game-panel");
@@ -71,6 +77,9 @@ let session = {
 };
 let initializedRoundTracking = false;
 let lastAnimatedRound = 0;
+let settingsDirty = false;
+let demandPoints = { 0: 5, 4: 10 };
+let demandScheduleChart = null;
 let charts = {
   totalCost: null,
   roundCost: null,
@@ -110,7 +119,101 @@ function teamColor(team) {
   return "#5b3c7e";
 }
 
+function sortedDemandEntries(points) {
+  return Object.entries(points)
+    .map(([round, demand]) => [Number(round), Number(demand)])
+    .filter(([round, demand]) => Number.isFinite(round) && Number.isFinite(demand) && round >= 0 && demand >= 0)
+    .sort((a, b) => a[0] - b[0]);
+}
+
+function demandScheduleStringFromPoints() {
+  const entries = sortedDemandEntries(demandPoints);
+  if (!entries.length || entries[0][0] !== 0) {
+    entries.unshift([0, 5]);
+  }
+  return entries.map(([round, demand]) => `${round}:${demand}`).join(",");
+}
+
+function parseDemandScheduleToPoints(raw) {
+  const points = {};
+  if (typeof raw === "string") {
+    raw
+      .split(",")
+      .map((p) => p.trim())
+      .filter(Boolean)
+      .forEach((part) => {
+        const [left, right] = part.split(":");
+        const round = Number(left);
+        const demand = Number(right);
+        if (Number.isFinite(round) && Number.isFinite(demand) && round >= 0 && demand >= 0) {
+          points[round] = demand;
+        }
+      });
+  } else if (raw && typeof raw === "object") {
+    Object.entries(raw).forEach(([round, demand]) => {
+      const r = Number(round);
+      const d = Number(demand);
+      if (Number.isFinite(r) && Number.isFinite(d) && r >= 0 && d >= 0) {
+        points[r] = d;
+      }
+    });
+  }
+  if (!Object.prototype.hasOwnProperty.call(points, 0)) points[0] = 5;
+  return points;
+}
+
+function renderDemandPointsList() {
+  demandPointsList.innerHTML = "";
+  sortedDemandEntries(demandPoints).forEach(([round, demand]) => {
+    const chip = document.createElement("span");
+    chip.className = "demand-point-chip";
+    chip.innerHTML = `R${round}: ${demand} <button type=\"button\" data-round=\"${round}\">x</button>`;
+    chip.querySelector("button").addEventListener("click", () => {
+      if (round === 0) return;
+      delete demandPoints[round];
+      settingsDirty = true;
+      demandScheduleInput.value = demandScheduleStringFromPoints();
+      renderDemandEditorChart();
+      renderDemandPointsList();
+    });
+    demandPointsList.appendChild(chip);
+  });
+}
+
+function renderDemandEditorChart() {
+  if (!window.Chart) return;
+  const entries = sortedDemandEntries(demandPoints);
+  const labels = entries.map(([round]) => `R${round}`);
+  const values = entries.map(([, demand]) => demand);
+  if (demandScheduleChart) {
+    demandScheduleChart.destroy();
+    demandScheduleChart = null;
+  }
+  demandScheduleChart = new Chart(demandScheduleChartCanvas, {
+    type: "line",
+    data: {
+      labels,
+      datasets: [
+        {
+          label: "Demand",
+          data: values,
+          borderColor: "#8f4f20",
+          backgroundColor: "#8f4f20",
+          tension: 0,
+          fill: false,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+    },
+  });
+}
+
 function settingsPayload() {
+  demandScheduleInput.value = demandScheduleStringFromPoints();
   return {
     maxRounds: Number(maxRoundsInput.value),
     holdingCost: Number(holdingCostInput.value),
@@ -130,10 +233,10 @@ function applySettingsToInputs(settings) {
   initialStockInput.value = settings.initialStock;
   initialOrderInput.value = settings.initialIncomingOrder;
   initialDeliveryInput.value = settings.initialIncomingDelivery;
-  const demandEntries = Object.entries(settings.demandSchedule || {})
-    .map(([round, demand]) => `${round}:${demand}`)
-    .join(",");
-  demandScheduleInput.value = demandEntries || "0:5,4:10";
+  demandPoints = parseDemandScheduleToPoints(settings.demandSchedule || "0:5,4:10");
+  demandScheduleInput.value = demandScheduleStringFromPoints();
+  renderDemandEditorChart();
+  renderDemandPointsList();
 }
 
 function updateAuthMode() {
@@ -400,7 +503,9 @@ function renderState(state) {
     submitOrderBtn.disabled = true;
   }
 
-  applySettingsToInputs(state.settings);
+  if (!settingsDirty) {
+    applySettingsToInputs(state.settings);
+  }
 
   teamBoard.innerHTML = "";
   for (const team of TEAM_ORDER) {
@@ -651,6 +756,7 @@ createBtn.addEventListener("click", async () => {
     initializedRoundTracking = false;
     lastAnimatedRound = 0;
     saveSession();
+    settingsDirty = false;
     roomCodeInput.value = data.roomCode;
     setAuthMessage(`Admin room created: ${data.roomCode}`, true);
     await refreshState();
@@ -691,6 +797,7 @@ startBtn.addEventListener("click", async () => {
 saveSettingsBtn.addEventListener("click", async () => {
   try {
     await api("/api/admin/settings", "POST", settingsPayload(), true);
+    settingsDirty = false;
     setSubmitMessage("Settings saved", true);
     await refreshState();
   } catch (err) {
@@ -714,6 +821,7 @@ resetBtn.addEventListener("click", async () => {
     initializedRoundTracking = false;
     lastAnimatedRound = 0;
     setSubmitMessage("Game reset", true);
+    settingsDirty = false;
     await refreshState();
   } catch (err) {
     setSubmitMessage(err.message);
@@ -724,6 +832,7 @@ adminRoundSaveBtn.addEventListener("click", async () => {
   try {
     const maxRounds = Number(adminMaxRoundsGameInput.value);
     await api("/api/admin/settings", "POST", { maxRounds }, true);
+    settingsDirty = false;
     setSubmitMessage(`Round count updated to ${maxRounds}`, true);
     await refreshState();
   } catch (err) {
@@ -731,10 +840,50 @@ adminRoundSaveBtn.addEventListener("click", async () => {
   }
 });
 
+[
+  maxRoundsInput,
+  holdingCostInput,
+  backlogCostInput,
+  initialStockInput,
+  initialOrderInput,
+  initialDeliveryInput,
+].forEach((input) => {
+  input.addEventListener("input", () => {
+    settingsDirty = true;
+  });
+});
+
+demandAddBtn.addEventListener("click", () => {
+  const round = Number(demandRoundPointInput.value);
+  const demand = Number(demandValuePointInput.value);
+  if (!Number.isFinite(round) || !Number.isFinite(demand) || round < 0 || demand < 0) {
+    setSubmitMessage("Round and demand must be >= 0");
+    return;
+  }
+  demandPoints[Math.floor(round)] = Math.floor(demand);
+  settingsDirty = true;
+  demandScheduleInput.value = demandScheduleStringFromPoints();
+  renderDemandEditorChart();
+  renderDemandPointsList();
+  setSubmitMessage("Demand point updated", true);
+});
+
+demandClearBtn.addEventListener("click", () => {
+  demandPoints = { 0: 5, 4: 10 };
+  settingsDirty = true;
+  demandScheduleInput.value = demandScheduleStringFromPoints();
+  renderDemandEditorChart();
+  renderDemandPointsList();
+  setSubmitMessage("Demand schedule reset", true);
+});
+
 roleSelect.addEventListener("change", updateAuthMode);
 
 updateAuthMode();
 loadSession();
+demandScheduleInput.value = demandScheduleStringFromPoints();
+renderDemandEditorChart();
+renderDemandPointsList();
 if (session.gameId && session.token) {
   refreshState();
 }
