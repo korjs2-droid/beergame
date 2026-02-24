@@ -85,6 +85,8 @@ let charts = {
   roundCost: null,
   stock: null,
   backlog: null,
+  serviceRate: null,
+  bullwhip: null,
 };
 
 for (const team of TEAM_ORDER) {
@@ -593,6 +595,8 @@ function renderAdminReport(state) {
   const totalDeliveries = {};
   const maxBacklog = {};
   const orderSeriesMap = {};
+  const serviceRateMap = {};
+  const bullwhipMap = {};
 
   TEAM_ORDER.forEach((team) => {
     totals[team] = finalCost[team] || 0;
@@ -689,6 +693,8 @@ function renderAdminReport(state) {
     const demandTotal = demandByTeam[team].reduce((a, b) => a + b, 0);
     const serviceRate = demandTotal > 0 ? (100 * totalDeliveries[team]) / demandTotal : 0;
     const bullwhip = demandStd > 0 ? orderStd / demandStd : 0;
+    serviceRateMap[team] = serviceRate;
+    bullwhipMap[team] = bullwhip;
     return {
       team,
       totalCost: totals[team].toFixed(2),
@@ -698,6 +704,51 @@ function renderAdminReport(state) {
       maxBacklog: maxBacklog[team],
       bullwhip: bullwhip.toFixed(2),
     };
+  });
+
+  charts.serviceRate = new Chart(document.getElementById("chart-service-rate"), {
+    type: "bar",
+    data: {
+      labels: TEAM_ORDER,
+      datasets: [
+        {
+          label: "Service Rate (%)",
+          data: TEAM_ORDER.map((t) => Number(serviceRateMap[t].toFixed(2))),
+          backgroundColor: TEAM_ORDER.map((t) => teamColor(t)),
+        },
+      ],
+    },
+    options: {
+      ...commonOptions,
+      scales: {
+        y: {
+          beginAtZero: true,
+          suggestedMax: 100,
+        },
+      },
+    },
+  });
+
+  charts.bullwhip = new Chart(document.getElementById("chart-bullwhip"), {
+    type: "bar",
+    data: {
+      labels: TEAM_ORDER,
+      datasets: [
+        {
+          label: "Bullwhip Index",
+          data: TEAM_ORDER.map((t) => Number(bullwhipMap[t].toFixed(2))),
+          backgroundColor: TEAM_ORDER.map((t) => teamColor(t)),
+        },
+      ],
+    },
+    options: {
+      ...commonOptions,
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+    },
   });
 
   reportTableWrap.innerHTML = `
