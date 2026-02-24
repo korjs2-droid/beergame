@@ -149,10 +149,21 @@ button.ghost {
 
 .demand-controls {
   display: grid;
-  grid-template-columns: 120px 120px auto auto;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
   gap: 8px;
   align-items: end;
   margin-bottom: 8px;
+}
+
+.demand-controls > label {
+  margin-bottom: 0;
+}
+
+#demand-add-btn,
+#demand-clear-btn {
+  width: 100%;
+  min-width: 0;
+  white-space: normal;
 }
 
 #demand-schedule-chart {
@@ -532,6 +543,12 @@ button.ghost {
 .report-card canvas {
   width: 100% !important;
   height: 220px !important;
+}
+
+@media (max-width: 1024px) {
+  .demand-controls {
+    grid-template-columns: 1fr;
+  }
 }
 
 #report-table-wrap table {
