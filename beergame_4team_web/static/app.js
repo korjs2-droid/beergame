@@ -1,4 +1,4 @@
-const TEAM_ORDER = ["Retailer", "Wholesaler", "Distributor", "Factory"];
+const DEFAULT_STAGE_NAMES = ["Retailer", "Wholesaler", "Distributor", "Factory"];
 const ROLE_ASSETS = {
   Retailer: "/static/assets/retailer.svg",
   Wholesaler: "/static/assets/wholesaler.svg",
@@ -35,6 +35,8 @@ const backlogCostInput = document.getElementById("backlog-cost");
 const initialStockInput = document.getElementById("initial-stock");
 const initialOrderInput = document.getElementById("initial-order");
 const initialDeliveryInput = document.getElementById("initial-delivery");
+const stageCountInput = document.getElementById("stage-count");
+const stageNamesList = document.getElementById("stage-names-list");
 const demandScheduleInput = document.getElementById("demand-schedule");
 const demandRoundPointInput = document.getElementById("demand-round-point");
 const demandValuePointInput = document.getElementById("demand-value-point");
@@ -60,6 +62,7 @@ const teamBoard = document.getElementById("team-board");
 const historyEl = document.getElementById("history");
 const flowScene = document.getElementById("flow-scene");
 const flowOverlay = document.getElementById("flow-overlay");
+const flowStageNodes = document.getElementById("flow-stage-nodes");
 const submitBox = document.querySelector(".submit-box");
 const adminReport = document.getElementById("admin-report");
 const reportTableWrap = document.getElementById("report-table-wrap");
@@ -81,6 +84,7 @@ let lastAnimatedRound = 0;
 let settingsDirty = false;
 let demandPoints = { 0: 5, 4: 10 };
 let demandScheduleChart = null;
+let currentStageNames = [...DEFAULT_STAGE_NAMES];
 let charts = {
   totalCost: null,
   roundCost: null,
@@ -90,12 +94,51 @@ let charts = {
   bullwhip: null,
 };
 
-for (const team of TEAM_ORDER) {
-  const option = document.createElement("option");
-  option.value = team;
-  option.textContent = team;
-  teamSelect.appendChild(option);
+function uniqueNames(names) {
+  const uniq = [];
+  names.forEach((n) => {
+    const name = String(n || "").trim();
+    if (name && !uniq.includes(name)) uniq.push(name);
+  });
+  return uniq;
 }
+
+function renderStageNameInputs(stageNames) {
+  stageNamesList.innerHTML = "";
+  stageNames.forEach((name, idx) => {
+    const label = document.createElement("label");
+    label.innerHTML = `Stage ${idx + 1}<input class=\"stage-name-input\" type=\"text\" data-index=\"${idx}\" value=\"${name}\" maxlength=\"24\" />`;
+    stageNamesList.appendChild(label);
+  });
+}
+
+function collectStageNamesFromInputs() {
+  const inputs = Array.from(stageNamesList.querySelectorAll(".stage-name-input"));
+  const names = uniqueNames(inputs.map((input) => input.value));
+  return names;
+}
+
+function setTeamOptions(stageNames, preferred = "") {
+  teamSelect.innerHTML = "";
+  stageNames.forEach((team) => {
+    const option = document.createElement("option");
+    option.value = team;
+    option.textContent = team;
+    teamSelect.appendChild(option);
+  });
+  if (preferred && stageNames.includes(preferred)) {
+    teamSelect.value = preferred;
+  }
+}
+
+function syncStageInputsFromNames(stageNames) {
+  const clean = uniqueNames(stageNames);
+  currentStageNames = [...clean];
+  stageCountInput.value = String(clean.length);
+  renderStageNameInputs(clean);
+}
+
+setTeamOptions(DEFAULT_STAGE_NAMES);
 
 function headers() {
   return {
@@ -119,7 +162,11 @@ function teamColor(team) {
   if (team === "Retailer") return "#8f4f20";
   if (team === "Wholesaler") return "#3f6c3b";
   if (team === "Distributor") return "#2a6a8a";
-  return "#5b3c7e";
+  if (team === "Factory") return "#5b3c7e";
+  const palette = ["#8c5a2b", "#2f6b55", "#3f658f", "#7b4f8d", "#9a5e3f", "#3b7f71", "#6f5a9a", "#4f5f2d"];
+  let sum = 0;
+  for (let i = 0; i < team.length; i += 1) sum += team.charCodeAt(i);
+  return palette[sum % palette.length];
 }
 
 function sortedDemandEntries(points) {
@@ -217,6 +264,20 @@ function renderDemandEditorChart() {
 
 function settingsPayload() {
   demandScheduleInput.value = demandScheduleStringFromPoints();
+  const parsedStageNames = collectStageNamesFromInputs();
+  const requestedCount = Number(stageCountInput.value);
+  let stageNames = parsedStageNames;
+  if (stageNames.length === 0) stageNames = [...DEFAULT_STAGE_NAMES];
+  if (Number.isFinite(requestedCount) && requestedCount >= 2) {
+    stageNames = stageNames.slice(0, requestedCount);
+    while (stageNames.length < requestedCount) {
+      stageNames.push(`Stage${stageNames.length + 1}`);
+    }
+  }
+  if (stageNames.length < 2) {
+    stageNames = [...DEFAULT_STAGE_NAMES];
+  }
+  syncStageInputsFromNames(stageNames);
   return {
     maxRounds: Number(maxRoundsInput.value),
     holdingCost: Number(holdingCostInput.value),
@@ -225,6 +286,7 @@ function settingsPayload() {
     initialIncomingOrder: Number(initialOrderInput.value),
     initialIncomingDelivery: Number(initialDeliveryInput.value),
     demandSchedule: demandScheduleInput.value.trim(),
+    stageNames,
   };
 }
 
@@ -236,6 +298,10 @@ function applySettingsToInputs(settings) {
   initialStockInput.value = settings.initialStock;
   initialOrderInput.value = settings.initialIncomingOrder;
   initialDeliveryInput.value = settings.initialIncomingDelivery;
+  if (Array.isArray(settings.stageNames) && settings.stageNames.length >= 2) {
+    syncStageInputsFromNames(settings.stageNames);
+    setTeamOptions(settings.stageNames, teamSelect.value);
+  }
   demandPoints = parseDemandScheduleToPoints(settings.demandSchedule || "0:5,4:10");
   demandScheduleInput.value = demandScheduleStringFromPoints();
   renderDemandEditorChart();
@@ -249,6 +315,9 @@ function updateAuthMode() {
   adminSettings.classList.toggle("hidden", !isAdmin);
   adminActions.classList.toggle("hidden", !isAdmin);
   playerActions.classList.toggle("hidden", isAdmin);
+  if (!isAdmin) {
+    setTeamOptions(currentStageNames, teamSelect.value);
+  }
 }
 
 function splitQuantity(total, maxTokens = 4) {
@@ -263,6 +332,36 @@ function splitQuantity(total, maxTokens = 4) {
     parts.push(base + add);
   }
   return parts;
+}
+
+function nodeIdForStage(stageName) {
+  return `node-stage-${stageName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+}
+
+function roleAssetForStage(stageName) {
+  if (ROLE_ASSETS[stageName]) return ROLE_ASSETS[stageName];
+  const lower = stageName.toLowerCase();
+  if (lower.includes("retail")) return ROLE_ASSETS.Retailer;
+  if (lower.includes("whole")) return ROLE_ASSETS.Wholesaler;
+  if (lower.includes("dist")) return ROLE_ASSETS.Distributor;
+  if (lower.includes("fact") || lower.includes("plant")) return ROLE_ASSETS.Factory;
+  return ROLE_ASSETS.Distributor;
+}
+
+function renderFlowNodes(stageNames) {
+  flowStageNodes.innerHTML = "";
+  const count = stageNames.length;
+  const start = 26;
+  const end = 80;
+  stageNames.forEach((stage, idx) => {
+    const node = document.createElement("div");
+    node.className = "flow-node";
+    node.id = nodeIdForStage(stage);
+    const left = count === 1 ? start : start + ((end - start) * idx) / (count - 1);
+    node.style.left = `${left}%`;
+    node.innerHTML = `<img src="${roleAssetForStage(stage)}" alt="${stage}" /><span>${stage}</span>`;
+    flowStageNodes.appendChild(node);
+  });
 }
 
 function pointFor(nodeId, lane) {
@@ -380,24 +479,35 @@ function spawnPlane(startNode, endNode, qty, delayMs) {
   }, delayMs + animMs(1450));
 }
 
-function animateRoundFlow(roundData, isAdminView) {
+function animateRoundFlow(roundData, isAdminView, stageNames) {
   if (!roundData) return;
   showRoundBadge(roundData.round);
 
-  const orderLegs = [
-    ["node-retailer", "node-wholesaler", roundData.orders.Retailer],
-    ["node-wholesaler", "node-distributor", roundData.orders.Wholesaler],
-    ["node-distributor", "node-factory", roundData.orders.Distributor],
-  ];
-  const deliveryLegs = [
-    ["node-factory", "node-distributor", roundData.deliveries.Factory],
-    ["node-distributor", "node-wholesaler", roundData.deliveries.Distributor],
-    ["node-wholesaler", "node-retailer", roundData.deliveries.Wholesaler],
-    ["node-retailer", "node-customer", roundData.deliveries.Retailer],
-  ];
+  const firstStage = stageNames[0];
+  const orderLegs = [];
+  for (let i = 0; i < stageNames.length - 1; i += 1) {
+    const from = stageNames[i];
+    const to = stageNames[i + 1];
+    orderLegs.push([nodeIdForStage(from), nodeIdForStage(to), (roundData.orders && roundData.orders[from]) || 0]);
+  }
+  const deliveryLegs = [];
+  for (let i = stageNames.length - 1; i > 0; i -= 1) {
+    const from = stageNames[i];
+    const to = stageNames[i - 1];
+    deliveryLegs.push([
+      nodeIdForStage(from),
+      nodeIdForStage(to),
+      (roundData.deliveries && roundData.deliveries[from]) || 0,
+    ]);
+  }
+  deliveryLegs.push([
+    nodeIdForStage(firstStage),
+    "node-customer",
+    (roundData.deliveries && roundData.deliveries[firstStage]) || 0,
+  ]);
 
   splitQuantity(roundData.customerDemand || 0, 3).forEach((qty, i) => {
-    spawnToken("node-customer", "node-retailer", "order", qty, "demand", animMs(i * 120));
+    spawnToken("node-customer", nodeIdForStage(firstStage), "order", qty, "demand", animMs(i * 120));
   });
 
   orderLegs.forEach(([from, to, qty], legIdx) => {
@@ -416,12 +526,7 @@ function animateRoundFlow(roundData, isAdminView) {
   });
 
   if (isAdminView) {
-    const truckLegs = [
-      ["node-factory", "node-distributor", roundData.deliveries.Factory],
-      ["node-distributor", "node-wholesaler", roundData.deliveries.Distributor],
-      ["node-wholesaler", "node-retailer", roundData.deliveries.Wholesaler],
-      ["node-retailer", "node-customer", roundData.deliveries.Retailer],
-    ];
+    const truckLegs = deliveryLegs;
     truckLegs.forEach(([from, to, qty], idx) => {
       const delay = animMs(260 + idx * 190);
       spawnTruck(from, to, qty, delay);
@@ -430,7 +535,7 @@ function animateRoundFlow(roundData, isAdminView) {
   }
 }
 
-function animateIfNeeded(state) {
+function animateIfNeeded(state, stageNames) {
   if (!state.history || state.history.length === 0) return;
   const latest = state.history[state.history.length - 1];
   if (!latest) return;
@@ -443,7 +548,7 @@ function animateIfNeeded(state) {
 
   if (latest.round > lastAnimatedRound) {
     lastAnimatedRound = latest.round;
-    animateRoundFlow(latest, state.role === "admin");
+    animateRoundFlow(latest, state.role === "admin", stageNames);
   }
 }
 
@@ -482,13 +587,33 @@ async function api(path, method = "GET", body = null, includeAuth = true) {
   return data;
 }
 
-function renderAssignments(assignmentMap) {
+async function loadRoomInfoAndTeams() {
+  if (roleSelect.value !== "player") return;
+  const code = roomCodeInput.value.trim().toUpperCase();
+  if (!code) return;
+  try {
+    const res = await fetch(`/api/room-info?roomCode=${encodeURIComponent(code)}`);
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Room lookup failed");
+    const options = data.availableTeams && data.availableTeams.length ? data.availableTeams : data.stageNames;
+    setTeamOptions(options, teamSelect.value);
+    if (data.started) {
+      setAuthMessage("Game already started. Join is closed.");
+    } else {
+      setAuthMessage(`Room loaded. Available teams: ${options.length}`, true);
+    }
+  } catch (err) {
+    setAuthMessage(err.message || "Could not load room info");
+  }
+}
+
+function renderAssignments(assignmentMap, stageNames) {
   assignmentsEl.innerHTML = "";
-  for (const team of TEAM_ORDER) {
+  for (const team of stageNames) {
     const item = document.createElement("div");
     item.className = "assignment-item";
     const owner = assignmentMap[team] || "waiting";
-    item.innerHTML = `<img class="assignment-icon" src="${ROLE_ASSETS[team]}" alt="${team}" /><strong>${team}</strong><br />${owner}`;
+    item.innerHTML = `<img class="assignment-icon" src="${roleAssetForStage(team)}" alt="${team}" /><strong>${team}</strong><br />${owner}`;
     assignmentsEl.appendChild(item);
   }
 }
@@ -496,6 +621,12 @@ function renderAssignments(assignmentMap) {
 function renderState(state) {
   authPanel.classList.add("hidden");
   gamePanel.classList.remove("hidden");
+  const stageNames = Array.isArray(state.stageNames) && state.stageNames.length >= 2 ? state.stageNames : DEFAULT_STAGE_NAMES;
+  currentStageNames = [...stageNames];
+  renderFlowNodes(stageNames);
+  if (roleSelect.value === "player") {
+    setTeamOptions(stageNames, teamSelect.value);
+  }
 
   const isAdmin = state.role === "admin";
   const teamLabel = isAdmin ? "Admin" : `Team ${state.yourTeam}`;
@@ -513,7 +644,7 @@ function renderState(state) {
     statusEl.textContent = `Collecting orders (${state.submissionsCount}/4)`;
   }
 
-  renderAssignments(state.teamAssignments || {});
+  renderAssignments(state.teamAssignments || {}, stageNames);
 
   submitBox.classList.toggle("hidden", isAdmin);
   adminRoundControl.classList.toggle("hidden", !isAdmin);
@@ -544,7 +675,7 @@ function renderState(state) {
   }
 
   teamBoard.innerHTML = "";
-  for (const team of TEAM_ORDER) {
+  for (const team of stageNames) {
     const data = state.teams[team];
     const card = document.createElement("article");
     card.className = "team-card";
@@ -555,7 +686,7 @@ function renderState(state) {
       : "no round data yet";
 
     card.innerHTML = `
-      <h4><img class="role-inline" src="${ROLE_ASSETS[team]}" alt="${team}" />${team}</h4>
+      <h4><img class="role-inline" src="${roleAssetForStage(team)}" alt="${team}" />${team}</h4>
       <div>Stock: <strong>${data.stock}</strong></div>
       <div>Backlog: <strong>${data.backlog}</strong></div>
       <div>Total Cost: <strong>${data.totalCost}</strong></div>
@@ -570,18 +701,22 @@ function renderState(state) {
   for (const round of rounds) {
     const item = document.createElement("div");
     item.className = "history-item";
+    const orderLine = stageNames.map((team) => `${team}: ${(round.orders && round.orders[team]) || 0}`).join(", ");
+    const deliveryLine = stageNames
+      .map((team) => `${team}: ${(round.deliveries && round.deliveries[team]) || 0}`)
+      .join(", ");
     item.innerHTML = `
       <strong>Round ${round.round}</strong> | Demand ${round.customerDemand}<br />
-      Orders: R ${round.orders.Retailer}, W ${round.orders.Wholesaler}, D ${round.orders.Distributor}, F ${round.orders.Factory}<br />
-      Deliveries: R ${round.deliveries.Retailer}, W ${round.deliveries.Wholesaler}, D ${round.deliveries.Distributor}, F ${round.deliveries.Factory}
+      Orders: ${orderLine}<br />
+      Deliveries: ${deliveryLine}
     `;
     historyEl.appendChild(item);
   }
 
-  animateIfNeeded(state);
+  animateIfNeeded(state, stageNames);
 
   if (isAdmin && state.completed) {
-    renderAdminReport(state);
+    renderAdminReport(state, stageNames);
   }
 }
 
@@ -605,7 +740,7 @@ function demandSeriesFromHistory(history) {
   return history.map((h) => h.customerDemand || 0);
 }
 
-function renderAdminReport(state) {
+function renderAdminReport(state, stageNames) {
   if (!window.Chart) {
     reportTableWrap.innerHTML = "<p>Chart library failed to load.</p>";
     return;
@@ -632,7 +767,7 @@ function renderAdminReport(state) {
   const serviceRateMap = {};
   const bullwhipMap = {};
 
-  TEAM_ORDER.forEach((team) => {
+  stageNames.forEach((team) => {
     totals[team] = finalCost[team] || 0;
     roundCostMap[team] = history.map((h) => (h.roundCost && h.roundCost[team]) || 0);
     stockMap[team] = history.map((h) => (h.teamState && h.teamState[team] ? h.teamState[team].stock : 0));
@@ -657,12 +792,12 @@ function renderAdminReport(state) {
   charts.totalCost = new Chart(document.getElementById("chart-total-cost"), {
     type: "bar",
     data: {
-      labels: TEAM_ORDER,
+      labels: stageNames,
       datasets: [
         {
           label: "Total Cost",
-          data: TEAM_ORDER.map((t) => totals[t]),
-          backgroundColor: TEAM_ORDER.map((t) => teamColor(t)),
+          data: stageNames.map((t) => totals[t]),
+          backgroundColor: stageNames.map((t) => teamColor(t)),
         },
       ],
     },
@@ -673,7 +808,7 @@ function renderAdminReport(state) {
     type: "line",
     data: {
       labels,
-      datasets: TEAM_ORDER.map((team) => ({
+      datasets: stageNames.map((team) => ({
         label: team,
         data: roundCostMap[team],
         borderColor: teamColor(team),
@@ -688,7 +823,7 @@ function renderAdminReport(state) {
     type: "line",
     data: {
       labels,
-      datasets: TEAM_ORDER.map((team) => ({
+      datasets: stageNames.map((team) => ({
         label: team,
         data: stockMap[team],
         borderColor: teamColor(team),
@@ -703,7 +838,7 @@ function renderAdminReport(state) {
     type: "line",
     data: {
       labels,
-      datasets: TEAM_ORDER.map((team) => ({
+      datasets: stageNames.map((team) => ({
         label: team,
         data: backlogMap[team],
         borderColor: teamColor(team),
@@ -714,14 +849,17 @@ function renderAdminReport(state) {
     options: commonOptions,
   });
 
-  const demandByTeam = {
-    Retailer: history.map((h) => h.customerDemand || 0),
-    Wholesaler: history.map((h) => (h.orders && h.orders.Retailer) || 0),
-    Distributor: history.map((h) => (h.orders && h.orders.Wholesaler) || 0),
-    Factory: history.map((h) => (h.orders && h.orders.Distributor) || 0),
-  };
+  const demandByTeam = {};
+  stageNames.forEach((team, idx) => {
+    if (idx === 0) {
+      demandByTeam[team] = history.map((h) => h.customerDemand || 0);
+    } else {
+      const prev = stageNames[idx - 1];
+      demandByTeam[team] = history.map((h) => (h.orders && h.orders[prev]) || 0);
+    }
+  });
 
-  const rows = TEAM_ORDER.map((team) => {
+  const rows = stageNames.map((team) => {
     const avgOrder = totalOrders[team] / history.length;
     const orderStd = stddev(orderSeriesMap[team]);
     const demandTotal = demandByTeam[team].reduce((a, b) => a + b, 0);
@@ -743,12 +881,12 @@ function renderAdminReport(state) {
   charts.serviceRate = new Chart(document.getElementById("chart-service-rate"), {
     type: "bar",
     data: {
-      labels: TEAM_ORDER,
+      labels: stageNames,
       datasets: [
         {
           label: "Service Rate (%)",
-          data: TEAM_ORDER.map((t) => Number(serviceRateMap[t].toFixed(2))),
-          backgroundColor: TEAM_ORDER.map((t) => teamColor(t)),
+          data: stageNames.map((t) => Number(serviceRateMap[t].toFixed(2))),
+          backgroundColor: stageNames.map((t) => teamColor(t)),
         },
       ],
     },
@@ -766,12 +904,12 @@ function renderAdminReport(state) {
   charts.bullwhip = new Chart(document.getElementById("chart-bullwhip"), {
     type: "bar",
     data: {
-      labels: TEAM_ORDER,
+      labels: stageNames,
       datasets: [
         {
           label: "Bullwhip Index",
-          data: TEAM_ORDER.map((t) => Number(bullwhipMap[t].toFixed(2))),
-          backgroundColor: TEAM_ORDER.map((t) => teamColor(t)),
+          data: stageNames.map((t) => Number(bullwhipMap[t].toFixed(2))),
+          backgroundColor: stageNames.map((t) => teamColor(t)),
         },
       ],
     },
@@ -932,10 +1070,30 @@ adminRoundSaveBtn.addEventListener("click", async () => {
   initialStockInput,
   initialOrderInput,
   initialDeliveryInput,
+  stageCountInput,
 ].forEach((input) => {
   input.addEventListener("input", () => {
     settingsDirty = true;
+    if (input === stageCountInput) {
+      const requested = Number(stageCountInput.value);
+      if (Number.isFinite(requested) && requested >= 2) {
+        const existing = collectStageNamesFromInputs();
+        let next = existing.slice(0, requested);
+        if (next.length === 0) next = [...DEFAULT_STAGE_NAMES].slice(0, requested);
+        while (next.length < requested) {
+          next.push(`Stage${next.length + 1}`);
+        }
+        syncStageInputsFromNames(next);
+        if (roleSelect.value === "player") {
+          setTeamOptions(next, teamSelect.value);
+        }
+      }
+    }
   });
+});
+
+stageNamesList.addEventListener("input", () => {
+  settingsDirty = true;
 });
 
 demandAddBtn.addEventListener("click", () => {
@@ -963,9 +1121,13 @@ demandClearBtn.addEventListener("click", () => {
 });
 
 roleSelect.addEventListener("change", updateAuthMode);
+roomCodeInput.addEventListener("change", loadRoomInfoAndTeams);
+roomCodeInput.addEventListener("blur", loadRoomInfoAndTeams);
 
 updateAuthMode();
 loadSession();
+syncStageInputsFromNames(DEFAULT_STAGE_NAMES);
+renderFlowNodes(DEFAULT_STAGE_NAMES);
 demandScheduleInput.value = demandScheduleStringFromPoints();
 renderDemandEditorChart();
 renderDemandPointsList();
