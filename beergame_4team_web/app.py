@@ -12,19 +12,9 @@ from flask import Flask, jsonify, render_template, request
 
 app = Flask(__name__)
 
-TEAM_ORDER = ["Retailer", "Wholesaler", "Distributor", "Factory"]
-UPSTREAM_OF = {
-    "Retailer": "Wholesaler",
-    "Wholesaler": "Distributor",
-    "Distributor": "Factory",
-    "Factory": None,
-}
-DOWNSTREAM_OF = {
-    "Retailer": None,
-    "Wholesaler": "Retailer",
-    "Distributor": "Wholesaler",
-    "Factory": "Distributor",
-}
+DEFAULT_STAGE_NAMES = ["Retailer", "Wholesaler", "Distributor", "Factory"]
+MIN_STAGES = 2
+MAX_STAGES = 8
 
 
 @dataclass
@@ -47,6 +37,7 @@ class Game:
     holding_cost: float = 0.5
     backlog_cost: float = 1.0
     demand_schedule: dict[int, int] = field(default_factory=lambda: {0: 5, 4: 10})
+    stage_names: list[str] = field(default_factory=lambda: copy.deepcopy(DEFAULT_STAGE_NAMES))
     initial_stock: int = 15
     initial_backlog: int = 0
     initial_incoming_order: int = 5
@@ -61,7 +52,7 @@ class Game:
 
     def __post_init__(self) -> None:
         self.teams = {}
-        for name in TEAM_ORDER:
+        for name in self.stage_names:
             self.teams[name] = TeamState(
                 name=name,
                 stock=self.initial_stock,
@@ -79,20 +70,38 @@ class Game:
         assigned = {
             entry["team"]
             for entry in self.players.values()
-            if entry.get("role") == "player" and entry.get("team") in TEAM_ORDER
+            if entry.get("role") == "player" and entry.get("team") in self.stage_names
         }
-        return all(team in assigned for team in TEAM_ORDER)
+        return all(team in assigned for team in self.stage_names)
 
     def team_assignments(self) -> dict[str, str | None]:
-        assigned: dict[str, str | None] = {team: None for team in TEAM_ORDER}
+        assigned: dict[str, str | None] = {team: None for team in self.stage_names}
         for entry in self.players.values():
-            if entry.get("role") == "player" and entry.get("team") in TEAM_ORDER:
+            if entry.get("role") == "player" and entry.get("team") in self.stage_names:
                 assigned[entry["team"]] = entry.get("name")
         return assigned
 
+    def upstream_of(self, team_name: str) -> str | None:
+        try:
+            idx = self.stage_names.index(team_name)
+        except ValueError:
+            return None
+        if idx == len(self.stage_names) - 1:
+            return None
+        return self.stage_names[idx + 1]
+
+    def downstream_of(self, team_name: str) -> str | None:
+        try:
+            idx = self.stage_names.index(team_name)
+        except ValueError:
+            return None
+        if idx == 0:
+            return None
+        return self.stage_names[idx - 1]
+
     def to_public_state(self, viewer_role: str, viewer_team: str | None = None) -> dict[str, Any]:
         teams = {}
-        for name in TEAM_ORDER:
+        for name in self.stage_names:
             team = self.teams[name]
             teams[name] = {
                 "stock": team.stock,
@@ -103,7 +112,8 @@ class Game:
             }
 
         current_demand = self.demand_for_round(self.round_index)
-        if viewer_role != "admin" and viewer_team != "Retailer":
+        retailer_name = self.stage_names[0] if self.stage_names else ""
+        if viewer_role != "admin" and viewer_team != retailer_name:
             current_demand = None
 
         return {
@@ -115,6 +125,7 @@ class Game:
             "allTeamsJoined": self.all_teams_joined(),
             "submissionsCount": len(self.submissions),
             "round": self.round_index + 1,
+            "stageNames": self.stage_names,
             "maxRounds": self.max_rounds,
             "currentDemand": current_demand,
             "teams": teams,
@@ -128,6 +139,7 @@ class Game:
                 "initialIncomingOrder": self.initial_incoming_order,
                 "initialIncomingDelivery": self.initial_incoming_delivery,
                 "demandSchedule": self.demand_schedule,
+                "stageNames": self.stage_names,
             },
             "history": self.history[-10:],
             "historyAll": self.history if viewer_role == "admin" else [],
@@ -190,6 +202,34 @@ def parse_demand_schedule(raw: Any) -> dict[int, int]:
     return parsed if parsed else default_schedule
 
 
+def parse_stage_names(raw: Any, fallback: list[str] | None = None) -> list[str]:
+    base = fallback if fallback else copy.deepcopy(DEFAULT_STAGE_NAMES)
+    names: list[str] = []
+
+    if isinstance(raw, list):
+        for item in raw:
+            if not isinstance(item, str):
+                continue
+            name = item.strip()
+            if name and name not in names:
+                names.append(name)
+    elif isinstance(raw, str):
+        for part in raw.split(","):
+            name = part.strip()
+            if name and name not in names:
+                names.append(name)
+
+    if not names:
+        names = copy.deepcopy(base)
+
+    if len(names) < MIN_STAGES:
+        names = copy.deepcopy(base)
+    if len(names) > MAX_STAGES:
+        names = names[:MAX_STAGES]
+
+    return names
+
+
 def current_user() -> dict[str, str]:
     game_id = request.headers.get("X-Game-Id", "")
     token = request.headers.get("X-Player-Token", "")
@@ -221,6 +261,7 @@ def create_game_as_admin():
     initial_incoming_order = parse_int(body.get("initialIncomingOrder"), 5, minimum=0)
     initial_incoming_delivery = parse_int(body.get("initialIncomingDelivery"), 5, minimum=0)
     demand_schedule = parse_demand_schedule(body.get("demandSchedule"))
+    stage_names = parse_stage_names(body.get("stageNames"))
 
     with lock:
         game_id = str(uuid.uuid4())
@@ -235,6 +276,7 @@ def create_game_as_admin():
             initial_incoming_order=initial_incoming_order,
             initial_incoming_delivery=initial_incoming_delivery,
             demand_schedule=demand_schedule,
+            stage_names=stage_names,
         )
         token = secrets.token_urlsafe(24)
         game.admin_token = token
@@ -244,6 +286,32 @@ def create_game_as_admin():
     return jsonify({"gameId": game_id, "token": token, "roomCode": room_code})
 
 
+@app.get("/api/room-info")
+def room_info():
+    room_code = (request.args.get("roomCode") or "").strip().upper()
+    if not room_code:
+        return jsonify({"error": "Room code is required"}), 400
+
+    game = next((g for g in games.values() if g.room_code == room_code), None)
+    if not game:
+        return jsonify({"error": "Room not found"}), 404
+
+    taken = {
+        entry["team"]
+        for entry in game.players.values()
+        if entry.get("role") == "player" and entry.get("team") in game.stage_names
+    }
+    return jsonify(
+        {
+            "roomCode": game.room_code,
+            "started": game.started,
+            "stageNames": game.stage_names,
+            "availableTeams": [team for team in game.stage_names if team not in taken],
+            "takenTeams": sorted(list(taken)),
+        }
+    )
+
+
 @app.post("/api/join")
 def join_game():
     body = request.get_json(silent=True) or {}
@@ -251,20 +319,19 @@ def join_game():
     name = (body.get("name") or "Player").strip()[:40]
     team = body.get("team")
 
-    if team not in TEAM_ORDER:
-        return jsonify({"error": "Invalid team"}), 400
-
     with lock:
         game = next((g for g in games.values() if g.room_code == room_code), None)
         if not game:
             return jsonify({"error": "Room not found"}), 404
         if game.started:
             return jsonify({"error": "Game already started"}), 409
+        if team not in game.stage_names:
+            return jsonify({"error": "Invalid team"}), 400
 
         taken_teams = {
             entry["team"]
             for entry in game.players.values()
-            if entry.get("role") == "player" and entry.get("team") in TEAM_ORDER
+            if entry.get("role") == "player" and entry.get("team") in game.stage_names
         }
         if team in taken_teams:
             return jsonify({"error": "Team already taken"}), 409
@@ -298,7 +365,7 @@ def admin_start():
         if game.started:
             return jsonify({"error": "Game already started"}), 409
         if not game.all_teams_joined():
-            return jsonify({"error": "4 teams are required before start"}), 409
+            return jsonify({"error": f"{len(game.stage_names)} teams are required before start"}), 409
         game.started = True
     return jsonify({"ok": True})
 
@@ -328,12 +395,18 @@ def admin_update_settings():
             body.get("initialIncomingDelivery"), game.initial_incoming_delivery, minimum=0
         )
         game.demand_schedule = parse_demand_schedule(body.get("demandSchedule"))
+        next_stage_names = parse_stage_names(body.get("stageNames"), fallback=game.stage_names)
+        if next_stage_names != game.stage_names:
+            player_count = len([p for p in game.players.values() if p.get("role") == "player"])
+            if player_count > 0:
+                return jsonify({"error": "Cannot change stage names/count after players joined"}), 409
+            game.stage_names = next_stage_names
         game.round_index = 0
         game.completed = False
         game.submissions = {}
         game.history = []
         game.teams = {}
-        for name in TEAM_ORDER:
+        for name in game.stage_names:
             game.teams[name] = TeamState(
                 name=name,
                 stock=game.initial_stock,
@@ -376,7 +449,7 @@ def submit_order():
             return jsonify({"error": "You already submitted this round"}), 409
 
         game.submissions[team] = order
-        if len(game.submissions) == len(TEAM_ORDER):
+        if len(game.submissions) == len(game.stage_names):
             run_round(game)
 
     return jsonify({"ok": True})
@@ -399,6 +472,7 @@ def reset_game():
             holding_cost=game.holding_cost,
             backlog_cost=game.backlog_cost,
             demand_schedule=copy.deepcopy(game.demand_schedule),
+            stage_names=copy.deepcopy(game.stage_names),
             initial_stock=game.initial_stock,
             initial_incoming_order=game.initial_incoming_order,
             initial_incoming_delivery=game.initial_incoming_delivery,
@@ -420,11 +494,12 @@ def run_round(game: Game) -> None:
     outgoing_deliveries: dict[str, int] = {}
     round_costs: dict[str, float] = {}
 
-    for team_name in TEAM_ORDER:
+    for team_name in game.stage_names:
         team = game.teams[team_name]
 
         incoming_delivery = team.delivery_queue.pop(0)
-        incoming_order = demand if team_name == "Retailer" else team.order_queue.pop(0)
+        first_stage = game.stage_names[0]
+        incoming_order = demand if team_name == first_stage else team.order_queue.pop(0)
 
         available = team.stock + incoming_delivery
         total_demand = team.backlog + incoming_order
@@ -442,17 +517,17 @@ def run_round(game: Game) -> None:
         outgoing_deliveries[team_name] = outgoing_delivery
         round_costs[team_name] = round(round_cost, 2)
 
-    for team_name in TEAM_ORDER:
+    for team_name in game.stage_names:
         team = game.teams[team_name]
         placed_order = game.submissions[team_name]
 
-        upstream = UPSTREAM_OF[team_name]
+        upstream = game.upstream_of(team_name)
         if upstream:
             game.teams[upstream].order_queue.append(placed_order)
         else:
             team.delivery_queue.append(placed_order)
 
-        downstream = DOWNSTREAM_OF[team_name]
+        downstream = game.downstream_of(team_name)
         if downstream:
             game.teams[downstream].delivery_queue.append(outgoing_deliveries[team_name])
 
@@ -471,17 +546,17 @@ def run_round(game: Game) -> None:
         {
             "round": round_no,
             "customerDemand": demand,
-            "orders": {team: game.submissions[team] for team in TEAM_ORDER},
-            "deliveries": {team: outgoing_deliveries[team] for team in TEAM_ORDER},
+            "orders": {team: game.submissions[team] for team in game.stage_names},
+            "deliveries": {team: outgoing_deliveries[team] for team in game.stage_names},
             "roundCost": round_costs,
-            "teamCost": {team: round(game.teams[team].total_cost, 2) for team in TEAM_ORDER},
+            "teamCost": {team: round(game.teams[team].total_cost, 2) for team in game.stage_names},
             "teamState": {
                 team: {
                     "stock": game.teams[team].stock,
                     "backlog": game.teams[team].backlog,
                     "totalCost": round(game.teams[team].total_cost, 2),
                 }
-                for team in TEAM_ORDER
+                for team in game.stage_names
             },
         }
     )
