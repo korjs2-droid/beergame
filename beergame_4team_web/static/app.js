@@ -9,6 +9,7 @@ const ROLE_ASSETS = {
 const FLOW_ASSETS = {
   order: "/static/assets/order.png",
   delivery: "/static/assets/truck.png",
+  plane: "/static/assets/plane.png",
 };
 const ANIMATION_SPEED = 0.3;
 
@@ -282,18 +283,20 @@ function pointForTruck(nodeId) {
   return { x, y };
 }
 
-function spawnToken(startNode, endNode, lane, qty, kind, delayMs) {
+function spawnToken(startNode, endNode, lane, qty, kind, delayMs, yOffset = 0) {
   const start = pointFor(startNode, lane);
   const end = pointFor(endNode, lane);
   const token = document.createElement("div");
   token.className = `flow-token ${kind}`;
   if (kind === "order" || kind === "delivery") {
     token.innerHTML = `<img class="flow-token-icon" src="${FLOW_ASSETS[kind]}" alt="${kind}" /><span class="flow-token-qty">${qty}</span>`;
+  } else if (kind === "delivery-plane") {
+    token.innerHTML = `<img class="flow-token-icon flow-plane-icon" src="${FLOW_ASSETS.plane}" alt="plane delivery" /><span class="flow-token-qty">${qty}</span>`;
   } else {
     token.textContent = String(qty);
   }
   token.style.left = `${start.x - 18}px`;
-  token.style.top = `${start.y - 14}px`;
+  token.style.top = `${start.y - 14 + yOffset}px`;
   token.style.opacity = "0.2";
   flowOverlay.appendChild(token);
 
@@ -349,6 +352,34 @@ function spawnTruck(startNode, endNode, qty, delayMs) {
   }, delayMs + animMs(1450));
 }
 
+function spawnPlane(startNode, endNode, qty, delayMs) {
+  if (!qty || qty <= 0) return;
+  const start = pointForTruck(startNode);
+  const end = pointForTruck(endNode);
+  const plane = document.createElement("div");
+  plane.className = "flow-truck flow-plane";
+  plane.innerHTML = `<img class="flow-truck-icon flow-plane-icon" src="${FLOW_ASSETS.plane}" alt="delivery plane" /><span class="truck-load">${qty}</span>`;
+  plane.style.left = `${start.x - 22}px`;
+  plane.style.top = `${start.y - 18}px`;
+  plane.style.opacity = "0.1";
+  flowOverlay.appendChild(plane);
+
+  const dx = end.x - start.x;
+  const dy = end.y - start.y;
+  setTimeout(() => {
+    plane.style.opacity = "1";
+    plane.style.transform = `translate(${dx}px, ${dy}px)`;
+  }, delayMs + animMs(30));
+
+  setTimeout(() => {
+    plane.style.opacity = "0";
+  }, delayMs + animMs(1050));
+
+  setTimeout(() => {
+    plane.remove();
+  }, delayMs + animMs(1450));
+}
+
 function animateRoundFlow(roundData, isAdminView) {
   if (!roundData) return;
   showRoundBadge(roundData.round);
@@ -380,6 +411,7 @@ function animateRoundFlow(roundData, isAdminView) {
     splitQuantity(qty, 4).forEach((chunk, chunkIdx) => {
       const delay = animMs(220 + legIdx * 90 + chunkIdx * 120);
       spawnToken(from, to, "delivery", chunk, "delivery", delay);
+      spawnToken(from, to, "delivery", chunk, "delivery-plane", delay, -16);
     });
   });
 
@@ -391,7 +423,9 @@ function animateRoundFlow(roundData, isAdminView) {
       ["node-retailer", "node-customer", roundData.deliveries.Retailer],
     ];
     truckLegs.forEach(([from, to, qty], idx) => {
-      spawnTruck(from, to, qty, animMs(260 + idx * 190));
+      const delay = animMs(260 + idx * 190);
+      spawnTruck(from, to, qty, delay);
+      spawnPlane(from, to, qty, delay);
     });
   }
 }
