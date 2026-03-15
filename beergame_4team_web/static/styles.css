@@ -143,6 +143,27 @@ button.ghost {
   padding: 10px;
 }
 
+.stage-name-editor {
+  background: #fff;
+  border: 1px solid #e5d4b1;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.stage-name-editor h4 {
+  margin: 0 0 8px;
+}
+
+.stage-names-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.stage-names-list label {
+  margin-bottom: 0;
+}
+
 .demand-editor h4 {
   margin: 0 0 8px;
 }
@@ -561,6 +582,10 @@ button.ghost {
 
 @media (max-width: 1024px) {
   .demand-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .stage-names-list {
     grid-template-columns: 1fr;
   }
 }
