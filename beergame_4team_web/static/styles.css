@@ -464,6 +464,7 @@ button.ghost {
 .flow-plane-icon {
   width: 20px;
   height: 20px;
+  transform: scaleX(-1);
 }
 
 .flow-token-qty {
