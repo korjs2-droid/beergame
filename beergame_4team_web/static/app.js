@@ -57,6 +57,7 @@ const roundEl = document.getElementById("round");
 const demandEl = document.getElementById("demand");
 const statusEl = document.getElementById("status");
 const submitMsg = document.getElementById("submit-msg");
+const adminMsg = document.getElementById("admin-msg");
 const orderInput = document.getElementById("order");
 const teamBoard = document.getElementById("team-board");
 const historyEl = document.getElementById("history");
@@ -156,6 +157,10 @@ function setAuthMessage(text, ok = false) {
 function setSubmitMessage(text, ok = false) {
   submitMsg.textContent = text;
   submitMsg.className = `status ${ok ? "ok" : ""}`;
+  if (adminMsg) {
+    adminMsg.textContent = text;
+    adminMsg.className = `status ${ok ? "ok" : ""}`;
+  }
 }
 
 function teamColor(team) {
@@ -1043,7 +1048,7 @@ resetBtn.addEventListener("click", async () => {
     await api("/api/reset", "POST", {}, true);
     initializedRoundTracking = false;
     lastAnimatedRound = 0;
-    setSubmitMessage("Game reset", true);
+    setSubmitMessage("Game reset. Waiting for admin to start again.", true);
     settingsDirty = false;
     await refreshState();
   } catch (err) {
