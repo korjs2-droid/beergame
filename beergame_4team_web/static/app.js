@@ -83,6 +83,7 @@ let session = {
 let initializedRoundTracking = false;
 let lastAnimatedRound = 0;
 let settingsDirty = false;
+let showAdminSettingsAfterReset = false;
 let demandPoints = { 0: 5, 4: 10 };
 let demandScheduleChart = null;
 let currentStageNames = [...DEFAULT_STAGE_NAMES];
@@ -624,7 +625,9 @@ function renderAssignments(assignmentMap, stageNames) {
 }
 
 function renderState(state) {
-  authPanel.classList.add("hidden");
+  const isAdmin = state.role === "admin";
+  const showSettingsPanel = isAdmin && !state.started && showAdminSettingsAfterReset;
+  authPanel.classList.toggle("hidden", !showSettingsPanel);
   gamePanel.classList.remove("hidden");
   const stageNames = Array.isArray(state.stageNames) && state.stageNames.length >= 2 ? state.stageNames : DEFAULT_STAGE_NAMES;
   currentStageNames = [...stageNames];
@@ -633,7 +636,6 @@ function renderState(state) {
     setTeamOptions(stageNames, teamSelect.value);
   }
 
-  const isAdmin = state.role === "admin";
   const teamLabel = isAdmin ? "Admin" : `Team ${state.yourTeam}`;
   roomTitle.textContent = `Room ${state.roomCode} | ${teamLabel}`;
   roundEl.textContent = `${state.round} / ${state.maxRounds}`;
@@ -983,6 +985,7 @@ createBtn.addEventListener("click", async () => {
     session = data;
     initializedRoundTracking = false;
     lastAnimatedRound = 0;
+    showAdminSettingsAfterReset = false;
     saveSession();
     settingsDirty = false;
     roomCodeInput.value = data.roomCode;
@@ -1004,6 +1007,7 @@ joinBtn.addEventListener("click", async () => {
     session = data;
     initializedRoundTracking = false;
     lastAnimatedRound = 0;
+    showAdminSettingsAfterReset = false;
     saveSession();
     setAuthMessage(`Joined room: ${data.roomCode}`, true);
     await refreshState();
@@ -1015,6 +1019,7 @@ joinBtn.addEventListener("click", async () => {
 startBtn.addEventListener("click", async () => {
   try {
     await api("/api/admin/start", "POST", {}, true);
+    showAdminSettingsAfterReset = false;
     setSubmitMessage("Game started", true);
     await refreshState();
   } catch (err) {
@@ -1048,9 +1053,11 @@ resetBtn.addEventListener("click", async () => {
     await api("/api/reset", "POST", {}, true);
     initializedRoundTracking = false;
     lastAnimatedRound = 0;
+    showAdminSettingsAfterReset = true;
     setSubmitMessage("Game reset. Waiting for admin to start again.", true);
     settingsDirty = false;
     await refreshState();
+    authPanel.scrollIntoView({ behavior: "smooth", block: "start" });
   } catch (err) {
     setSubmitMessage(err.message);
   }
