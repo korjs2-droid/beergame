@@ -425,6 +425,10 @@ button.ghost {
   background: rgba(230, 247, 238, 0.9);
 }
 
+.flow-token.delivery-plane {
+  background: rgba(232, 239, 255, 0.9);
+}
+
 .flow-token.demand {
   background: #a0352a;
 }
@@ -434,6 +438,11 @@ button.ghost {
   height: 22px;
   object-fit: contain;
   display: block;
+}
+
+.flow-plane-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .flow-token-qty {
@@ -462,6 +471,11 @@ button.ghost {
   transition: transform 4s ease-in-out, opacity 4s ease-in-out;
   z-index: 7;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.flow-plane {
+  background: #c8d9ff;
+  border-color: #7d99d1;
 }
 
 .truck-load {
