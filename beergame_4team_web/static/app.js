@@ -365,8 +365,20 @@ function roleAssetForStage(stageName) {
 function renderFlowNodes(stageNames) {
   flowStageNodes.innerHTML = "";
   const count = stageNames.length;
-  const start = 26;
-  const end = 80;
+  flowScene.classList.remove("flow-dense", "flow-ultra");
+  if (count >= 7) flowScene.classList.add("flow-dense");
+  if (count >= 8) flowScene.classList.add("flow-ultra");
+
+  let start = 26;
+  let end = 80;
+  if (count >= 6) {
+    start = 20;
+    end = 90;
+  }
+  if (count >= 8) {
+    start = 16;
+    end = 93;
+  }
   stageNames.forEach((stage, idx) => {
     const node = document.createElement("div");
     node.className = "flow-node";
