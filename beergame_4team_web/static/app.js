@@ -379,13 +379,33 @@ function pointFor(nodeId, lane) {
   return { x, y };
 }
 
-function pointForTruck(nodeId) {
+function pointForTruck(nodeId, yOffset = 0) {
   const node = document.getElementById(nodeId);
   const sceneBox = flowScene.getBoundingClientRect();
   const nodeBox = node.getBoundingClientRect();
   const x = nodeBox.left - sceneBox.left + nodeBox.width / 2;
-  const y = 112;
+  const y = 112 + yOffset;
   return { x, y };
+}
+
+function spawnPulseAtPoint(x, y, color, delayMs) {
+  const pulse = document.createElement("div");
+  pulse.className = "flow-pulse";
+  pulse.style.left = `${x - 9}px`;
+  pulse.style.top = `${y - 9}px`;
+  pulse.style.setProperty("--pulse-color", color);
+  pulse.style.opacity = "0";
+  flowOverlay.appendChild(pulse);
+  setTimeout(() => {
+    pulse.style.opacity = "1";
+    pulse.classList.add("show");
+  }, delayMs);
+  setTimeout(() => pulse.remove(), delayMs + animMs(900));
+}
+
+function spawnPulse(nodeId, lane, delayMs, color) {
+  const p = pointFor(nodeId, lane);
+  spawnPulseAtPoint(p.x, p.y, color, delayMs);
 }
 
 function spawnToken(startNode, endNode, lane, qty, kind, delayMs, yOffset = 0) {
@@ -403,10 +423,14 @@ function spawnToken(startNode, endNode, lane, qty, kind, delayMs, yOffset = 0) {
   token.style.left = `${start.x - 18}px`;
   token.style.top = `${start.y - 14 + yOffset}px`;
   token.style.opacity = "0.2";
+  token.classList.add(kind === "delivery-plane" ? "flow-fast" : "flow-slow");
   flowOverlay.appendChild(token);
 
   const dx = end.x - start.x;
   const dy = end.y - start.y;
+  const pulseColor = kind === "delivery-plane" ? "#6f92d6" : kind === "delivery" ? "#2f7f58" : "#8f4f20";
+  spawnPulseAtPoint(start.x, start.y + yOffset, pulseColor, delayMs);
+  spawnPulseAtPoint(end.x, end.y + yOffset, pulseColor, delayMs + animMs(760));
   setTimeout(() => {
     token.style.opacity = "1";
     token.style.transform = `translate(${dx}px, ${dy}px)`;
@@ -431,10 +455,10 @@ function showRoundBadge(roundNo) {
 
 function spawnTruck(startNode, endNode, qty, delayMs) {
   if (!qty || qty <= 0) return;
-  const start = pointForTruck(startNode);
-  const end = pointForTruck(endNode);
+  const start = pointForTruck(startNode, 10);
+  const end = pointForTruck(endNode, 10);
   const truck = document.createElement("div");
-  truck.className = "flow-truck";
+  truck.className = "flow-truck flow-slow";
   truck.innerHTML = `<img class="flow-truck-icon" src="${FLOW_ASSETS.delivery}" alt="delivery truck" /><span class="truck-load">${qty}</span>`;
   truck.style.left = `${start.x - 22}px`;
   truck.style.top = `${start.y}px`;
@@ -443,6 +467,8 @@ function spawnTruck(startNode, endNode, qty, delayMs) {
 
   const dx = end.x - start.x;
   const dy = end.y - start.y;
+  spawnPulseAtPoint(start.x, start.y, "#2f7f58", delayMs);
+  spawnPulseAtPoint(end.x, end.y, "#2f7f58", delayMs + animMs(900));
   setTimeout(() => {
     truck.style.opacity = "1";
     truck.style.transform = `translate(${dx}px, ${dy}px)`;
@@ -459,18 +485,20 @@ function spawnTruck(startNode, endNode, qty, delayMs) {
 
 function spawnPlane(startNode, endNode, qty, delayMs) {
   if (!qty || qty <= 0) return;
-  const start = pointForTruck(startNode);
-  const end = pointForTruck(endNode);
+  const start = pointForTruck(startNode, -14);
+  const end = pointForTruck(endNode, -14);
   const plane = document.createElement("div");
-  plane.className = "flow-truck flow-plane";
+  plane.className = "flow-truck flow-plane flow-fast";
   plane.innerHTML = `<img class="flow-truck-icon flow-plane-icon" src="${FLOW_ASSETS.plane}" alt="delivery plane" /><span class="truck-load">${qty}</span>`;
   plane.style.left = `${start.x - 22}px`;
-  plane.style.top = `${start.y - 18}px`;
+  plane.style.top = `${start.y}px`;
   plane.style.opacity = "0.1";
   flowOverlay.appendChild(plane);
 
   const dx = end.x - start.x;
   const dy = end.y - start.y;
+  spawnPulseAtPoint(start.x, start.y, "#6f92d6", delayMs);
+  spawnPulseAtPoint(end.x, end.y, "#6f92d6", delayMs + animMs(620));
   setTimeout(() => {
     plane.style.opacity = "1";
     plane.style.transform = `translate(${dx}px, ${dy}px)`;
@@ -526,8 +554,8 @@ function animateRoundFlow(roundData, isAdminView, stageNames) {
   deliveryLegs.forEach(([from, to, qty], legIdx) => {
     splitQuantity(qty, 4).forEach((chunk, chunkIdx) => {
       const delay = animMs(220 + legIdx * 90 + chunkIdx * 120);
-      spawnToken(from, to, "delivery", chunk, "delivery", delay);
-      spawnToken(from, to, "delivery", chunk, "delivery-plane", delay, -16);
+      spawnToken(from, to, "delivery", chunk, "delivery", delay, 10);
+      spawnToken(from, to, "delivery", chunk, "delivery-plane", delay, -14);
     });
   });
 
