@@ -2,8 +2,12 @@ const DEFAULT_STAGE_NAMES = ["Retailer", "Wholesaler", "Distributor", "Factory"]
 const ROLE_ASSETS = {
   Retailer: "/static/assets/retailer.svg",
   Wholesaler: "/static/assets/wholesaler.svg",
+  "Regional DC": "/static/assets/regional-dc.svg",
+  "Central DC": "/static/assets/central-dc.svg",
   Distributor: "/static/assets/distributor.svg",
+  Importer: "/static/assets/importer.svg",
   Factory: "/static/assets/factory.svg",
+  Supplier: "/static/assets/supplier.svg",
   Customer: "/static/assets/customer.svg",
 };
 const FLOW_ASSETS = {
@@ -349,8 +353,12 @@ function roleAssetForStage(stageName) {
   const lower = stageName.toLowerCase();
   if (lower.includes("retail")) return ROLE_ASSETS.Retailer;
   if (lower.includes("whole")) return ROLE_ASSETS.Wholesaler;
+  if (lower.includes("regional")) return ROLE_ASSETS["Regional DC"];
+  if (lower.includes("central")) return ROLE_ASSETS["Central DC"];
   if (lower.includes("dist")) return ROLE_ASSETS.Distributor;
+  if (lower.includes("import")) return ROLE_ASSETS.Importer;
   if (lower.includes("fact") || lower.includes("plant")) return ROLE_ASSETS.Factory;
+  if (lower.includes("supply")) return ROLE_ASSETS.Supplier;
   return ROLE_ASSETS.Distributor;
 }
 
