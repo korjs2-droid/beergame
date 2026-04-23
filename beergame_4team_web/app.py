@@ -42,6 +42,8 @@ class Game:
     initial_backlog: int = 0
     initial_incoming_order: int = 5
     initial_incoming_delivery: int = 5
+    order_lead_time: int = 2
+    delivery_lead_time: int = 2
     round_index: int = 0
     started: bool = False
     completed: bool = False
@@ -50,7 +52,11 @@ class Game:
     submissions: dict[str, int] = field(default_factory=dict)
     history: list[dict[str, Any]] = field(default_factory=list)
 
-    def __post_init__(self) -> None:
+    def _pipeline(self, value: int, lead_time: int) -> list[int]:
+        safe_lead_time = max(1, lead_time)
+        return [value for _ in range(safe_lead_time)]
+
+    def initialize_teams(self) -> None:
         self.teams = {}
         for name in self.stage_names:
             self.teams[name] = TeamState(
@@ -58,9 +64,12 @@ class Game:
                 stock=self.initial_stock,
                 backlog=self.initial_backlog,
                 total_cost=0.0,
-                order_queue=[self.initial_incoming_order, self.initial_incoming_order],
-                delivery_queue=[self.initial_incoming_delivery, self.initial_incoming_delivery],
+                order_queue=self._pipeline(self.initial_incoming_order, self.order_lead_time),
+                delivery_queue=self._pipeline(self.initial_incoming_delivery, self.delivery_lead_time),
             )
+
+    def __post_init__(self) -> None:
+        self.initialize_teams()
 
     def demand_for_round(self, idx: int) -> int:
         selected_round = max((r for r in self.demand_schedule if r <= idx), default=0)
@@ -138,6 +147,8 @@ class Game:
                 "initialStock": self.initial_stock,
                 "initialIncomingOrder": self.initial_incoming_order,
                 "initialIncomingDelivery": self.initial_incoming_delivery,
+                "orderLeadTime": self.order_lead_time,
+                "deliveryLeadTime": self.delivery_lead_time,
                 "demandSchedule": self.demand_schedule,
                 "stageNames": self.stage_names,
             },
@@ -260,6 +271,8 @@ def create_game_as_admin():
     initial_stock = parse_int(body.get("initialStock"), 15, minimum=0)
     initial_incoming_order = parse_int(body.get("initialIncomingOrder"), 5, minimum=0)
     initial_incoming_delivery = parse_int(body.get("initialIncomingDelivery"), 5, minimum=0)
+    order_lead_time = parse_int(body.get("orderLeadTime"), 2, minimum=1)
+    delivery_lead_time = parse_int(body.get("deliveryLeadTime"), 2, minimum=1)
     demand_schedule = parse_demand_schedule(body.get("demandSchedule"))
     stage_names = parse_stage_names(body.get("stageNames"))
 
@@ -275,6 +288,8 @@ def create_game_as_admin():
             initial_stock=initial_stock,
             initial_incoming_order=initial_incoming_order,
             initial_incoming_delivery=initial_incoming_delivery,
+            order_lead_time=order_lead_time,
+            delivery_lead_time=delivery_lead_time,
             demand_schedule=demand_schedule,
             stage_names=stage_names,
         )
@@ -394,6 +409,8 @@ def admin_update_settings():
         game.initial_incoming_delivery = parse_int(
             body.get("initialIncomingDelivery"), game.initial_incoming_delivery, minimum=0
         )
+        game.order_lead_time = parse_int(body.get("orderLeadTime"), game.order_lead_time, minimum=1)
+        game.delivery_lead_time = parse_int(body.get("deliveryLeadTime"), game.delivery_lead_time, minimum=1)
         game.demand_schedule = parse_demand_schedule(body.get("demandSchedule"))
         next_stage_names = parse_stage_names(body.get("stageNames"), fallback=game.stage_names)
         if next_stage_names != game.stage_names:
@@ -405,16 +422,7 @@ def admin_update_settings():
         game.completed = False
         game.submissions = {}
         game.history = []
-        game.teams = {}
-        for name in game.stage_names:
-            game.teams[name] = TeamState(
-                name=name,
-                stock=game.initial_stock,
-                backlog=game.initial_backlog,
-                total_cost=0.0,
-                order_queue=[game.initial_incoming_order, game.initial_incoming_order],
-                delivery_queue=[game.initial_incoming_delivery, game.initial_incoming_delivery],
-            )
+        game.initialize_teams()
     return jsonify({"ok": True})
 
 
@@ -476,6 +484,8 @@ def reset_game():
             initial_stock=game.initial_stock,
             initial_incoming_order=game.initial_incoming_order,
             initial_incoming_delivery=game.initial_incoming_delivery,
+            order_lead_time=game.order_lead_time,
+            delivery_lead_time=game.delivery_lead_time,
         )
         new_game.players = copy.deepcopy(game.players)
         new_game.admin_token = game.admin_token
