@@ -39,6 +39,8 @@ const backlogCostInput = document.getElementById("backlog-cost");
 const initialStockInput = document.getElementById("initial-stock");
 const initialOrderInput = document.getElementById("initial-order");
 const initialDeliveryInput = document.getElementById("initial-delivery");
+const orderLeadTimeInput = document.getElementById("order-lead-time");
+const deliveryLeadTimeInput = document.getElementById("delivery-lead-time");
 const stageCountInput = document.getElementById("stage-count");
 const stageNamesList = document.getElementById("stage-names-list");
 const demandScheduleInput = document.getElementById("demand-schedule");
@@ -295,6 +297,8 @@ function settingsPayload() {
     initialStock: Number(initialStockInput.value),
     initialIncomingOrder: Number(initialOrderInput.value),
     initialIncomingDelivery: Number(initialDeliveryInput.value),
+    orderLeadTime: Number(orderLeadTimeInput.value),
+    deliveryLeadTime: Number(deliveryLeadTimeInput.value),
     demandSchedule: demandScheduleInput.value.trim(),
     stageNames,
   };
@@ -308,6 +312,8 @@ function applySettingsToInputs(settings) {
   initialStockInput.value = settings.initialStock;
   initialOrderInput.value = settings.initialIncomingOrder;
   initialDeliveryInput.value = settings.initialIncomingDelivery;
+  orderLeadTimeInput.value = settings.orderLeadTime ?? 2;
+  deliveryLeadTimeInput.value = settings.deliveryLeadTime ?? 2;
   if (Array.isArray(settings.stageNames) && settings.stageNames.length >= 2) {
     syncStageInputsFromNames(settings.stageNames);
     setTeamOptions(settings.stageNames, teamSelect.value);
@@ -1130,6 +1136,8 @@ adminRoundSaveBtn.addEventListener("click", async () => {
   initialStockInput,
   initialOrderInput,
   initialDeliveryInput,
+  orderLeadTimeInput,
+  deliveryLeadTimeInput,
   stageCountInput,
 ].forEach((input) => {
   input.addEventListener("input", () => {
