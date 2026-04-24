@@ -98,6 +98,9 @@ let charts = {
   roundCost: null,
   stock: null,
   backlog: null,
+  demandVsOrders: null,
+  demandVsShipments: null,
+  demandVsBacklog: null,
   serviceRate: null,
   bullwhip: null,
 };
@@ -906,6 +909,74 @@ function renderAdminReport(state, stageNames) {
         backgroundColor: teamColor(team),
         tension: 0.2,
       })),
+    },
+    options: commonOptions,
+  });
+
+  const buildDemandDataset = () => ({
+    label: "Demand",
+    data: demandSeries,
+    borderColor: "#1f1f1f",
+    backgroundColor: "#1f1f1f",
+    borderDash: [6, 4],
+    borderWidth: 2,
+    pointRadius: 2,
+    tension: 0.15,
+  });
+
+  charts.demandVsOrders = new Chart(document.getElementById("chart-demand-vs-orders"), {
+    type: "line",
+    data: {
+      labels,
+      datasets: [
+        buildDemandDataset(),
+        ...stageNames.map((team) => ({
+          label: `${team} order`,
+          data: orderSeriesMap[team],
+          borderColor: teamColor(team),
+          backgroundColor: teamColor(team),
+          pointRadius: 2,
+          tension: 0.2,
+        })),
+      ],
+    },
+    options: commonOptions,
+  });
+
+  charts.demandVsShipments = new Chart(document.getElementById("chart-demand-vs-shipments"), {
+    type: "line",
+    data: {
+      labels,
+      datasets: [
+        buildDemandDataset(),
+        ...stageNames.map((team) => ({
+          label: `${team} shipment`,
+          data: history.map((h) => (h.deliveries && h.deliveries[team]) || 0),
+          borderColor: teamColor(team),
+          backgroundColor: teamColor(team),
+          pointRadius: 2,
+          tension: 0.2,
+        })),
+      ],
+    },
+    options: commonOptions,
+  });
+
+  charts.demandVsBacklog = new Chart(document.getElementById("chart-demand-vs-backlog"), {
+    type: "line",
+    data: {
+      labels,
+      datasets: [
+        buildDemandDataset(),
+        ...stageNames.map((team) => ({
+          label: `${team} backlog`,
+          data: backlogMap[team],
+          borderColor: teamColor(team),
+          backgroundColor: teamColor(team),
+          pointRadius: 2,
+          tension: 0.2,
+        })),
+      ],
     },
     options: commonOptions,
   });
