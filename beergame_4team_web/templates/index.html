@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beer Game - 4 Team Local Multiplayer</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="top-header">
+      <div class="top-header-text">
+        <div class="top-header-game">맥주게임 For "글로컬과물류"</div>
+        <div class="top-header-maker">Produced by LEE JUNSEO</div>
+      </div>
+      <img src="/static/assets/lee.JPG" alt="LEE JUNSEO" class="credit-photo" />
+    </header>
+    <main class="container">
+      <section class="panel" id="auth-panel">
+        <h1>Beer Game (4 Teams)</h1>
+        <p class="muted">Admin 1 + Player 4 local/online multiplayer mode.</p>
+
+        <div class="grid2">
+          <label>
+            Role
+            <select id="role">
+              <option value="player">Player</option>
+              <option value="admin">Admin</option>
+            </select>
+          </label>
+          <label>
+            Your name
+            <input id="name" type="text" maxlength="40" value="Player" />
+          </label>
+          <label id="team-label">
+            Team
+            <select id="team"></select>
+          </label>
+        </div>
+
+        <div id="admin-settings" class="grid3 hidden">
+          <label>
+            Max rounds
+            <input id="max-rounds" type="number" min="1" value="40" />
+          </label>
+          <label>
+            Holding cost
+            <input id="holding-cost" type="number" min="0" step="0.1" value="0.5" />
+          </label>
+          <label>
+            Backlog cost
+            <input id="backlog-cost" type="number" min="0" step="0.1" value="1.0" />
+          </label>
+          <label>
+            Initial stock
+            <input id="initial-stock" type="number" min="0" value="15" />
+          </label>
+          <label>
+            Initial incoming order
+            <input id="initial-order" type="number" min="0" value="5" />
+          </label>
+          <label>
+            Initial incoming delivery
+            <input id="initial-delivery" type="number" min="0" value="5" />
+          </label>
+          <label>
+            Order lead time (rounds)
+            <input id="order-lead-time" type="number" min="1" value="2" />
+          </label>
+          <label>
+            Delivery lead time (rounds)
+            <input id="delivery-lead-time" type="number" min="1" value="2" />
+          </label>
+          <label>
+            Stage count
+            <input id="stage-count" type="number" min="2" max="8" value="4" />
+          </label>
+          <div class="span3 stage-name-editor">
+            <h4>Stage names</h4>
+            <div id="stage-names-list" class="stage-names-list"></div>
+          </div>
+          <div class="span3 demand-editor">
+            <h4>Demand Schedule (Linear)</h4>
+            <div class="demand-controls">
+              <label>
+                Round
+                <input id="demand-round-point" type="number" min="0" value="0" />
+              </label>
+              <label>
+                Demand
+                <input id="demand-value-point" type="number" min="0" value="5" />
+              </label>
+              <button id="demand-add-btn" type="button">Add/Update Point</button>
+              <button id="demand-clear-btn" type="button" class="ghost">Reset Default</button>
+            </div>
+            <canvas id="demand-schedule-chart"></canvas>
+            <div id="demand-points-list" class="demand-points-list"></div>
+            <input id="demand-schedule" type="hidden" value="0:5,4:10" />
+          </div>
+        </div>
+
+        <div class="actions" id="admin-actions">
+          <button id="create-btn">Create Room (Admin)</button>
+        </div>
+
+        <div class="actions" id="player-actions">
+          <button id="join-btn">Join Room (Player)</button>
+        </div>
+
+        <label id="room-code-label">
+          Room code (for join)
+          <input id="room-code" type="text" placeholder="e.g. A1B2C3" />
+        </label>
+
+        <p id="auth-msg" class="status"></p>
+      </section>
+
+      <section class="panel hidden" id="game-panel">
+        <div class="top-row">
+          <h2 id="room-title">Room</h2>
+          <div class="actions">
+            <button id="start-btn" class="ghost hidden">Start Game</button>
+            <button id="save-settings-btn" class="ghost hidden">Save Settings</button>
+            <button id="reset-btn" class="ghost hidden">Reset Game</button>
+          </div>
+        </div>
+
+        <div id="assignments" class="assignments"></div>
+
+        <div id="admin-round-control" class="admin-round hidden">
+          <label>
+            Max rounds (admin)
+            <input id="admin-max-rounds-game" type="number" min="1" value="40" />
+          </label>
+          <button id="admin-round-save-btn" class="ghost">Apply Round Count</button>
+        </div>
+
+        <div class="stats">
+          <div>
+            <span class="k">Round</span>
+            <span id="round">-</span>
+          </div>
+          <div>
+            <span class="k">Demand</span>
+            <span id="demand">Hidden</span>
+          </div>
+          <div>
+            <span class="k">Status</span>
+            <span id="status">-</span>
+          </div>
+        </div>
+        <p id="admin-msg" class="status"></p>
+
+        <div class="submit-box">
+          <label>
+            Order this round
+            <input id="order" type="number" min="0" step="1" value="5" />
+          </label>
+          <button id="submit-order-btn">Submit Order</button>
+          <p id="submit-msg" class="status"></p>
+        </div>
+
+        <h3>Supply Chain Flow</h3>
+        <div id="flow-scene" class="flow-scene">
+          <div id="flow-overlay" class="flow-overlay"></div>
+          <div class="flow-lane lane-delivery">Delivery (right to left)</div>
+          <div class="flow-lane lane-order">Order (left to right)</div>
+
+          <div id="node-customer" class="flow-node customer">
+            <img src="/static/assets/customer.svg" alt="Customer" />
+            <span>Customer</span>
+          </div>
+          <div id="flow-stage-nodes"></div>
+        </div>
+
+        <h3>Team Board</h3>
+        <div id="team-board" class="team-board"></div>
+
+        <h3>Recent Rounds</h3>
+        <div id="history" class="history"></div>
+
+        <section id="admin-report" class="report hidden">
+          <h3>Final Report (Admin)</h3>
+          <div class="report-grid">
+            <article class="report-card">
+              <h4>Total Cost by Team</h4>
+              <p class="formula-helper">수식: Total Cost = Σ(Stock_after × Holding Cost + Backlog_after × Backlog Cost)<span class="formula-tip" data-tip="의미: 팀의 전체 운영 부담(재고+미충족)의 누적 비용&#10;해석: 낮을수록 좋고 급증 구간은 과보정 신호">?</span></p>
+              <canvas id="chart-total-cost"></canvas>
+            </article>
+            <article class="report-card">
+              <h4>Round Cost Trend</h4>
+              <p class="formula-helper">수식: Round Cost(t) = Stock_after(t) × Holding Cost + Backlog_after(t) × Backlog Cost<span class="formula-tip" data-tip="의미: 각 라운드의 즉시 발생 비용&#10;해석: 급등 라운드는 늦은 반응/과잉 반응 가능성">?</span></p>
+              <canvas id="chart-round-cost"></canvas>
+            </article>
+            <article class="report-card">
+              <h4>Stock Trend</h4>
+              <p class="formula-helper">수식: Stock_after(t) = max(0, Stock_before(t) + InDelivery(t) - OutDelivery(t))<span class="formula-tip" data-tip="의미: 라운드 종료 시 남은 재고 수준&#10;해석: 고재고 지속은 과잉발주, 0 근처 반복은 품절 위험">?</span></p>
+              <canvas id="chart-stock"></canvas>
+            </article>
+            <article class="report-card">
+              <h4>Backlog Trend</h4>
+              <p class="formula-helper">수식: Backlog_after(t) = max(0, Backlog_before(t) + InOrder(t) - OutDelivery(t))<span class="formula-tip" data-tip="의미: 미충족 주문 누적량&#10;해석: 계속 증가하면 병목 지속 + 서비스 저하">?</span></p>
+              <canvas id="chart-backlog"></canvas>
+            </article>
+            <article class="report-card">
+              <h4>Demand vs Orders (by Team)</h4>
+              <p class="formula-helper">수식: Compare Demand(t) vs Placed Order(t)<span class="formula-tip" data-tip="의미: 수요 대비 발주 반응 크기/타이밍 비교&#10;해석: 주문선이 더 크게 흔들리면 Bullwhip 가능성 큼">?</span></p>
+              <canvas id="chart-demand-vs-orders"></canvas>
+            </article>
+            <article class="report-card">
+              <h4>Demand vs Shipments (by Team)</h4>
+              <p class="formula-helper">수식: Compare Demand(t) vs OutDelivery(t)<span class="formula-tip" data-tip="의미: 수요 대비 실제 출고(충족) 수준&#10;해석: 출고선이 수요선보다 낮으면 서비스 부족 누적">?</span></p>
+              <canvas id="chart-demand-vs-shipments"></canvas>
+            </article>
+            <article class="report-card">
+              <h4>Demand vs Backlog (by Team)</h4>
+              <p class="formula-helper">수식: Compare Demand(t) vs Backlog_after(t)<span class="formula-tip" data-tip="의미: 수요 변화의 backlog 전이 정도&#10;해석: 수요 피크 후 backlog 급등은 리드타임 지연 충격">?</span></p>
+              <canvas id="chart-demand-vs-backlog"></canvas>
+            </article>
+            <article class="report-card">
+              <h4>Service Rate by Team</h4>
+              <p class="formula-helper">수식: Service Rate(%) = 100 × (Σ OutDelivery / Σ Team Demand)<span class="formula-tip" data-tip="의미: 받은 수요 중 실제 충족 비율&#10;해석: 높을수록 좋고, 85% 미만은 개선 필요">?</span></p>
+              <canvas id="chart-service-rate"></canvas>
+            </article>
+            <article class="report-card">
+              <h4>Bullwhip Index by Team</h4>
+              <p class="formula-helper">수식: Bullwhip Index = StdDev(Order Series) / StdDev(Demand Series)<span class="formula-tip" data-tip="의미: 수요 변동 대비 주문 변동 증폭 정도&#10;해석: 1에 가까우면 안정, 1 초과는 증폭 큼">?</span></p>
+              <canvas id="chart-bullwhip"></canvas>
+            </article>
+          </div>
+          <article class="report-card">
+            <h4>Team Performance Details</h4>
+            <p class="formula-helper">수식: Avg Order = ΣOrders/N, Order StdDev = 표준편차, Max Backlog = max(Backlog_after)<span class="formula-tip" data-tip="의미: 팀별 발주 성향/변동성/병목 강도 요약&#10;해석: Avg 대비 StdDev 과대면 주문 안정화 정책 필요">?</span></p>
+            <div id="report-table-wrap"></div>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
