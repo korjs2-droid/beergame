@@ -642,6 +642,62 @@ button.ghost {
   margin: 0 0 8px;
 }
 
+.formula-helper {
+  margin: 0 0 8px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #6f634f;
+  background: #faf4ea;
+  border: 1px solid #eadabb;
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+
+.formula-tip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #8f4f20;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: help;
+}
+
+.formula-tip::after {
+  content: attr(data-tip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  min-width: 220px;
+  max-width: 320px;
+  white-space: pre-line;
+  background: #2c2419;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 12px;
+  line-height: 1.35;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.formula-tip:hover::after,
+.formula-tip:focus::after,
+.formula-tip:active::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 .report-card canvas {
   width: 100% !important;
   height: 220px !important;
